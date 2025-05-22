@@ -1,0 +1,24 @@
+<recettes>
+    <recette>
+        <nom>Brandade de morue</nom>
+        <photo>Brandade_de_morue.png</photo>
+        <catégorie>plat</catégorie>
+        <description></description>
+        <nombre_personnes>4</nombre_personnes>
+        <prix>20</prix>
+        <createur>Jean-Patrick</createur>
+        <date>22/05/2025</date>
+        <ingredient>
+            <nom>Pomme de terre</nom>
+            <quantite>400</quantite>
+        </ingredient>
+        <ingredient>
+            <nom>Morue</nom>
+            <quantite>230</quantite>
+            </ingredient>
+    </recette>
+    <recette>
+
+
+    </recette>
+</recettes>
