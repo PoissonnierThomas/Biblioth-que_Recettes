@@ -1,9 +1,9 @@
-#Liste des membres
+#Liste des membres :
 - BEKKARI Chadi
 - POISSONNIER Thomas
 
 
-#Tâches
+#Tâches :
 ## Conception
 - [] Concevoir les objets
 - [] Décider de la structure
