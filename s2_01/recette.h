@@ -18,14 +18,16 @@ private :
     std::string nom;
     std::string photo;  // Contient le nom de l'emplacement de la photo correspondante
     std::string categorie; // Contient le nom de la catégorie ( Entrée, Plat, Dessert, Entremet, Soupe)
-    std::string description;
+    std::string description; // Contient une description des étapes de la recette
     size_t nbConvives; // Contient le nombre de personnes prévu par la recette initiale
-    double prix;
-    std::string createur;
-    Date date;
-    std::vector<Ingredient*> ingredients;
+    double prix; // Contient le prix unitaire que coûte la recette
+    std::string createur; // Contient le nom du créateur de la recette
+    Date date; // Date de dépôt de la recette sur l'appli
+    std::vector<Ingredient*> ingredients; // Contient les différents ingrédients, dans lesquels on retrouve le nom et la quantité
 public:
-    Recette();
+    Recette()=delete;
+    Recette(std::istream &is);
+    Recette(std::string _nom, std::string _photo,std::string _categorie, std::string _description, size_t _nombre, double _prix, std::string _createur, Date _date, std::vector<Ingredient*> _Ingredients );
     ~Recette();
     inline std::string getString() const {return nom;};
     inline void setString(std::string s) {nom=s;};

@@ -1,10 +1,14 @@
-#Liste des membres :
+# S2.01 Groupe 19 BEKKARI - POISSONNIER
+
+## Liste des membres
+
 - BEKKARI Chadi
 - POISSONNIER Thomas
 
+## Tâches
 
-#Tâches :
-## Conception
+### Conception
+
 - [] Concevoir les objets
-- [] Décider de la structure
-- [] Répartir
+- [] Décider de la structure du logiciel
+- [] Répartir les fonctionnalités à développer
