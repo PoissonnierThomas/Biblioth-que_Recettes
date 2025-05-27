@@ -23,7 +23,7 @@ FORMS += \
     mainwindow.ui
 
 TRANSLATIONS += \
-    S2_01_en_GB.ts
+    S2_01_en_FR.ts
 CONFIG += lrelease
 CONFIG += embed_translations
 

@@ -9,6 +9,6 @@
 
 ### Conception
 
-- [] Concevoir les objets
+- [] Concevoir les objets --> En cours
 - [] Décider de la structure du logiciel
 - [] Répartir les fonctionnalités à développer
