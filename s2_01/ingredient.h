@@ -7,11 +7,11 @@ class Ingredient
 {
 private :
     std::string nom;
-    double quantite; // Si le booléen poids_état est vrai, la quantité sera exprimée en grammes, sinon en Litres.
-    bool poids_etat;
+    double quantite; 
+    std::string unite;
 public:
     Ingredient()=delete;
-    Ingredient(std::string _nom, double _quantite, bool _etat);
+    Ingredient(std::string _nom, double _quantite, std::string _unite);
     Ingredient(std::istream &is);
     ~Ingredient();
 
@@ -19,8 +19,8 @@ public:
     inline void setNom(std::string s) {nom=s;};
     inline double getQuantite() const {return quantite;};
     inline void setQuantite(double d) {quantite=d;};
-    inline bool getPoids() const {return poids_etat;};
-    inline void setPoids(bool d) {poids_etat=d;};
+    inline std::string getUnite() const {return unite;};
+    inline void setPoids(std::string u) {unite=u;};
 
     friend std::ostream& operator<<(std::ostream &os, const Ingredient& i);
 };
