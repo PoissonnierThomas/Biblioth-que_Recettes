@@ -1,0 +1,76 @@
+[
+  {
+    "nom": "Brandade de Morue",
+    "photo": "Brandade_de_morue.png",
+    "categorie": "Plat",
+    "description": "Plat traditionnel du Sud de la France à base de morue dessalée, pommes de terre et huile d'olive.",
+    "nombre_personnes": 6,
+    "prix": 12.50,
+    "createur": "Chef Michel",
+    "date": "15/03/2024",
+    "ingredients": [
+      {
+        "nom": "Morue dessalée",
+        "quantite": 800,
+        "unite": "g"
+      },
+      {
+        "nom": "Pommes de terre",
+        "quantite": 1000,
+        "unite": "g"
+      },
+      {
+        "nom": "Huile d'olive",
+        "quantite": 200,
+        "unite": "ml"
+      },
+      {
+        "nom": "Lait",
+        "quantite": 250,
+        "unite": "ml"
+      },
+      {
+        "nom": "Ail",
+        "quantite": 3,
+        "unite": "gousses"
+      }
+    ]
+  },
+  {
+    "nom": "Tarte aux Pommes",
+    "photo": "tarte_pommes.jpg",
+    "categorie": "Dessert",
+    "description": "Délicieuse tarte aux pommes avec pâte brisée maison et compote de pommes.",
+    "nombre_personnes": 8,
+    "prix": 8.00,
+    "createur": "Pâtissier Paul",
+    "date": "2024-03-20",
+    "ingredients": [
+      {
+        "nom": "Farine",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "nom": "Beurre",
+        "quantite": 125,
+        "unite": "g"
+      },
+      {
+        "nom": "Pommes",
+        "quantite": 1000,
+        "unite": "g"
+      },
+      {
+        "nom": "Sucre",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "nom": "Œufs",
+        "quantite": 2,
+        "unite": "pièces"
+      }
+    ]
+  }
+]
