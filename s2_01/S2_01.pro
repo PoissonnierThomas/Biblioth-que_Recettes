@@ -1,36 +1,36 @@
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += core gui widgets
 
 CONFIG += c++17
 
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+TARGET = S2_01
+TEMPLATE = app
+
+# Définir les chemins
+INCLUDEPATH += .
+DEPENDPATH += .
 
 SOURCES += \
-    ingredient.cpp \
     main.cpp \
     mainwindow.cpp \
+    ingredient.cpp \
     recette.cpp
 
 HEADERS += \
-    ingredient.h \
     mainwindow.h \
+    ingredient.h \
     recette.h
 
-FORMS += \
-    mainwindow.ui
+RESOURCES += \
+    ressources.qrc
+
+# Configuration de build
+CONFIG += lrelease
+CONFIG += embed_translations
 
 TRANSLATIONS += \
     S2_01_en_FR.ts
 
-RESOURCES += ressources.qrc
-
-CONFIG += lrelease
-CONFIG += embed_translations
-
-# Default rules for deployment.
+# Rules de déploiement
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target

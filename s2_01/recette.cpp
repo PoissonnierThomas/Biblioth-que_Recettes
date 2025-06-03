@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 #include <QFile>
 #include <QDebug>
 #include <QString>
@@ -142,15 +143,13 @@ Recette::Recette(std::istream &is) {
 
 Recette::Recette(std::string _nom, std::string _photo,std::string _categorie, std::vector<std::string> _description, size_t _nombre, double _prix, std::string _createur, Date _date, std::vector<Ingredient*> _Ingredients )
     : nom(_nom), photo(_photo), categorie("plat"), description(_description), nbConvives(_nombre), prix(_prix), createur(_createur), date(_date), ingredients(_Ingredients)
-{    
+{
     setCategorie(_categorie);
 }
 
-
 Recette::~Recette()
 {
-    for (Ingredient* i : ingredients)
-        delete i;
+    viderIngredients();
 }
 
 void Recette::setCategorie(std::string s)
@@ -160,6 +159,92 @@ void Recette::setCategorie(std::string s)
     else
         throw ("La catégorie n'est pas valable");
 }
+
+// ================================
+// GESTION DES INGRÉDIENTS
+// ================================
+
+void Recette::retirerIngredient(Ingredient* i)
+{
+    if (!i) return;
+
+    auto it = std::find(ingredients.begin(), ingredients.end(), i);
+    if (it != ingredients.end()) {
+        delete *it;  // Libérer la mémoire de l'ingrédient
+        ingredients.erase(it);
+
+        qDebug() << "Ingrédient retiré de la recette";
+    } else {
+        qDebug() << "Ingrédient non trouvé dans la recette";
+    }
+}
+
+void Recette::retirerIngredientParIndex(int index)
+{
+    if (index < 0 || index >= static_cast<int>(ingredients.size())) {
+        qDebug() << "Index d'ingrédient invalide:" << index;
+        return;
+    }
+
+    Ingredient* ingredient = ingredients[index];
+    delete ingredient;  // Libérer la mémoire
+    ingredients.erase(ingredients.begin() + index);
+
+    qDebug() << "Ingrédient à l'index" << index << "retiré";
+}
+
+void Recette::modifierIngredient(Ingredient* ancien, Ingredient* nouveau)
+{
+    if (!ancien || !nouveau) {
+        qDebug() << "Pointeurs d'ingrédients invalides";
+        return;
+    }
+
+    auto it = std::find(ingredients.begin(), ingredients.end(), ancien);
+    if (it != ingredients.end()) {
+        delete *it;     // Libérer l'ancien ingrédient
+        *it = nouveau;  // Remplacer par le nouveau
+
+        qDebug() << "Ingrédient modifié avec succès";
+    } else {
+        qDebug() << "Ancien ingrédient non trouvé";
+        delete nouveau; // Nettoyer le nouveau si pas utilisé
+    }
+}
+
+void Recette::modifierIngredientParIndex(int index, const std::string& nom, double quantite, const std::string& unite)
+{
+    if (index < 0 || index >= static_cast<int>(ingredients.size())) {
+        qDebug() << "Index d'ingrédient invalide:" << index;
+        return;
+    }
+
+    Ingredient* nouvelIngredient = new Ingredient(nom, quantite, unite);
+
+    delete ingredients[index];          // Libérer l'ancien
+    ingredients[index] = nouvelIngredient;  // Assigner le nouveau
+
+    qDebug() << "Ingrédient à l'index" << index << "modifié:" << QString::fromStdString(nom);
+}
+
+void Recette::viderIngredients()
+{
+    for (Ingredient* ingredient : ingredients) {
+        delete ingredient;
+    }
+    ingredients.clear();
+
+    qDebug() << "Tous les ingrédients ont été supprimés";
+}
+
+size_t Recette::getNombreIngredients() const
+{
+    return ingredients.size();
+}
+
+// ================================
+// OPÉRATEURS D'AFFICHAGE
+// ================================
 
 std::ostream& operator<<(std::ostream &os, const Recette &R)
 {
@@ -172,7 +257,7 @@ std::ostream& operator<<(std::ostream &os, const Recette &R)
     {
         os << *i<<std::endl;
     }
-   return os;
+    return os;
 }
 
 QDebug operator<<(QDebug debug, const Date& d)
@@ -181,8 +266,6 @@ QDebug operator<<(QDebug debug, const Date& d)
     debug.nospace() << d.jour << "/" << d.mois << "/" << d.annee;
     return debug;
 }
-
-
 
 QDebug operator<<(QDebug debug, const Recette& r)
 {
@@ -194,7 +277,7 @@ QDebug operator<<(QDebug debug, const Recette& r)
                     << "Prix: " << r.getPrix() << "€ par personne\n"
                     << "Créateur: " << QString::fromStdString(r.getCreateur()) << "\n"
                     << "Date: " << r.getDate() << "\n"
-                    << "Photo: " << QString::fromStdString(r.getPhoto()) << "\n"  // Décommentée
+                    << "Photo: " << QString::fromStdString(r.getPhoto()) << "\n"
                     << "Description: ";
 
     const auto& desc = r.getDescription();
@@ -202,7 +285,7 @@ QDebug operator<<(QDebug debug, const Recette& r)
         debug << QString::fromStdString(desc[0]);
     }
 
-    debug << "\nIngrédients:\n";
+    debug << "\nIngrédients (" << r.getNombreIngredients() << "):\n";
     const auto& ingredients = r.getIngredients();
     for (const Ingredient* ingredient : ingredients) {
         debug << "  - " << *ingredient << "\n";

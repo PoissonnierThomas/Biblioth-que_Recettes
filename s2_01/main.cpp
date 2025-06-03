@@ -1,23 +1,18 @@
-#include "mainwindow.h"
-
 #include <QApplication>
-#include <QLocale>
-#include <QTranslator>
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
 
-    QTranslator translator;
-    const QStringList uiLanguages = QLocale::system().uiLanguages();
-    for (const QString &locale : uiLanguages) {
-        const QString baseName = "S2_01_" + QLocale(locale).name();
-        if (translator.load(":/i18n/" + baseName)) {
-            a.installTranslator(&translator);
-            break;
-        }
-    }
-    MainWindow w;
-    w.show();
-    return a.exec();
+    // Configuration de l'application
+    app.setApplicationName("Gestionnaire de Recettes");
+    app.setApplicationVersion("1.0");
+    app.setOrganizationName("S2.01 - Groupe 19");
+
+    // Créer et afficher la fenêtre principale
+    MainWindow window;
+    window.show();
+
+    return app.exec();
 }
