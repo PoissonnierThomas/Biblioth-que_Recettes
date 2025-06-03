@@ -1,10 +1,11 @@
 #include <string>
 #include <vector>
+#include <iostream>
 #include <QFile>
+#include <QDebug>
 #include "ingredient.h"
 #ifndef RECETTE_H
 #define RECETTE_H
-
 
 struct Date {
     size_t jour;
@@ -12,6 +13,7 @@ struct Date {
     size_t annee;
 };
 
+QDebug operator<<(QDebug debug, const Date& d);
 
 class Recette
 {
@@ -28,6 +30,7 @@ private :
 public:
     Recette()=delete;
     Recette(std::string nom_fichier);
+    Recette(std::istream &is);
     Recette(std::string _nom, std::string _photo,std::string _categorie, std::vector<std::string> _description, size_t _nombre, double _prix, std::string _createur, Date _date, std::vector<Ingredient*> _Ingredients );
     ~Recette();
     inline std::string getNom() const {return nom;};
@@ -44,12 +47,17 @@ public:
     inline void setCreateur(std::string s) {createur=s;};
     inline Date getDate() const {return date;};
     inline void setDate(Date d) {date=d;};
+    inline std::string getPhoto() const {return photo;};  // AJOUT DE CETTE LIGNE
+    inline void setPhoto(std::string s) {photo=s;};       // AJOUT DE CETTE LIGNE
     inline std::vector<Ingredient*> getIngredients() const {return ingredients;};
     void afficherIngredients(std::ostream &os);
     inline void ajouterIngredient(Ingredient* i) {ingredients.push_back(i);};
     void retirerIngredient(Ingredient* i);
     void modifierIngredient(Ingredient* i);
+
+
     friend std::ostream& operator<<(std::ostream &os, const Recette &R);
+    friend QDebug operator<<(QDebug debug, const Recette& R);
 };
 
 #endif // RECETTE_H

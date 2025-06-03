@@ -24,6 +24,9 @@ FORMS += \
 
 TRANSLATIONS += \
     S2_01_en_FR.ts
+
+RESOURCES += ressources.qrc
+
 CONFIG += lrelease
 CONFIG += embed_translations
 

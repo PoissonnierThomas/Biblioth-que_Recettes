@@ -1,4 +1,6 @@
 #include <string>
+#include <iostream>
+#include <QDebug>
 #ifndef INGREDIENT_H
 #define INGREDIENT_H
 
@@ -20,9 +22,10 @@ public:
     inline double getQuantite() const {return quantite;};
     inline void setQuantite(double d) {quantite=d;};
     inline std::string getUnite() const {return unite;};
-    inline void setPoids(std::string u) {unite=u;};
+    inline void setUnite(std::string u) {unite=u;};
 
     friend std::ostream& operator<<(std::ostream &os, const Ingredient& i);
+    friend QDebug operator<<(QDebug debug, const Ingredient& i);
 };
 
 #endif // INGREDIENT_H

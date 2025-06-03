@@ -1,0 +1,19 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource>
+        <!-- Fichier XML des recettes depuis le dossier Recettes -->
+        <file>Recettes/recettes.xml</file>
+        
+        <!-- Image depuis le dossier Recettes/images -->
+        <file>Recettes/images/Brandade_de_morue.png</file>
+    </qresource>
+    
+    <!-- Organisation avec préfixes pour un accès plus propre -->
+    <qresource prefix="/data">
+        <file alias="recettes">Recettes/recettes.xml</file>
+    </qresource>
+    
+    <qresource prefix="/images">
+        <file alias="brandade">Recettes/images/Brandade_de_morue.png</file>
+    </qresource>
+</RCC>

@@ -12,30 +12,37 @@
             <ingredient>
                 <nom>Pomme de terre</nom>
                 <quantite>500</quantite>
+                <unite>grammes</unite>
             </ingredient>
             <ingredient>
                 <nom>Morue salée</nom>
                 <quantite>500</quantite>
+                <unite>grammes</unite>
             </ingredient>
             <ingredient>
                 <nom>Persil</nom>
                 <quantite>10</quantite>
+                <unite>grammes</unite>
             </ingredient>
             <ingredient>
                 <nom>Sel</nom>
                 <quantite>10</quantite>
+                <unite>grammes</unite>
             </ingredient>
             <ingredient>
                 <nom>Poivre</nom>
                 <quantite>5</quantite>
+                <unite>grammes</unite>
             </ingredient>
             <ingredient>
                 <nom>Huile d'olive</nom>
                 <quantite>15</quantite>
+                <unite>mL</unite>
             </ingredient>
             <ingredient>
                 <nom>Ail</nom>
                 <quantite>5</quantite>
+                <unite>grammes</unite>
             </ingredient>
         </recette>
         <recette>
