@@ -16,4 +16,9 @@
     <qresource prefix="/images">
         <file alias="brandade">Recettes/images/Brandade_de_morue.png</file>
     </qresource>
+
+    <qresource prefix="/translations">
+        <file>S2_01_en_FR.qm</file>
+    </qresource>
+
 </RCC>

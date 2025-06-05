@@ -11,14 +11,14 @@ Recette::Recette(std::string sfichier) {
     std::ifstream fichier(sfichier);
     if (!fichier.is_open()) {
         std::cerr << "Erreur: Impossible d'ouvrir le fichier " << sfichier << std::endl;
-        // Initialiser avec des valeurs par défaut
+        // Valeurs par défaut
         nom = "Recette inconnue";
         photo = "";
         categorie = "plat";
         nbConvives = 1;
         prix = 0.0;
         createur = "Inconnu";
-        date = {1, 1, 2023};
+        date = {1, 1, 2025};
         return;
     }
 
@@ -34,37 +34,31 @@ Recette::Recette(std::istream &is) {
     categorie = "plat";
     nbConvives = 1;
     prix = 0.0;
-    date = {1, 1, 2023};
+    date = {1, 1, 2025};
 
-    // Lire jusqu'à trouver l'ouverture <recette>
     while (std::getline(is, line)) {
         if (line.find("<recette>") != std::string::npos) {
             break;
         }
     }
 
-    // Lire les éléments de la recette
     while (std::getline(is, line)) {
-        // Fin de la recette
         if (line.find("</recette>") != std::string::npos) {
             break;
         }
 
-        // Extraire le nom
         if (line.find("<nom>") != std::string::npos) {
             size_t start = line.find("<nom>") + 5;
             size_t end = line.find("</nom>");
             nom = line.substr(start, end - start);
         }
 
-        // Extraire la photo
         if (line.find("<photo>") != std::string::npos) {
             size_t start = line.find("<photo>") + 7;
             size_t end = line.find("</photo>");
             photo = line.substr(start, end - start);
         }
 
-        // Extraire la catégorie
         if (line.find("<catégorie>") != std::string::npos) {
             size_t start = line.find("<catégorie>") + 11;
             size_t end = line.find("</catégorie>");
@@ -76,7 +70,6 @@ Recette::Recette(std::istream &is) {
             }
         }
 
-        // Extraire la description
         if (line.find("<description>") != std::string::npos) {
             size_t start = line.find("<description>") + 13;
             size_t end = line.find("</description>");
@@ -84,7 +77,6 @@ Recette::Recette(std::istream &is) {
             description.push_back(desc);
         }
 
-        // Extraire le nombre de personnes
         if (line.find("<nombre_personnes>") != std::string::npos) {
             size_t start = line.find("<nombre_personnes>") + 18;
             size_t end = line.find("</nombre_personnes>");
@@ -92,7 +84,6 @@ Recette::Recette(std::istream &is) {
             nbConvives = std::stoul(nbStr);
         }
 
-        // Extraire le prix
         if (line.find("<prix>") != std::string::npos) {
             size_t start = line.find("<prix>") + 6;
             size_t end = line.find("</prix>");
@@ -100,7 +91,6 @@ Recette::Recette(std::istream &is) {
             prix = std::stod(prixStr);
         }
 
-        // Extraire le créateur
         if (line.find("<createur>") != std::string::npos) {
             size_t start = line.find("<createur>") + 10;
             size_t end = line.find("</createur>");
@@ -131,7 +121,7 @@ Recette::Recette(std::istream &is) {
 
         // Traiter les ingrédients
         if (line.find("<ingredient>") != std::string::npos) {
-            // Remettre le flux au début de cette ligne pour que le constructeur d'Ingredient puisse la lire
+            // Remettre le flux au début de la ligne pour le constructeur d'Ingredient (a besoin des positions précises dans la ligne)
             is.seekg(-(long)line.length() - 1, std::ios::cur);
 
             // Créer un nouvel ingrédient
@@ -160,17 +150,14 @@ void Recette::setCategorie(std::string s)
         throw ("La catégorie n'est pas valable");
 }
 
-// ================================
-// GESTION DES INGRÉDIENTS
-// ================================
 
 void Recette::retirerIngredient(Ingredient* i)
 {
     if (!i) return;
 
-    auto it = std::find(ingredients.begin(), ingredients.end(), i);
+    auto it = std::find(ingredients.begin(), ingredients.end(), i); // Trouver l'ingrédient dans le vecteur d'ingrédients
     if (it != ingredients.end()) {
-        delete *it;  // Libérer la mémoire de l'ingrédient
+        delete *it;
         ingredients.erase(it);
 
         qDebug() << "Ingrédient retiré de la recette";
@@ -187,7 +174,7 @@ void Recette::retirerIngredientParIndex(int index)
     }
 
     Ingredient* ingredient = ingredients[index];
-    delete ingredient;  // Libérer la mémoire
+    delete ingredient;
     ingredients.erase(ingredients.begin() + index);
 
     qDebug() << "Ingrédient à l'index" << index << "retiré";
@@ -202,13 +189,13 @@ void Recette::modifierIngredient(Ingredient* ancien, Ingredient* nouveau)
 
     auto it = std::find(ingredients.begin(), ingredients.end(), ancien);
     if (it != ingredients.end()) {
-        delete *it;     // Libérer l'ancien ingrédient
+        delete *it;
         *it = nouveau;  // Remplacer par le nouveau
 
         qDebug() << "Ingrédient modifié avec succès";
     } else {
         qDebug() << "Ancien ingrédient non trouvé";
-        delete nouveau; // Nettoyer le nouveau si pas utilisé
+        delete nouveau;
     }
 }
 
@@ -221,7 +208,7 @@ void Recette::modifierIngredientParIndex(int index, const std::string& nom, doub
 
     Ingredient* nouvelIngredient = new Ingredient(nom, quantite, unite);
 
-    delete ingredients[index];          // Libérer l'ancien
+    delete ingredients[index];
     ingredients[index] = nouvelIngredient;  // Assigner le nouveau
 
     qDebug() << "Ingrédient à l'index" << index << "modifié:" << QString::fromStdString(nom);
@@ -237,14 +224,6 @@ void Recette::viderIngredients()
     qDebug() << "Tous les ingrédients ont été supprimés";
 }
 
-size_t Recette::getNombreIngredients() const
-{
-    return ingredients.size();
-}
-
-// ================================
-// OPÉRATEURS D'AFFICHAGE
-// ================================
 
 std::ostream& operator<<(std::ostream &os, const Recette &R)
 {

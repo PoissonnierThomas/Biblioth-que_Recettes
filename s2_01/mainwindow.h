@@ -44,18 +44,18 @@ public:
     ~MainWindow();
 
 private slots:
-    // Gestion des recettes
+    // Recettes
     void onRecetteSelectionnee();
     void onNouvelleRecette();
     void onSupprimerRecette();
     void onRechercheRecette(const QString &texte);
 
-    // Mode édition
+    // Edition
     void onModeEditionToggled(bool actif);
     void onSauvegarder();
     void onAnnuler();
 
-    // Gestion des ingrédients
+    // Ingrédients
     void onAjouterIngredient();
     void onSupprimerIngredient();
     void onIngredientSelectionne();
@@ -65,15 +65,15 @@ private slots:
     void ouvrirFichier();
     void onParcourirPhoto();
 
-    // Détection des modifications
+    // Modifications
     void onDonneesModifiees();
 
 private:
-    // === WIDGETS PRINCIPAUX ===
+    //  Widgets principaux
     QWidget *centralWidget;
     QSplitter *mainSplitter;
 
-    // === PANEL MASTER (LISTE) ===
+    // Master Panel (Liste)
     QFrame *frameListeRecettes;
     QLabel *labelTitreListe;
     QLineEdit *lineEditRecherche;
@@ -81,7 +81,7 @@ private:
     QPushButton *btnNouvelleRecette;
     QPushButton *btnSupprimerRecette;
 
-    // === PANEL DETAIL (EDITION) ===
+    // Detail Panel (édition)
     QFrame *frameDetailRecette;
     QLabel *labelTitreDetail;
     QPushButton *btnSauvegarder;
@@ -89,7 +89,7 @@ private:
     QScrollArea *scrollArea;
     QWidget *scrollContent;
 
-    // === INFORMATIONS GENERALES ===
+    // Utilitaires
     QGroupBox *groupBoxInfos;
     QLineEdit *lineEditNom;
     QComboBox *comboBoxCategorie;
@@ -100,23 +100,23 @@ private:
     QLineEdit *lineEditPhoto;
     QPushButton *btnParcourirPhoto;
 
-    // === DESCRIPTION ===
+    // Description
     QGroupBox *groupBoxDescription;
     QTextEdit *textEditDescription;
 
-    // === INGREDIENTS ===
+    // Ingrédients
     QGroupBox *groupBoxIngredients;
     QTableWidget *tableWidgetIngredients;
     QPushButton *btnAjouterIngredient;
     QPushButton *btnSupprimerIngredient;
 
-    // === MENUS ===
+    // Menu
     QAction *actionOuvrir;
     QAction *actionSauvegarder;
     QAction *actionQuitter;
     QAction *actionModeEdition;
 
-    // === DONNEES ===
+    // Données
     std::vector<std::unique_ptr<Recette>> recettes;
     Recette* recetteActuelle;
     bool modeEdition;
@@ -131,7 +131,7 @@ private:
         std::vector<Ingredient*> ingredients;
     } donneesOriginales;
 
-    // === METHODES PRIVEES ===
+    // Méthodes
     void setupInterface();
     void setupMenus();
     void setupMasterPanel();
@@ -164,6 +164,8 @@ private:
     // Utilitaires
     void redimensionnerColonnes();
     void appliquerStyle();
+    QString formaterPrix(double prix);
+    QString categorieVersInterface(const std::string& categorie);
 
 protected:
     void resizeEvent(QResizeEvent *event) override;

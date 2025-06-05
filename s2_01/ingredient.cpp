@@ -20,9 +20,7 @@ Ingredient::Ingredient(std::istream &is) {
         }
     }
 
-    // Lire les éléments de l'ingrédient
     while (std::getline(is, line)) {
-        // Fin de l'ingrédient
         if (line.find("</ingredient>") != std::string::npos) {
             break;
         }
@@ -42,7 +40,7 @@ Ingredient::Ingredient(std::istream &is) {
             quantite = std::stod(quantiteStr);
         }
 
-        // Extraire l'unité (si présente)
+        // Extraire l'unité
         if (line.find("<unite>") != std::string::npos) {
             size_t start = line.find("<unite>") + 7;
             size_t end = line.find("</unite>");
@@ -50,7 +48,7 @@ Ingredient::Ingredient(std::istream &is) {
         }
     }
 
-    // L'unité n'est pas présente dans le XML, on met une valeur par défaut
+    // Si unité non présente, grammes par défaut
     if (unite.empty()) {
         unite = "g"; // grammes par défaut
     }

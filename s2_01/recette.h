@@ -8,7 +8,7 @@
 #ifndef RECETTE_H
 #define RECETTE_H
 
-struct Date {
+struct Date { // Structure de représentation simple des dates
     size_t jour;
     size_t mois;
     size_t annee;
@@ -30,13 +30,13 @@ private :
     std::vector<Ingredient*> ingredients; // Contient les différents ingrédients, dans lesquels on retrouve le nom et la quantité
 
 public:
-    Recette()=delete;
-    Recette(std::string nom_fichier);
-    Recette(std::istream &is);
+    Recette()=delete; // Interdire la création de recette sans paramètre
+    Recette(std::string nom_fichier); // Création de recette à partir du nom de fichier
+    Recette(std::istream &is); // Création de recette à partir d'un flux
     Recette(std::string _nom, std::string _photo,std::string _categorie, std::vector<std::string> _description, size_t _nombre, double _prix, std::string _createur, Date _date, std::vector<Ingredient*> _Ingredients );
     ~Recette();
 
-    // Getters/Setters de base
+    // Getters et Setters
     inline std::string getNom() const {return nom;};
     inline void setNom(std::string s) {nom=s;};
     inline std::string getCategorie() const {return categorie;};
@@ -53,6 +53,7 @@ public:
     inline void setDate(Date d) {date=d;};
     inline std::string getPhoto() const {return photo;};
     inline void setPhoto(std::string s) {photo=s;};
+    inline size_t getNombreIngredients() const {return ingredients.size();};
 
     // Gestion des ingrédients
     inline std::vector<Ingredient*> getIngredients() const {return ingredients;};
@@ -62,10 +63,7 @@ public:
     void modifierIngredient(Ingredient* ancien, Ingredient* nouveau);
     void modifierIngredientParIndex(int index, const std::string& nom, double quantite, const std::string& unite);
     void viderIngredients();
-    size_t getNombreIngredients() const;
 
-    // Affichage
-    void afficherIngredients(std::ostream &os);
 
     // Opérateurs
     friend std::ostream& operator<<(std::ostream &os, const Recette &R);
