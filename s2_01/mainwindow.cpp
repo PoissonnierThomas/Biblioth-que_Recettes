@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     , modeEdition(false)
     , donneesModifiees(false)
 {
-    setWindowTitle("Gestionnaire de Recettes - S2.01");
+    setWindowTitle(tr("Recipe Manager - S2.01"));
     setMinimumSize(1000, 700);
     resize(1200, 800);
 
@@ -25,12 +25,11 @@ MainWindow::MainWindow(QWidget *parent)
     // Charger les données au démarrage
     chargerRecettesParDefaut();
 
-    statusBar()->showMessage("Application démarrée - Mode lecture");
+    statusBar()->showMessage(tr("Application started - Lecture mode"));
 }
 
 MainWindow::~MainWindow()
 {
-    // Nettoyage automatique avec smart pointers
 }
 
 void MainWindow::setupInterface()
@@ -66,7 +65,7 @@ void MainWindow::setupMasterPanel()
     layoutMaster->setSpacing(10);
 
     // Titre
-    labelTitreListe = new QLabel("📋 Liste des Recettes");
+    labelTitreListe = new QLabel(tr("Recipe list"));
     labelTitreListe->setAlignment(Qt::AlignCenter);
     QFont fontTitre = labelTitreListe->font();
     fontTitre.setPointSize(14);
@@ -76,7 +75,7 @@ void MainWindow::setupMasterPanel()
 
     // Barre de recherche
     lineEditRecherche = new QLineEdit();
-    lineEditRecherche->setPlaceholderText("🔍 Rechercher une recette...");
+    lineEditRecherche->setPlaceholderText(tr(" Search for a recipe ..."));
     layoutMaster->addWidget(lineEditRecherche);
 
     // Liste des recettes
@@ -88,8 +87,8 @@ void MainWindow::setupMasterPanel()
     // Boutons d'action
     QHBoxLayout *layoutBoutons = new QHBoxLayout();
 
-    btnNouvelleRecette = new QPushButton("➕ Nouvelle");
-    btnSupprimerRecette = new QPushButton("🗑️ Supprimer");
+    btnNouvelleRecette = new QPushButton(tr("New"));
+    btnSupprimerRecette = new QPushButton(tr("Delete"));
     btnSupprimerRecette->setEnabled(false);
 
     layoutBoutons->addWidget(btnNouvelleRecette);
@@ -110,14 +109,14 @@ void MainWindow::setupDetailPanel()
     // En-tête avec titre et boutons
     QHBoxLayout *layoutHeader = new QHBoxLayout();
 
-    labelTitreDetail = new QLabel("📄 Détails de la Recette");
+    labelTitreDetail = new QLabel(tr("Recipe details"));
     QFont fontDetail = labelTitreDetail->font();
     fontDetail.setPointSize(16);
     fontDetail.setBold(true);
     labelTitreDetail->setFont(fontDetail);
 
-    btnSauvegarder = new QPushButton("💾 Sauvegarder");
-    btnAnnuler = new QPushButton("❌ Annuler");
+    btnSauvegarder = new QPushButton(tr("Save"));
+    btnAnnuler = new QPushButton(tr("Cancel"));
     btnSauvegarder->setEnabled(false);
     btnAnnuler->setEnabled(false);
 
@@ -138,33 +137,33 @@ void MainWindow::setupDetailPanel()
     QVBoxLayout *layoutScroll = new QVBoxLayout(scrollContent);
 
     // === INFORMATIONS GENERALES ===
-    groupBoxInfos = new QGroupBox("ℹ️ Informations Générales");
+    groupBoxInfos = new QGroupBox(tr("General informations"));
     QFormLayout *formInfos = new QFormLayout(groupBoxInfos);
 
     lineEditNom = new QLineEdit();
     lineEditNom->setEnabled(false);
-    formInfos->addRow("Nom :", lineEditNom);
+    formInfos->addRow(tr("Name :"), lineEditNom);
 
     comboBoxCategorie = new QComboBox();
     comboBoxCategorie->addItems({"Entrée", "Plat", "Dessert", "Entremet", "Soupe"});
     comboBoxCategorie->setEnabled(false);
-    formInfos->addRow("Catégorie :", comboBoxCategorie);
+    formInfos->addRow(tr("Category :"), comboBoxCategorie);
 
     spinBoxNbPersonnes = new QSpinBox();
     spinBoxNbPersonnes->setRange(1, 20);
     spinBoxNbPersonnes->setEnabled(false);
-    formInfos->addRow("Nb. personnes :", spinBoxNbPersonnes);
+    formInfos->addRow(tr("Nb. of people :"), spinBoxNbPersonnes);
 
     doubleSpinBoxPrix = new QDoubleSpinBox();
     doubleSpinBoxPrix->setRange(0.0, 999.99);
     doubleSpinBoxPrix->setDecimals(2);
     doubleSpinBoxPrix->setSuffix(" €");
     doubleSpinBoxPrix->setEnabled(false);
-    formInfos->addRow("Prix/pers. :", doubleSpinBoxPrix);
+    formInfos->addRow(tr("Price/pers. :"), doubleSpinBoxPrix);
 
     lineEditCreateur = new QLineEdit();
     lineEditCreateur->setEnabled(false);
-    formInfos->addRow("Créateur :", lineEditCreateur);
+    formInfos->addRow(tr("Creator :"), lineEditCreateur);
 
     dateEditDate = new QDateEdit();
     dateEditDate->setCalendarPopup(true);
@@ -173,18 +172,18 @@ void MainWindow::setupDetailPanel()
 
     QHBoxLayout *layoutPhoto = new QHBoxLayout();
     lineEditPhoto = new QLineEdit();
-    lineEditPhoto->setPlaceholderText("Chemin vers l'image");
+    lineEditPhoto->setPlaceholderText(tr("Path to te picture"));
     lineEditPhoto->setEnabled(false);
-    btnParcourirPhoto = new QPushButton("📁 Parcourir...");
+    btnParcourirPhoto = new QPushButton(tr("Browse"));
     btnParcourirPhoto->setEnabled(false);
     layoutPhoto->addWidget(lineEditPhoto);
     layoutPhoto->addWidget(btnParcourirPhoto);
-    formInfos->addRow("Photo :", layoutPhoto);
+    formInfos->addRow(tr("Picture :"), layoutPhoto);
 
     layoutScroll->addWidget(groupBoxInfos);
 
     // === DESCRIPTION ===
-    groupBoxDescription = new QGroupBox("📝 Description");
+    groupBoxDescription = new QGroupBox(tr("Description"));
     QVBoxLayout *layoutDesc = new QVBoxLayout(groupBoxDescription);
 
     textEditDescription = new QTextEdit();
@@ -195,12 +194,12 @@ void MainWindow::setupDetailPanel()
     layoutScroll->addWidget(groupBoxDescription);
 
     // === INGREDIENTS ===
-    groupBoxIngredients = new QGroupBox("🥘 Ingrédients");
+    groupBoxIngredients = new QGroupBox(tr("Ingredients"));
     QVBoxLayout *layoutIng = new QVBoxLayout(groupBoxIngredients);
 
     QHBoxLayout *layoutBoutonsIng = new QHBoxLayout();
-    btnAjouterIngredient = new QPushButton("➕ Ajouter");
-    btnSupprimerIngredient = new QPushButton("➖ Supprimer");
+    btnAjouterIngredient = new QPushButton(tr("Add"));
+    btnSupprimerIngredient = new QPushButton(tr("Delete"));
     btnAjouterIngredient->setEnabled(false);
     btnSupprimerIngredient->setEnabled(false);
 
@@ -220,7 +219,7 @@ void MainWindow::setupDetailPanel()
     tableWidgetIngredients->setEnabled(false);
 
     // Tooltip pour indiquer le double-clic
-    tableWidgetIngredients->setToolTip("Double-cliquez sur un ingrédient pour le modifier");
+    tableWidgetIngredients->setToolTip(tr("Double-click on an ingredient to edit it"));
 
     layoutIng->addWidget(tableWidgetIngredients);
 
@@ -233,26 +232,26 @@ void MainWindow::setupDetailPanel()
 void MainWindow::setupMenus()
 {
     // Menu Fichier
-    QMenu *menuFichier = menuBar()->addMenu("📁 Fichier");
+    QMenu *menuFichier = menuBar()->addMenu(tr("File"));
 
-    actionOuvrir = new QAction("📂 Ouvrir...", this);
+    actionOuvrir = new QAction(tr("Open ..."), this);
     actionOuvrir->setShortcut(QKeySequence::Open);
     menuFichier->addAction(actionOuvrir);
 
-    actionSauvegarder = new QAction("💾 Sauvegarder", this);
+    actionSauvegarder = new QAction(tr("Save"), this);
     actionSauvegarder->setShortcut(QKeySequence::Save);
     menuFichier->addAction(actionSauvegarder);
 
     menuFichier->addSeparator();
 
-    actionQuitter = new QAction("🚪 Quitter", this);
+    actionQuitter = new QAction(tr("Quit"), this);
     actionQuitter->setShortcut(QKeySequence::Quit);
     menuFichier->addAction(actionQuitter);
 
     // Menu Edition
-    QMenu *menuEdition = menuBar()->addMenu("✏️ Édition");
+    QMenu *menuEdition = menuBar()->addMenu(tr("Edit"));
 
-    actionModeEdition = new QAction("🔧 Mode Édition", this);
+    actionModeEdition = new QAction(tr("Edition mode"), this);
     actionModeEdition->setCheckable(true);
     actionModeEdition->setShortcut(QKeySequence("Ctrl+E"));
     menuEdition->addAction(actionModeEdition);
@@ -306,7 +305,7 @@ void MainWindow::chargerRecettesParDefaut()
     QFile fichier(":/Recettes/recettes.xml");
 
     if (fichier.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Chargement XML par défaut...";
+        qDebug() << tr("Default xml loading ...");
         QTextStream stream(&fichier);
         QString contenu = stream.readAll();
         fichier.close();
@@ -316,17 +315,17 @@ void MainWindow::chargerRecettesParDefaut()
 
         try {
             auto recette = std::make_unique<Recette>(ss);
-            qDebug() << "Recette chargée:" << *recette;
+            qDebug() << tr("Charged recipe:") << *recette;
 
             recettes.push_back(std::move(recette));
             mettreAJourListeRecettes();
 
         } catch (const std::exception& e) {
-            qDebug() << "Erreur parsing XML:" << e.what();
+            qDebug() << tr("Error parsing XML:") << e.what();
         }
     } else {
-        qDebug() << "Fichier de ressources non trouvé";
-        statusBar()->showMessage("Aucune recette par défaut - Utilisez Fichier > Ouvrir");
+        qDebug() << tr("Resource file not found");
+        statusBar()->showMessage(tr("No default recipe - Use File > Open"));
     }
 }
 
@@ -390,7 +389,7 @@ void MainWindow::onRecetteSelectionnee()
         afficherRecette(recetteActuelle);
         btnSupprimerRecette->setEnabled(true);
 
-        qDebug() << "Recette sélectionnée:" << QString::fromStdString(recetteActuelle->getNom());
+        qDebug() << tr("Selected recipe:") << QString::fromStdString(recetteActuelle->getNom());
 
     } else {
         recetteActuelle = nullptr;
@@ -439,7 +438,7 @@ void MainWindow::afficherRecette(Recette* recette)
     mettreAJourTableIngredients();
 
     // Titre
-    labelTitreDetail->setText(QString("📄 Détails : %1")
+    labelTitreDetail->setText(QString(tr("Details : %1"))
                                   .arg(QString::fromStdString(recette->getNom())));
 
     // 3. SAUVEGARDER LES DONNÉES ORIGINALES
@@ -455,7 +454,7 @@ void MainWindow::afficherRecette(Recette* recette)
         connecterSignauxModification();
     }
 
-    qDebug() << "Recette affichée, donneesModifiees =" << donneesModifiees << ", modeEdition =" << modeEdition;
+    qDebug() << tr("Recipe displayed, Modified Data =") << donneesModifiees << ", modeEdition =" << modeEdition;
 }
 
 void MainWindow::mettreAJourTableIngredients()
@@ -503,7 +502,7 @@ void MainWindow::viderFormulaire()
     dateEditDate->setDate(QDate::currentDate());
     textEditDescription->clear();
     tableWidgetIngredients->setRowCount(0);
-    labelTitreDetail->setText("📄 Sélectionnez une recette");
+    labelTitreDetail->setText(tr("Select a recipe"));
 
     // Remettre l'état propre
     donneesModifiees = false;
@@ -518,10 +517,10 @@ void MainWindow::onModeEditionToggled(bool actif)
 
     if (actif) {
         connecterSignauxModification();
-        statusBar()->showMessage("🔧 Mode édition activé");
+        statusBar()->showMessage(tr("Edition mode active"));
     } else {
         deconnecterSignauxModification();
-        statusBar()->showMessage("📖 Mode lecture");
+        statusBar()->showMessage(tr("Lecture mode"));
 
         if (donneesModifiees && !confirmerAbandonModifications()) {
             actionModeEdition->setChecked(true);
@@ -594,9 +593,9 @@ void MainWindow::onDonneesModifiees()
     donneesModifiees = true;
     btnSauvegarder->setEnabled(true);
     btnAnnuler->setEnabled(true);
-    statusBar()->showMessage("⚠️ Modifications non sauvegardées", 2000);
+    statusBar()->showMessage(tr("Modifications not saved"), 2000);
 
-    qDebug() << "Données modifiées détectées";
+    qDebug() << tr("Modified data detected");
 }
 
 void MainWindow::onSauvegarder()
@@ -611,7 +610,7 @@ void MainWindow::onSauvegarder()
     btnAnnuler->setEnabled(false);
 
     mettreAJourListeRecettes();
-    statusBar()->showMessage("✅ Recette sauvegardée", 2000);
+    statusBar()->showMessage(tr("Recipe saved"), 2000);
 }
 
 void MainWindow::onAnnuler()
@@ -624,7 +623,7 @@ void MainWindow::onAnnuler()
     btnSauvegarder->setEnabled(false);
     btnAnnuler->setEnabled(false);
 
-    statusBar()->showMessage("↩️ Modifications annulées", 2000);
+    statusBar()->showMessage(tr("Modifications canceled"), 2000);
 }
 
 void MainWindow::sauvegarderRecetteActuelle()
@@ -653,7 +652,7 @@ void MainWindow::sauvegarderRecetteActuelle()
     // Les ingrédients sont déjà sauvegardés automatiquement lors de l'ajout/suppression
     // via les méthodes onAjouterIngredient() et onSupprimerIngredient()
 
-    qDebug() << "Recette sauvegardée:" << *recetteActuelle;
+    qDebug() << tr("Recipe saved :") << *recetteActuelle;
 }
 
 void MainWindow::sauvegarderDonneesOriginales()
@@ -703,9 +702,9 @@ bool MainWindow::confirmerAbandonModifications()
 
     QMessageBox::StandardButton reponse = QMessageBox::question(
         this,
-        "Modifications non sauvegardées",
-        "Des modifications n'ont pas été sauvegardées.\n"
-        "Voulez-vous les abandonner ?",
+        tr("Modifications not saved"),
+        tr("Modifications haven't been saved.\n"
+        "Would you like to cancel it ?"),
         QMessageBox::Yes | QMessageBox::No,
         QMessageBox::No
         );
@@ -747,7 +746,7 @@ void MainWindow::onNouvelleRecette()
     // Activer le mode édition automatiquement
     actionModeEdition->setChecked(true);
 
-    statusBar()->showMessage("➕ Nouvelle recette créée", 2000);
+    statusBar()->showMessage(tr("new recipe created"), 2000);
 }
 
 void MainWindow::onSupprimerRecette()
@@ -757,8 +756,8 @@ void MainWindow::onSupprimerRecette()
 
     QMessageBox::StandardButton reponse = QMessageBox::question(
         this,
-        "Supprimer la recette",
-        QString("Êtes-vous sûr de vouloir supprimer la recette '%1' ?")
+        tr("Delete the recipe"),
+        QString(tr("Are you sure you want to delete the '%1' recipe?"))
             .arg(QString::fromStdString(recettes[index]->getNom())),
         QMessageBox::Yes | QMessageBox::No,
         QMessageBox::No
@@ -769,7 +768,7 @@ void MainWindow::onSupprimerRecette()
         mettreAJourListeRecettes();
         viderFormulaire();
         recetteActuelle = nullptr;
-        statusBar()->showMessage("🗑️ Recette supprimée", 2000);
+        statusBar()->showMessage(tr("Recipe deleted"), 2000);
     }
 }
 
@@ -789,20 +788,20 @@ void MainWindow::onAjouterIngredient()
     if (!modeEdition || !recetteActuelle) return;
 
     bool ok;
-    QString nom = QInputDialog::getText(this, "Nouvel ingrédient",
-                                        "Nom de l'ingrédient:",
+    QString nom = QInputDialog::getText(this, tr("New ingredient"),
+                                        tr("Name of the ingredient:"),
                                         QLineEdit::Normal, "", &ok);
 
     if (!ok || nom.isEmpty()) return;
 
-    double quantite = QInputDialog::getDouble(this, "Quantité",
-                                              "Quantité:",
+    double quantite = QInputDialog::getDouble(this, tr("Quantity"),
+                                              tr("Quantity:"),
                                               1.0, 0.0, 9999.99, 2, &ok);
 
     if (!ok) return;
 
-    QString unite = QInputDialog::getText(this, "Unité",
-                                          "Unité (g, ml, pièce, etc.):",
+    QString unite = QInputDialog::getText(this, tr("Unity="),
+                                          tr("Unity (French unity such as :g, ml, pièce, etc.):"),
                                           QLineEdit::Normal, "g", &ok);
 
     if (!ok) return;
@@ -822,11 +821,11 @@ void MainWindow::onAjouterIngredient()
         // Marquer comme modifié
         onDonneesModifiees();
 
-        statusBar()->showMessage("➕ Ingrédient ajouté avec succès", 2000);
+        statusBar()->showMessage(tr("Ingredient added successfully"), 2000);
 
     } catch (const std::exception& e) {
-        QMessageBox::warning(this, "Erreur",
-                             QString("Erreur lors de l'ajout de l'ingrédient : %1").arg(e.what()));
+        QMessageBox::warning(this, tr("Error"),
+                             QString(tr("Error while adding the ingredient : %1")).arg(e.what()));
     }
 }
 
@@ -843,8 +842,8 @@ void MainWindow::onSupprimerIngredient()
 
     QMessageBox::StandardButton reponse = QMessageBox::question(
         this,
-        "Supprimer l'ingrédient",
-        QString("Êtes-vous sûr de vouloir supprimer l'ingrédient '%1' ?").arg(nomIngredient),
+        tr("Delete the ingredient"),
+        QString(tr("Are you sure you want to delete the '%1' ingredient ?")).arg(nomIngredient),
         QMessageBox::Yes | QMessageBox::No,
         QMessageBox::No
         );
@@ -860,11 +859,11 @@ void MainWindow::onSupprimerIngredient()
             // Marquer comme modifié
             onDonneesModifiees();
 
-            statusBar()->showMessage(QString("➖ Ingrédient '%1' supprimé avec succès").arg(nomIngredient), 2000);
+            statusBar()->showMessage(QString(tr("'%1' ingredient deleted successfully")).arg(nomIngredient), 2000);
 
         } catch (const std::exception& e) {
-            QMessageBox::warning(this, "Erreur",
-                                 QString("Erreur lors de la suppression : %1").arg(e.what()));
+            QMessageBox::warning(this, tr("Error"),
+                                 QString(tr("Error while deleting : %1")).arg(e.what()));
         }
     }
 }
@@ -890,23 +889,23 @@ void MainWindow::onModifierIngredient()
     bool ok;
 
     // Modifier le nom
-    QString nouveauNom = QInputDialog::getText(this, "Modifier l'ingrédient",
-                                               "Nom de l'ingrédient:",
+    QString nouveauNom = QInputDialog::getText(this, tr("Modify the ingredient"),
+                                               tr("Name of the ingredient:"),
                                                QLineEdit::Normal, nomActuel, &ok);
 
     if (!ok || nouveauNom.isEmpty()) return;
 
     // Modifier la quantité
-    double nouvelleQuantite = QInputDialog::getDouble(this, "Modifier la quantité",
-                                                      "Quantité:",
+    double nouvelleQuantite = QInputDialog::getDouble(this, tr("Modify the quantity"),
+                                                      tr("Quantity:"),
                                                       quantiteActuelle.toDouble(),
                                                       0.0, 9999.99, 2, &ok);
 
     if (!ok) return;
 
     // Modifier l'unité
-    QString nouvelleUnite = QInputDialog::getText(this, "Modifier l'unité",
-                                                  "Unité (g, ml, pièce, etc.):",
+    QString nouvelleUnite = QInputDialog::getText(this, tr("Modify the unity"),
+                                                  tr("Unity (French unity such as :g, ml, pièce, etc.):"),
                                                   QLineEdit::Normal, uniteActuelle, &ok);
 
     if (!ok) return;
@@ -927,11 +926,11 @@ void MainWindow::onModifierIngredient()
         // Marquer comme modifié
         onDonneesModifiees();
 
-        statusBar()->showMessage(QString("✏️ Ingrédient '%1' modifié avec succès").arg(nouveauNom), 2000);
+        statusBar()->showMessage(QString(tr("'%1' ingredient modified successfully")).arg(nouveauNom), 2000);
 
     } catch (const std::exception& e) {
-        QMessageBox::warning(this, "Erreur",
-                             QString("Erreur lors de la modification : %1").arg(e.what()));
+        QMessageBox::warning(this, tr("Error"),
+                             QString(tr("Error while modifying : %1")).arg(e.what()));
     }
 }
 
@@ -939,9 +938,9 @@ void MainWindow::onParcourirPhoto()
 {
     QString fichier = QFileDialog::getOpenFileName(
         this,
-        "Sélectionner une photo",
+        tr("Select a picture"),
         "",
-        "Images (*.png *.jpg *.jpeg *.bmp *.gif)"
+        tr("Pictures (*.png *.jpg *.jpeg *.bmp *.gif)")
         );
 
     if (!fichier.isEmpty()) {
@@ -957,10 +956,10 @@ void MainWindow::ouvrirFichier()
 
     QString fichier = QFileDialog::getOpenFileName(
         this,
-        "Ouvrir un fichier de recettes",
+        tr("Open a recipe file"),
         "",
-        "Fichiers de recettes (*.xml *.json);;Fichiers XML (*.xml);;Fichiers JSON (*.json);;Tous les fichiers (*)"
-        );
+        tr("Recipe files (*.xml *.json);;XML files (*.xml);;JSON files (*.json);;All files (*)"
+           ));
 
     if (fichier.isEmpty()) return;
 
@@ -972,8 +971,8 @@ void MainWindow::ouvrirFichier()
     } else if (extension == "json") {
         chargerRecetteJSON(fichier);
     } else {
-        QMessageBox::warning(this, "Erreur",
-                             "Format de fichier non reconnu. Veuillez choisir un fichier XML ou JSON.");
+        QMessageBox::warning(this, tr("Error"),
+                             tr("Unrecognized file format. Please choose an XML or JSON file."));
     }
 }
 
@@ -982,8 +981,8 @@ void MainWindow::chargerRecetteXML(const QString &fichier)
     QFile file(fichier);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "Erreur",
-                             QString("Impossible d'ouvrir le fichier : %1").arg(fichier));
+        QMessageBox::warning(this, tr("Error"),
+                             QString(tr("Cannot open the file : %1")).arg(fichier));
         return;
     }
 
@@ -1000,11 +999,11 @@ void MainWindow::chargerRecetteXML(const QString &fichier)
         recettes.push_back(std::move(recette));
         mettreAJourListeRecettes();
 
-        statusBar()->showMessage(QString("📁 Fichier XML chargé : %1").arg(fichier), 3000);
+        statusBar()->showMessage(QString(tr("XML file charged: %1")).arg(fichier), 3000);
 
     } catch (const std::exception& e) {
-        QMessageBox::warning(this, "Erreur de parsing",
-                             QString("Erreur lors du chargement : %1").arg(e.what()));
+        QMessageBox::warning(this, tr("Parsing error"),
+                             QString(tr("Error while loading : %1")).arg(e.what()));
     }
 }
 
@@ -1013,8 +1012,8 @@ void MainWindow::chargerRecetteJSON(const QString &fichier)
     QFile file(fichier);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QMessageBox::warning(this, "Erreur",
-                             QString("Impossible d'ouvrir le fichier : %1").arg(fichier));
+        QMessageBox::warning(this, tr("Error"),
+                             QString(tr("Cannot open the file : %1")).arg(fichier));
         return;
     }
 
@@ -1026,8 +1025,8 @@ void MainWindow::chargerRecetteJSON(const QString &fichier)
     QJsonDocument document = QJsonDocument::fromJson(contenu.toUtf8(), &parseError);
 
     if (parseError.error != QJsonParseError::NoError) {
-        QMessageBox::warning(this, "Erreur JSON",
-                             QString("Erreur de parsing JSON : %1").arg(parseError.errorString()));
+        QMessageBox::warning(this, tr("Error JSON"),
+                             QString(tr("Parsing JSON error : %1")).arg(parseError.errorString()));
         return;
     }
 
@@ -1046,11 +1045,11 @@ void MainWindow::chargerRecetteJSON(const QString &fichier)
         }
 
         mettreAJourListeRecettes();
-        statusBar()->showMessage(QString("📁 Fichier JSON chargé : %1").arg(fichier), 3000);
+        statusBar()->showMessage(QString(tr("JSON file loaded: %1")).arg(fichier), 3000);
 
     } catch (const std::exception& e) {
-        QMessageBox::warning(this, "Erreur de parsing",
-                             QString("Erreur lors du chargement : %1").arg(e.what()));
+        QMessageBox::warning(this, tr("Parsing error"),
+                             QString(tr("Error while loading : %1")).arg(e.what()));
     }
 }
 
