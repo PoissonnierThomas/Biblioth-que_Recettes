@@ -63,7 +63,7 @@ public:
     void modifierIngredient(Ingredient* ancien, Ingredient* nouveau);
     void modifierIngredientParIndex(int index, const std::string& nom, double quantite, const std::string& unite);
     void viderIngredients();
-
+    static std::vector<std::unique_ptr<Recette>> chargerDepuisFlux(std::istream& is);
 
     // Opérateurs
     friend std::ostream& operator<<(std::ostream &os, const Recette &R);

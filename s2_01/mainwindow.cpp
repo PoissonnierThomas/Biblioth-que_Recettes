@@ -986,9 +986,7 @@ void MainWindow::chargerRecetteXML(const QString &fichier)
     std::stringstream ss(contenuStd);
 
     try {
-        auto recette = std::make_unique<Recette>(ss);
-        recettes.clear();
-        recettes.push_back(std::move(recette));
+        recettes = Recette::chargerDepuisFlux(ss);
         mettreAJourListeRecettes();
 
         statusBar()->showMessage(QString(tr("XML file loaded: %1")).arg(fichier), 3000);

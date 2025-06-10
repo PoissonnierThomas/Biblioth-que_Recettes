@@ -273,3 +273,16 @@ QDebug operator<<(QDebug debug, const Recette& r)
 
     return debug;
 }
+
+std::vector<std::unique_ptr<Recette>> Recette::chargerDepuisFlux(std::istream& is) {
+    std::vector<std::unique_ptr<Recette>> recettes;
+
+    while (is.good()) {
+        auto recette = std::make_unique<Recette>(is);
+        if (!recette->getNom().empty()) {
+            recettes.push_back(std::move(recette));
+        }
+    }
+
+    return recettes;
+}
