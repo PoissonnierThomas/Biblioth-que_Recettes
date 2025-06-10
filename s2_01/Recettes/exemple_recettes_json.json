@@ -10,36 +10,36 @@
     "description": "Poulet basquaise maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Sel",
-        "quantite": 747.7,
+        "nom": "Poulet",
+        "quantite": 800,
+        "unite": "g"
+      },
+      {
+        "nom": "Poivrons",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "nom": "Tomates",
+        "quantite": 400,
         "unite": "g"
       },
       {
         "nom": "Oignons",
-        "quantite": 360.7,
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Thon",
-        "quantite": 409.4,
-        "unite": "g"
-      },
-      {
-        "nom": "Maïs",
-        "quantite": 457.0,
-        "unite": "g"
-      },
-      {
-        "nom": "Chocolat",
-        "quantite": 662.1,
-        "unite": "g"
+        "nom": "Ail",
+        "quantite": 3,
+        "unite": "gousses"
       }
     ]
   },
   {
     "nom": "Riz au curry",
     "photo": "riz_au_curry.jpg",
-    "categorie": "Dessert",
+    "categorie": "plat",
     "createur": "Chef B",
     "nombre_personnes": 6,
     "prix": 7.84,
@@ -47,24 +47,29 @@
     "description": "Riz au curry maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Poivre",
-        "quantite": 430.4,
+        "nom": "Riz",
+        "quantite": 500,
         "unite": "g"
       },
       {
-        "nom": "Tomates",
-        "quantite": 434.4,
+        "nom": "Curry",
+        "quantite": 20,
         "unite": "g"
       },
       {
-        "nom": "Sel",
-        "quantite": 197.8,
+        "nom": "Oignons",
+        "quantite": 150,
         "unite": "g"
       },
       {
-        "nom": "Lait",
-        "quantite": 322.4,
+        "nom": "Lait de coco",
+        "quantite": 400,
         "unite": "ml"
+      },
+      {
+        "nom": "Poulet",
+        "quantite": 300,
+        "unite": "g"
       }
     ]
   },
@@ -79,18 +84,28 @@
     "description": "Lasagnes maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Vanille",
-        "quantite": 368.1,
+        "nom": "Pâtes à lasagne",
+        "quantite": 250,
         "unite": "g"
       },
       {
-        "nom": "Sucre",
-        "quantite": 260.2,
+        "nom": "Viande hachée",
+        "quantite": 400,
         "unite": "g"
       },
       {
-        "nom": "Pâtes",
-        "quantite": 384.0,
+        "nom": "Tomates",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "nom": "Oignons",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "nom": "Fromage râpé",
+        "quantite": 200,
         "unite": "g"
       }
     ]
@@ -98,7 +113,7 @@
   {
     "nom": "Pizza Margherita",
     "photo": "pizza_margherita.jpg",
-    "categorie": "Dessert",
+    "categorie": "plat",
     "createur": "Chef D",
     "nombre_personnes": 5,
     "prix": 19.62,
@@ -106,29 +121,29 @@
     "description": "Pizza Margherita maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Beurre",
-        "quantite": 272.7,
+        "nom": "Pâte à pizza",
+        "quantite": 300,
         "unite": "g"
-      },
-      {
-        "nom": "Pomme",
-        "quantite": 426.6,
-        "unite": "g"
-      },
-      {
-        "nom": "Poulet",
-        "quantite": 142.7,
-        "unite": "g"
-      },
-      {
-        "nom": "Oeufs",
-        "quantite": 639.9,
-        "unite": "pièces"
       },
       {
         "nom": "Tomates",
-        "quantite": 753.9,
+        "quantite": 200,
         "unite": "g"
+      },
+      {
+        "nom": "Mozzarella",
+        "quantite": 250,
+        "unite": "g"
+      },
+      {
+        "nom": "Basilic",
+        "quantite": 10,
+        "unite": "g"
+      },
+      {
+        "nom": "Huile d'olive",
+        "quantite": 20,
+        "unite": "ml"
       }
     ]
   },
@@ -143,18 +158,28 @@
     "description": "Gratin dauphinois maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Thon",
-        "quantite": 513.0,
+        "nom": "Pommes de terre",
+        "quantite": 1000,
         "unite": "g"
       },
       {
-        "nom": "Sucre",
-        "quantite": 769.3,
-        "unite": "g"
+        "nom": "Crème",
+        "quantite": 400,
+        "unite": "ml"
       },
       {
-        "nom": "Chocolat",
-        "quantite": 389.5,
+        "nom": "Lait",
+        "quantite": 200,
+        "unite": "ml"
+      },
+      {
+        "nom": "Ail",
+        "quantite": 2,
+        "unite": "gousses"
+      },
+      {
+        "nom": "Fromage râpé",
+        "quantite": 100,
         "unite": "g"
       }
     ]
@@ -162,7 +187,7 @@
   {
     "nom": "Soupe à l'oignon",
     "photo": "soupe_à_l'oignon.jpg",
-    "categorie": "Dessert",
+    "categorie": "soupe",
     "createur": "Chef F",
     "nombre_personnes": 7,
     "prix": 11.41,
@@ -170,23 +195,28 @@
     "description": "Soupe à l'oignon maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Maïs",
-        "quantite": 589.7,
-        "unite": "g"
-      },
-      {
-        "nom": "Oeufs",
-        "quantite": 616.8,
-        "unite": "pièces"
-      },
-      {
         "nom": "Oignons",
-        "quantite": 555.3,
+        "quantite": 600,
         "unite": "g"
       },
       {
-        "nom": "Vanille",
-        "quantite": 103.4,
+        "nom": "Bouillon de boeuf",
+        "quantite": 1000,
+        "unite": "ml"
+      },
+      {
+        "nom": "Beurre",
+        "quantite": 50,
+        "unite": "g"
+      },
+      {
+        "nom": "Farine",
+        "quantite": 20,
+        "unite": "g"
+      },
+      {
+        "nom": "Pain",
+        "quantite": 100,
         "unite": "g"
       }
     ]
@@ -194,7 +224,7 @@
   {
     "nom": "Crêpes sucrées",
     "photo": "crêpes_sucrées.jpg",
-    "categorie": "Plat",
+    "categorie": "dessert",
     "createur": "Chef G",
     "nombre_personnes": 6,
     "prix": 8.98,
@@ -202,23 +232,28 @@
     "description": "Crêpes sucrées maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Oignons",
-        "quantite": 211.3,
+        "nom": "Farine",
+        "quantite": 250,
         "unite": "g"
       },
       {
-        "nom": "Chocolat",
-        "quantite": 138.4,
+        "nom": "Lait",
+        "quantite": 500,
+        "unite": "ml"
+      },
+      {
+        "nom": "Oeufs",
+        "quantite": 3,
+        "unite": "pièces"
+      },
+      {
+        "nom": "Sucre",
+        "quantite": 50,
         "unite": "g"
       },
       {
-        "nom": "Pâtes",
-        "quantite": 132.0,
-        "unite": "g"
-      },
-      {
-        "nom": "Vanille",
-        "quantite": 459.9,
+        "nom": "Beurre",
+        "quantite": 30,
         "unite": "g"
       }
     ]
@@ -226,7 +261,7 @@
   {
     "nom": "Couscous",
     "photo": "couscous.jpg",
-    "categorie": "Dessert",
+    "categorie": "plat",
     "createur": "Chef H",
     "nombre_personnes": 6,
     "prix": 8.91,
@@ -234,28 +269,28 @@
     "description": "Couscous maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Vanille",
-        "quantite": 566.6,
+        "nom": "Semoule",
+        "quantite": 400,
         "unite": "g"
       },
       {
-        "nom": "Farine",
-        "quantite": 217.0,
+        "nom": "Pois chiches",
+        "quantite": 150,
         "unite": "g"
       },
       {
-        "nom": "Beurre",
-        "quantite": 793.8,
+        "nom": "Carottes",
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Pomme",
-        "quantite": 485.0,
+        "nom": "Courgettes",
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Oignons",
-        "quantite": 251.4,
+        "nom": "Agneau",
+        "quantite": 400,
         "unite": "g"
       }
     ]
@@ -271,31 +306,36 @@
     "description": "Tajine de légumes maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
+        "nom": "Carottes",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "nom": "Courgettes",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
         "nom": "Tomates",
-        "quantite": 148.4,
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Farine",
-        "quantite": 641.3,
+        "nom": "Pois chiches",
+        "quantite": 150,
         "unite": "g"
       },
       {
-        "nom": "Sucre",
-        "quantite": 157.6,
+        "nom": "Épices à tajine",
+        "quantite": 20,
         "unite": "g"
-      },
-      {
-        "nom": "Lait",
-        "quantite": 445.5,
-        "unite": "ml"
       }
     ]
   },
   {
     "nom": "Boeuf bourguignon",
     "photo": "boeuf_bourguignon.jpg",
-    "categorie": "Dessert",
+    "categorie": "plat",
     "createur": "Chef J",
     "nombre_personnes": 5,
     "prix": 13.66,
@@ -303,23 +343,28 @@
     "description": "Boeuf bourguignon maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Tomates",
-        "quantite": 621.4,
+        "nom": "Boeuf",
+        "quantite": 800,
         "unite": "g"
       },
       {
-        "nom": "Poivrons",
-        "quantite": 710.7,
+        "nom": "Vin rouge",
+        "quantite": 500,
+        "unite": "ml"
+      },
+      {
+        "nom": "Carottes",
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Cannelle",
-        "quantite": 518.8,
+        "nom": "Oignons",
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Riz",
-        "quantite": 493.4,
+        "nom": "Champignons",
+        "quantite": 150,
         "unite": "g"
       }
     ]
@@ -327,7 +372,7 @@
   {
     "nom": "Salade niçoise",
     "photo": "salade_niçoise.jpg",
-    "categorie": "Plat",
+    "categorie": "entrée",
     "createur": "Chef K",
     "nombre_personnes": 8,
     "prix": 17.47,
@@ -336,32 +381,27 @@
     "ingredients": [
       {
         "nom": "Tomates",
-        "quantite": 134.9,
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Sucre",
-        "quantite": 678.2,
+        "nom": "Thon",
+        "quantite": 150,
         "unite": "g"
       },
       {
-        "nom": "Cannelle",
-        "quantite": 111.5,
+        "nom": "Oeufs",
+        "quantite": 3,
+        "unite": "pièces"
+      },
+      {
+        "nom": "Haricots verts",
+        "quantite": 100,
         "unite": "g"
       },
       {
-        "nom": "Pâtes",
-        "quantite": 541.9,
-        "unite": "g"
-      },
-      {
-        "nom": "Chocolat",
-        "quantite": 694.4,
-        "unite": "g"
-      },
-      {
-        "nom": "Poivrons",
-        "quantite": 327.5,
+        "nom": "Olives noires",
+        "quantite": 50,
         "unite": "g"
       }
     ]
@@ -369,7 +409,7 @@
   {
     "nom": "Tarte au citron",
     "photo": "tarte_au_citron.jpg",
-    "categorie": "Dessert",
+    "categorie": "dessert",
     "createur": "Chef L",
     "nombre_personnes": 5,
     "prix": 13.39,
@@ -377,23 +417,28 @@
     "description": "Tarte au citron maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Sel",
-        "quantite": 388.8,
+        "nom": "Farine",
+        "quantite": 250,
         "unite": "g"
       },
       {
-        "nom": "Maïs",
-        "quantite": 565.1,
+        "nom": "Citron",
+        "quantite": 3,
+        "unite": "pièces"
+      },
+      {
+        "nom": "Oeufs",
+        "quantite": 4,
+        "unite": "pièces"
+      },
+      {
+        "nom": "Sucre",
+        "quantite": 150,
         "unite": "g"
       },
       {
-        "nom": "Vanille",
-        "quantite": 380.6,
-        "unite": "g"
-      },
-      {
-        "nom": "Thon",
-        "quantite": 775.7,
+        "nom": "Beurre",
+        "quantite": 100,
         "unite": "g"
       }
     ]
@@ -401,7 +446,7 @@
   {
     "nom": "Fondant au chocolat",
     "photo": "fondant_au_chocolat.jpg",
-    "categorie": "Plat",
+    "categorie": "dessert",
     "createur": "Chef M",
     "nombre_personnes": 2,
     "prix": 13.79,
@@ -409,28 +454,28 @@
     "description": "Fondant au chocolat maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
+        "nom": "Chocolat noir",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "nom": "Beurre",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "nom": "Sucre",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
         "nom": "Oeufs",
-        "quantite": 717.6,
+        "quantite": 4,
         "unite": "pièces"
       },
       {
-        "nom": "Ail",
-        "quantite": 561.6,
-        "unite": "gousses"
-      },
-      {
-        "nom": "Cannelle",
-        "quantite": 259.7,
-        "unite": "g"
-      },
-      {
-        "nom": "Maïs",
-        "quantite": 591.9,
-        "unite": "g"
-      },
-      {
-        "nom": "Sel",
-        "quantite": 54.0,
+        "nom": "Farine",
+        "quantite": 50,
         "unite": "g"
       }
     ]
@@ -438,7 +483,7 @@
   {
     "nom": "Gâteau au yaourt",
     "photo": "gâteau_au_yaourt.jpg",
-    "categorie": "Dessert",
+    "categorie": "dessert",
     "createur": "Chef N",
     "nombre_personnes": 2,
     "prix": 15.03,
@@ -446,31 +491,36 @@
     "description": "Gâteau au yaourt maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Pomme",
-        "quantite": 213.1,
+        "nom": "Yaourt nature",
+        "quantite": 125,
         "unite": "g"
       },
       {
-        "nom": "Sel",
-        "quantite": 479.7,
-        "unite": "g"
-      },
-      {
-        "nom": "Tomates",
-        "quantite": 95.1,
+        "nom": "Farine",
+        "quantite": 250,
         "unite": "g"
       },
       {
         "nom": "Sucre",
-        "quantite": 526.1,
+        "quantite": 150,
         "unite": "g"
+      },
+      {
+        "nom": "Oeufs",
+        "quantite": 3,
+        "unite": "pièces"
+      },
+      {
+        "nom": "Huile",
+        "quantite": 100,
+        "unite": "ml"
       }
     ]
   },
   {
     "nom": "Tarte Tatin",
     "photo": "tarte_tatin.jpg",
-    "categorie": "Plat",
+    "categorie": "dessert",
     "createur": "Chef O",
     "nombre_personnes": 3,
     "prix": 7.94,
@@ -478,31 +528,31 @@
     "description": "Tarte Tatin maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Lait",
-        "quantite": 188.0,
-        "unite": "ml"
-      },
-      {
-        "nom": "Sel",
-        "quantite": 764.0,
+        "nom": "Pommes",
+        "quantite": 800,
         "unite": "g"
       },
       {
-        "nom": "Farine",
-        "quantite": 236.0,
+        "nom": "Sucre",
+        "quantite": 150,
         "unite": "g"
       },
       {
-        "nom": "Ail",
-        "quantite": 710.1,
-        "unite": "gousses"
+        "nom": "Beurre",
+        "quantite": 100,
+        "unite": "g"
+      },
+      {
+        "nom": "Pâte brisée",
+        "quantite": 300,
+        "unite": "g"
       }
     ]
   },
   {
     "nom": "Chili con carne",
     "photo": "chili_con_carne.jpg",
-    "categorie": "Dessert",
+    "categorie": "plat",
     "createur": "Chef P",
     "nombre_personnes": 2,
     "prix": 19.65,
@@ -510,23 +560,28 @@
     "description": "Chili con carne maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Beurre",
-        "quantite": 728.3,
+        "nom": "Boeuf haché",
+        "quantite": 500,
         "unite": "g"
       },
       {
-        "nom": "Sel",
-        "quantite": 754.3,
+        "nom": "Haricots rouges",
+        "quantite": 300,
         "unite": "g"
       },
       {
-        "nom": "Pâtes",
-        "quantite": 217.4,
+        "nom": "Tomates",
+        "quantite": 300,
         "unite": "g"
       },
       {
-        "nom": "Poivre",
-        "quantite": 368.0,
+        "nom": "Oignons",
+        "quantite": 150,
+        "unite": "g"
+      },
+      {
+        "nom": "Épices chili",
+        "quantite": 20,
         "unite": "g"
       }
     ]
@@ -542,23 +597,28 @@
     "description": "Ratatouille maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Sucre",
-        "quantite": 279.6,
+        "nom": "Aubergines",
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Beurre",
-        "quantite": 128.3,
+        "nom": "Courgettes",
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Ail",
-        "quantite": 795.3,
-        "unite": "gousses"
+        "nom": "Poivrons",
+        "quantite": 200,
+        "unite": "g"
       },
       {
-        "nom": "Sel",
-        "quantite": 564.4,
+        "nom": "Tomates",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
+        "nom": "Oignons",
+        "quantite": 100,
         "unite": "g"
       }
     ]
@@ -566,7 +626,7 @@
   {
     "nom": "Blinis au saumon",
     "photo": "blinis_au_saumon.jpg",
-    "categorie": "Dessert",
+    "categorie": "entrée",
     "createur": "Chef R",
     "nombre_personnes": 4,
     "prix": 6.23,
@@ -574,29 +634,29 @@
     "description": "Blinis au saumon maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Ail",
-        "quantite": 768.9,
-        "unite": "gousses"
+        "nom": "Blinis",
+        "quantite": 12,
+        "unite": "pièces"
       },
       {
-        "nom": "Tomates",
-        "quantite": 166.0,
+        "nom": "Saumon fumé",
+        "quantite": 200,
         "unite": "g"
       },
       {
-        "nom": "Chocolat",
-        "quantite": 332.4,
+        "nom": "Crème fraîche",
+        "quantite": 100,
         "unite": "g"
       },
       {
-        "nom": "Lait",
-        "quantite": 797.4,
-        "unite": "ml"
+        "nom": "Aneth",
+        "quantite": 5,
+        "unite": "g"
       },
       {
-        "nom": "Maïs",
-        "quantite": 352.9,
-        "unite": "g"
+        "nom": "Citron",
+        "quantite": 1,
+        "unite": "pièce"
       }
     ]
   },
@@ -611,33 +671,28 @@
     "description": "Quiche lorraine maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
+        "nom": "Pâte brisée",
+        "quantite": 300,
+        "unite": "g"
+      },
+      {
+        "nom": "Lardons",
+        "quantite": 200,
+        "unite": "g"
+      },
+      {
         "nom": "Oeufs",
-        "quantite": 336.2,
+        "quantite": 3,
         "unite": "pièces"
       },
       {
-        "nom": "Maïs",
-        "quantite": 163.4,
-        "unite": "g"
+        "nom": "Crème fraîche",
+        "quantite": 200,
+        "unite": "ml"
       },
       {
-        "nom": "Beurre",
-        "quantite": 65.1,
-        "unite": "g"
-      },
-      {
-        "nom": "Poivrons",
-        "quantite": 565.8,
-        "unite": "g"
-      },
-      {
-        "nom": "Vanille",
-        "quantite": 627.9,
-        "unite": "g"
-      },
-      {
-        "nom": "Pomme",
-        "quantite": 785.3,
+        "nom": "Fromage râpé",
+        "quantite": 100,
         "unite": "g"
       }
     ]
@@ -645,7 +700,7 @@
   {
     "nom": "Mousse au chocolat",
     "photo": "mousse_au_chocolat.jpg",
-    "categorie": "Dessert",
+    "categorie": "dessert",
     "createur": "Chef T",
     "nombre_personnes": 3,
     "prix": 9.56,
@@ -653,19 +708,24 @@
     "description": "Mousse au chocolat maison préparé avec amour et des ingrédients frais.",
     "ingredients": [
       {
-        "nom": "Beurre",
-        "quantite": 621.6,
+        "nom": "Chocolat noir",
+        "quantite": 200,
         "unite": "g"
+      },
+      {
+        "nom": "Oeufs",
+        "quantite": 4,
+        "unite": "pièces"
       },
       {
         "nom": "Sucre",
-        "quantite": 339.8,
+        "quantite": 50,
         "unite": "g"
       },
       {
-        "nom": "Oignons",
-        "quantite": 195.8,
-        "unite": "g"
+        "nom": "Crème",
+        "quantite": 200,
+        "unite": "ml"
       }
     ]
   }
