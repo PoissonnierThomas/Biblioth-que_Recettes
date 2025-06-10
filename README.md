@@ -89,8 +89,8 @@ Application Qt de gestion de recettes de cuisine permettant l'affichage, l'édit
 
 ### Persistance
 
-- [ ] **Sauvegarde XML** - Export des modifications
-- [ ] **Sauvegarde JSON** - Export au format JSON
+- [x] **Sauvegarde XML** - Export des modifications
+- [x] **Sauvegarde JSON** - Export au format JSON
 - [ ] **Auto-sauvegarde** - Sauvegarde automatique
 
 ### Interface avancée

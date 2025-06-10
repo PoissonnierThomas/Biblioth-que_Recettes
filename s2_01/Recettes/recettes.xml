@@ -1,119 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <recettes>
-        <recette>
-            <nom>Brandade de morue</nom>
-            <photo>Brandade_de_morue.png</photo>
-            <catégorie>plat</catégorie>
-            <description>La brandade de morue est un mets à base de morue qui est du cabillaud séché et salé. Cette spécialité de Nîmes mais originaire d'Alès s'est répandue dans toute l'Occitanie, du Languedoc à la Ligurie, en passant par la Provence et le Roussillon, jusqu'aux Pays catalans.</description>
-            <description>Pour cette recette, il vous faudra :</description>
-            <description> - Un four</description>
-            <description> - Un plat en verre</description>
-            <description> - 15 minutes de préparation et 20 minutes de cuisson</description>
-            <description> </description>
-            <description> Etapes :</description>
-            <description> - Faire dessaler la morue en la faisant tremper dans l'eau 36 à 48 heures avant le moment de préparer la brandade (en changeant l'eau régulièrement).</description>
-            <description> - Faire cuire les pommes de terre et les écraser à la fourchette</description>
-            <description> - Emietter la morue dessalée et mélanger avec les pommes de terre écrasées, l'ail pilé et le persil haché</description>
-            <description> - Ajouter petit à petit l'huile d'olive</description>
-            <description> - Poivrer. Goûter et ressaler éventuellement</description>
-            <description> - Mettre la purée dans un plat allant au four et faire cuire 15 à 20 minutes. Passer sous le grill avant de servir.</description>
-            <nombre_personnes>4</nombre_personnes>
-            <prix>4</prix>
-            <createur>Jérôme Guyard</createur>
-            <date>30/10/2023</date>
-            <ingredient>
-                <nom>Pomme de terre</nom>
-                <quantite>500</quantite>
-                <unite>grammes</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Morue salée</nom>
-                <quantite>500</quantite>
-                <unite>grammes</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Persil</nom>
-                <quantite>1</quantite>
-                <unite>bouquet</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Sel</nom>
-                <quantite>10</quantite>
-                <unite>grammes</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Poivre</nom>
-                <quantite>5</quantite>
-                <unite>grammes</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Huile d'olive</nom>
-                <quantite>15</quantite>
-                <unite>mL</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Ail</nom>
-                <quantite>5</quantite>
-                <unite>grammes</unite>
-            </ingredient>
-        </recette>
+<recette>
+  <nom>Brandade de morue</nom>
+  <photo>Brandade_de_morue.png</photo>
+  <catégorie>plat</catégorie>
+  <createur>Jérôme Guyard</createur>
+  <nombre_personnes>4</nombre_personnes>
+  <prix>4</prix>
+  <date>30/10/2023</date>
+  <description>La brandade de morue est un mets à base de morue qui est du cabillaud séché et salé. Cette spécialité de Nîmes mais originaire d'Alès s'est répandue dans toute l'Occitanie, du Languedoc à la Ligurie, en passant par la Provence et le Roussillon, jusqu'aux Pays catalans.</description>
+  <description>Pour cette recette, il vous faudra :</description>
+  <description> - Un four</description>
+  <description> - Un plat en verre</description>
+  <description> - 15 minutes de préparation et 20 minutes de cuisson</description>
+  <description> </description>
+  <description> Etapes :</description>
+  <description> - Faire dessaler la morue en la faisant tremper dans l'eau 36 à 48 heures avant le moment de préparer la brandade (en changeant l'eau régulièrement).</description>
+  <description> - Faire cuire les pommes de terre et les écraser à la fourchette</description>
+  <description> - Emietter la morue dessalée et mélanger avec les pommes de terre écrasées, l'ail pilé et le persil haché</description>
+  <description> - Ajouter petit à petit l'huile d'olive</description>
+  <description> - Poivrer. Goûter et ressaler éventuellement</description>
+  <description> - Mettre la purée dans un plat allant au four et faire cuire 15 à 20 minutes. Passer sous le grill avant de servir.</description>
+  <ingredient>
+    <nom>Pomme de terre</nom>
+    <quantite>500</quantite>
+    <unite>grammes</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Morue salée</nom>
+    <quantite>500</quantite>
+    <unite>grammes</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Persil</nom>
+    <quantite>1</quantite>
+    <unite>bouquet</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Sel</nom>
+    <quantite>10</quantite>
+    <unite>grammes</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Poivre</nom>
+    <quantite>5</quantite>
+    <unite>grammes</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Huile d'olive</nom>
+    <quantite>15</quantite>
+    <unite>mL</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Ail</nom>
+    <quantite>5</quantite>
+    <unite>grammes</unite>
+  </ingredient>
+</recette>
 
-        <recette>
-            <nom>Flan pâtissier traditionnel</nom>
-            <photo>Flan.png</photo>
-            <catégorie>plat</catégorie>
-            <description>Un flan pâtissier est un mets popularisé par les pâtissiers, qui présente un flan sur une base de pâte brisée. Il peut être adapté aux goûts de chacun en ajoutant du caramel, de la noix de coco ou encore du chocolat. Cette pâtisserie devrait normalement s'appeler flan parisien, le véritable flan pâtissier ne comportant pas de pâte.</description>
-            <description>Pour cette recette, il vous faudra :</description>
-            <description> - Un four</description>
-            <description> - Un moule à tarte</description>
-            <description> - 20 minutes de préparation et 40 minutes de cuisson</description>
-            <description> </description>
-            <description> Etapes :</description>
-            <description> - Faire bouillir le lait avec la gousse de vanille fendue (dans le sens de la longueur).</description>
-            <description> - Pendant ce temps, mélanger la Maïzena (tamisée, c'est mieux) avec le sucre et ajouter les œufs bien battus</description>
-            <description> - Mélanger le tout </description>
-            <description> - Cuire la préparation à feu doux sans cesser de remuer pendant environ 1 à 2 minutes</description>
-            <description> - Préchauffer le four à 200°C (thermostat 6-7). Foncer un plat rectangulaire ou rond préalablement beurré avec la pâte brisée</description>
-            <description> - Piquer le fond, versez-y la préparation et lisser la surface</description>
-            <description> - Cuire pendant 30 à 40 minutes</description>
-            <description> - Laisser refroidir</description>
-            <nombre_personnes>8</nombre_personnes>
-            <prix>1</prix>
-            <createur>Alain Carvalho</createur>
-            <date>04/02/2024</date>
-            <ingredient>
-                <nom>Pâte brisée</nom>
-                <quantite>1</quantite>
-                <unite>pièce</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Sucre en poudre</nom>
-                <quantite>150</quantite>
-                <unite>grammes</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Maïzena</nom>
-                <quantite>90</quantite>
-                <unite>grammes</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Vanille</nom>
-                <quantite>1</quantite>
-                <unite>gousse</unite>
-            </ingredient>
-            <ingredient>
-                <nom>œufs</nom>
-                <quantite>4</quantite>
-                <unite>pièces</unite>
-            </ingredient>
-            <ingredient>
-                <nom>Lait</nom>
-                <quantite>1</quantite>
-                <unite>L</unite>
-            </ingredient>
-        </recette>
-        <recette>
+<recette>
+  <nom>Flan pâtissier traditionnel</nom>
+  <photo>Flan.png</photo>
+  <catégorie>plat</catégorie>
+  <createur>Alain Carvalho</createur>
+  <nombre_personnes>8</nombre_personnes>
+  <prix>1</prix>
+  <date>4/2/2024</date>
+  <description>Un flan pâtissier est un mets popularisé par les pâtissiers, qui présente un flan sur une base de pâte brisée. Il peut être adapté aux goûts de chacun en ajoutant du caramel, de la noix de coco ou encore du chocolat. Cette pâtisserie devrait normalement s'appeler flan parisien, le véritable flan pâtissier ne comportant pas de pâte.</description>
+  <description>Pour cette recette, il vous faudra :</description>
+  <description> - Un four</description>
+  <description> - Un moule à tarte</description>
+  <description> - 20 minutes de préparation et 40 minutes de cuisson</description>
+  <description> </description>
+  <description> Etapes :</description>
+  <description> - Faire bouillir le lait avec la gousse de vanille fendue (dans le sens de la longueur).</description>
+  <description> - Pendant ce temps, mélanger la Maïzena (tamisée, c'est mieux) avec le sucre et ajouter les œufs bien battus</description>
+  <description> - Mélanger le tout </description>
+  <description> - Cuire la préparation à feu doux sans cesser de remuer pendant environ 1 à 2 minutes</description>
+  <description> - Préchauffer le four à 200°C (thermostat 6-7). Foncer un plat rectangulaire ou rond préalablement beurré avec la pâte brisée</description>
+  <description> - Piquer le fond, versez-y la préparation et lisser la surface</description>
+  <description> - Cuire pendant 30 à 40 minutes</description>
+  <description> - Laisser refroidir</description>
+  <ingredient>
+    <nom>Pâte brisée</nom>
+    <quantite>1</quantite>
+    <unite>pièce</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Sucre en poudre</nom>
+    <quantite>150</quantite>
+    <unite>grammes</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Maïzena</nom>
+    <quantite>90</quantite>
+    <unite>grammes</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Vanille</nom>
+    <quantite>1</quantite>
+    <unite>gousse</unite>
+  </ingredient>
+  <ingredient>
+    <nom>œufs</nom>
+    <quantite>4</quantite>
+    <unite>pièces</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Lait</nom>
+    <quantite>1</quantite>
+    <unite>L</unite>
+  </ingredient>
+</recette>
 
-        </recette>
-        
-    </recettes>
+<recette>
+  <nom>Nouvelle Recette</nom>
+  <photo></photo>
+  <catégorie>Plat</catégorie>
+  <createur>Utilisateur</createur>
+  <nombre_personnes>4</nombre_personnes>
+  <prix>0</prix>
+  <date>10/6/2025</date>
+  <description>Description de la nouvelle recette</description>
+  <ingredient>
+    <nom>a</nom>
+    <quantite>1</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>b</nom>
+    <quantite>1</quantite>
+    <unite>g</unite>
+  </ingredient>
+</recette>
+
