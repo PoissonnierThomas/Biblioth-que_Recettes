@@ -5,7 +5,26 @@
         <file>Recettes/recettes.xml</file>
         
         <!-- Images depuis le dossier Recettes/images -->
-        <file>Recettes/images/Brandade_de_morue.png</file>
+        <file>Recettes/images/poulet_basquaise.jpg</file>
+        <file>Recettes/images/riz_au_curry.jpg</file>
+        <file>Recettes/images/lasagnes.jpg</file>
+        <file>Recettes/images/pizza_margherita.jpg</file>
+        <file>Recettes/images/gratin_dauphinois.jpg</file>
+        <file>Recettes/images/soupe_a_l_oignon.jpg</file>
+        <file>Recettes/images/crepes_sucrees.jpg</file>
+        <file>Recettes/images/couscous.jpg</file>
+        <file>Recettes/images/tajine_de_legumes.jpg</file>
+        <file>Recettes/images/boeuf_bourguignon.jpg</file>
+        <file>Recettes/images/salade_nicoise.jpg</file>
+        <file>Recettes/images/tarte_au_citron.jpg</file>
+        <file>Recettes/images/fondant_au_chocolat.jpg</file>
+        <file>Recettes/images/gateau_au_yaourt.jpg</file>
+        <file>Recettes/images/tarte_tatin.jpg</file>
+        <file>Recettes/images/chili_con_carne.jpg</file>
+        <file>Recettes/images/ratatouille.jpg</file>
+        <file>Recettes/images/blinis_au_saumon.jpg</file>
+        <file>Recettes/images/quiche_lorraine.jpg</file>
+        <file>Recettes/images/mousse_au_chocolat.jpg</file>
     </qresource>
     
     <!-- Organisation avec préfixes pour un accès plus propre -->
@@ -14,7 +33,26 @@
     </qresource>
     
     <qresource prefix="/images">
-        <file alias="brandade">Recettes/images/Brandade_de_morue.png</file>
+        <file alias="poulet_basquaise">Recettes/images/poulet_basquaise.jpg</file>
+        <file alias="riz_curry">Recettes/images/riz_au_curry.jpg</file>
+        <file alias="lasagnes">Recettes/images/lasagnes.jpg</file>
+        <file alias="pizza">Recettes/images/pizza_margherita.jpg</file>
+        <file alias="gratin">Recettes/images/gratin_dauphinois.jpg</file>
+        <file alias="soupe">Recettes/images/soupe_a_l_oignon.jpg</file>
+        <file alias="crepes">Recettes/images/crepes_sucrees.jpg</file>
+        <file alias="couscous">Recettes/images/couscous.jpg</file>
+        <file alias="tajine">Recettes/images/tajine_de_legumes.jpg</file>
+        <file alias="boeuf">Recettes/images/boeuf_bourguignon.jpg</file>
+        <file alias="salade">Recettes/images/salade_nicoise.jpg</file>
+        <file alias="tarte_citron">Recettes/images/tarte_au_citron.jpg</file>
+        <file alias="fondant">Recettes/images/fondant_au_chocolat.jpg</file>
+        <file alias="gateau">Recettes/images/gateau_au_yaourt.jpg</file>
+        <file alias="tarte_tatin">Recettes/images/tarte_tatin.jpg</file>
+        <file alias="chili">Recettes/images/chili_con_carne.jpg</file>
+        <file alias="ratatouille">Recettes/images/ratatouille.jpg</file>
+        <file alias="blinis">Recettes/images/blinis_au_saumon.jpg</file>
+        <file alias="quiche">Recettes/images/quiche_lorraine.jpg</file>
+        <file alias="mousse">Recettes/images/mousse_au_chocolat.jpg</file>
     </qresource>
 
     <qresource prefix="/translations">

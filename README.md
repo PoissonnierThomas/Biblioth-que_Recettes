@@ -74,16 +74,16 @@ Application Qt de gestion de recettes de cuisine permettant l'affichage, l'édit
 ### Interface utilisateur
 
 - [x] **Interface Master/Detail** - Liste + détails
-- [ ] **Mode édition/lecture** - Basculement sécurisé
-- [ ] **Recherche en temps réel** - Filtrage des recettes
-- [ ] **Gestion des modifications** - Sauvegarde/annulation
+- [x] **Mode édition/lecture** - Basculement sécurisé
+- [x] **Recherche en temps réel** - Filtrage des recettes
+- [x] **Gestion des modifications** - Sauvegarde/annulation
 - [x] **Interface responsive** - Adaptation à la taille d'écran
 - [x] **Interface traduisible** - Adaptation au langage utilisateur (anglais/français)
 
 ### Fonctionnalités métier
 
-- [ ] **CRUD recettes** - Création, lecture, modification, suppression
-- [ ] **Gestion des ingrédients** - Ajout/suppression dynamique
+- [x] **CRUD recettes** - Création, lecture, modification, suppression
+- [x] **Gestion des ingrédients** - Ajout/suppression dynamique
 - [x] **Validation des données** - Contrôles de saisie
 - [x] **Catégories prédéfinies** - Entrée, Plat, Dessert, Entremet, Soupe
 
@@ -91,13 +91,11 @@ Application Qt de gestion de recettes de cuisine permettant l'affichage, l'édit
 
 - [x] **Sauvegarde XML** - Export des modifications
 - [x] **Sauvegarde JSON** - Export au format JSON
-- [ ] **Auto-sauvegarde** - Sauvegarde automatique
 
 ### Interface avancée
 
 - [ ] **Thèmes visuels** - Dark/Light mode
-- [ ] **Aperçu des images** - Affichage des photos de recettes
-- [ ] **Impression** - Export PDF des recettes
+- [x] **Aperçu des images** - Affichage des photos de recettes
 
 ## Technologies utilisées
 

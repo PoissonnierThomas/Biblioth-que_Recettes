@@ -39,7 +39,7 @@
   {
     "nom": "Riz au curry",
     "photo": "riz_au_curry.jpg",
-    "categorie": "plat",
+    "categorie": "Plat",
     "createur": "Chef B",
     "nombre_personnes": 6,
     "prix": 7.84,
@@ -113,7 +113,7 @@
   {
     "nom": "Pizza Margherita",
     "photo": "pizza_margherita.jpg",
-    "categorie": "plat",
+    "categorie": "Plat",
     "createur": "Chef D",
     "nombre_personnes": 5,
     "prix": 19.62,
@@ -186,8 +186,8 @@
   },
   {
     "nom": "Soupe à l'oignon",
-    "photo": "soupe_à_l'oignon.jpg",
-    "categorie": "soupe",
+    "photo": "soupe_a_l_oignon.jpg",
+    "categorie": "Soupe",
     "createur": "Chef F",
     "nombre_personnes": 7,
     "prix": 11.41,
@@ -223,8 +223,8 @@
   },
   {
     "nom": "Crêpes sucrées",
-    "photo": "crêpes_sucrées.jpg",
-    "categorie": "dessert",
+    "photo": "crepes_sucrees.jpg",
+    "categorie": "Dessert",
     "createur": "Chef G",
     "nombre_personnes": 6,
     "prix": 8.98,
@@ -261,7 +261,7 @@
   {
     "nom": "Couscous",
     "photo": "couscous.jpg",
-    "categorie": "plat",
+    "categorie": "Plat",
     "createur": "Chef H",
     "nombre_personnes": 6,
     "prix": 8.91,
@@ -297,7 +297,7 @@
   },
   {
     "nom": "Tajine de légumes",
-    "photo": "tajine_de_légumes.jpg",
+    "photo": "tajine_de_legumes.jpg",
     "categorie": "Plat",
     "createur": "Chef I",
     "nombre_personnes": 7,
@@ -335,7 +335,7 @@
   {
     "nom": "Boeuf bourguignon",
     "photo": "boeuf_bourguignon.jpg",
-    "categorie": "plat",
+    "categorie": "Plat",
     "createur": "Chef J",
     "nombre_personnes": 5,
     "prix": 13.66,
@@ -371,8 +371,8 @@
   },
   {
     "nom": "Salade niçoise",
-    "photo": "salade_niçoise.jpg",
-    "categorie": "entrée",
+    "photo": "salade_nicoise.jpg",
+    "categorie": "Entrée",
     "createur": "Chef K",
     "nombre_personnes": 8,
     "prix": 17.47,
@@ -409,7 +409,7 @@
   {
     "nom": "Tarte au citron",
     "photo": "tarte_au_citron.jpg",
-    "categorie": "dessert",
+    "categorie": "Dessert",
     "createur": "Chef L",
     "nombre_personnes": 5,
     "prix": 13.39,
@@ -446,7 +446,7 @@
   {
     "nom": "Fondant au chocolat",
     "photo": "fondant_au_chocolat.jpg",
-    "categorie": "dessert",
+    "categorie": "Dessert",
     "createur": "Chef M",
     "nombre_personnes": 2,
     "prix": 13.79,
@@ -482,8 +482,8 @@
   },
   {
     "nom": "Gâteau au yaourt",
-    "photo": "gâteau_au_yaourt.jpg",
-    "categorie": "dessert",
+    "photo": "gateau_au_yaourt.jpg",
+    "categorie": "Dessert",
     "createur": "Chef N",
     "nombre_personnes": 2,
     "prix": 15.03,
@@ -520,7 +520,7 @@
   {
     "nom": "Tarte Tatin",
     "photo": "tarte_tatin.jpg",
-    "categorie": "dessert",
+    "categorie": "Dessert",
     "createur": "Chef O",
     "nombre_personnes": 3,
     "prix": 7.94,
@@ -552,7 +552,7 @@
   {
     "nom": "Chili con carne",
     "photo": "chili_con_carne.jpg",
-    "categorie": "plat",
+    "categorie": "Plat",
     "createur": "Chef P",
     "nombre_personnes": 2,
     "prix": 19.65,
@@ -626,7 +626,7 @@
   {
     "nom": "Blinis au saumon",
     "photo": "blinis_au_saumon.jpg",
-    "categorie": "entrée",
+    "categorie": "Entrée",
     "createur": "Chef R",
     "nombre_personnes": 4,
     "prix": 6.23,
@@ -700,7 +700,7 @@
   {
     "nom": "Mousse au chocolat",
     "photo": "mousse_au_chocolat.jpg",
-    "categorie": "dessert",
+    "categorie": "Dessert",
     "createur": "Chef T",
     "nombre_personnes": 3,
     "prix": 9.56,

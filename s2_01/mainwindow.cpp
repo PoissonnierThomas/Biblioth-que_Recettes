@@ -188,9 +188,13 @@ void MainWindow::setupDetailPanel()
 
     layoutScroll->addWidget(groupBoxDescription);
 
-    // Ingrédients
+    // Ingrédients avec image
     groupBoxIngredients = new QGroupBox(tr("Ingredients"));
-    QVBoxLayout *layoutIng = new QVBoxLayout(groupBoxIngredients);
+    QHBoxLayout *layoutIngredientsPrincipal = new QHBoxLayout(groupBoxIngredients);
+
+    // Partie gauche : tableau et boutons des ingrédients
+    QWidget *widgetIngredientsGauche = new QWidget();
+    QVBoxLayout *layoutIng = new QVBoxLayout(widgetIngredientsGauche);
 
     QHBoxLayout *layoutBoutonsIng = new QHBoxLayout();
     btnAjouterIngredient = new QPushButton(tr("Add"));
@@ -212,17 +216,48 @@ void MainWindow::setupDetailPanel()
     tableWidgetIngredients->setSelectionBehavior(QAbstractItemView::SelectRows);
     tableWidgetIngredients->horizontalHeader()->setStretchLastSection(true);
     tableWidgetIngredients->setEnabled(false);
-
     tableWidgetIngredients->setToolTip(tr("Double-click on an ingredient to edit it"));
 
     layoutIng->addWidget(tableWidgetIngredients);
+
+    // Partie droite : image de la recette
+    QWidget *widgetImageDroite = new QWidget();
+    QVBoxLayout *layoutImageDroite = new QVBoxLayout(widgetImageDroite);
+
+    QLabel *labelTitreImage = new QLabel(tr("Recipe picture"));
+    QFont fontTitreImage = labelTitreImage->font();
+    fontTitreImage.setBold(true);
+    labelTitreImage->setFont(fontTitreImage);
+    labelTitreImage->setAlignment(Qt::AlignCenter);
+
+    labelImageRecette = new QLabel();
+    labelImageRecette->setAlignment(Qt::AlignCenter);
+    labelImageRecette->setMinimumSize(200, 200);
+    labelImageRecette->setMaximumSize(300, 300);
+    labelImageRecette->setScaledContents(true);
+    labelImageRecette->setStyleSheet(
+        "QLabel { "
+        "    border: 2px solid #cccccc; "
+        "    border-radius: 8px; "
+        "    background-color: #f8f8f8; "
+        "    color: #888888; "
+        "}"
+        );
+    labelImageRecette->setText(tr("No image available"));
+
+    layoutImageDroite->addWidget(labelTitreImage);
+    layoutImageDroite->addWidget(labelImageRecette);
+    layoutImageDroite->addStretch();
+
+    // Assemblage horizontal : tableau à gauche, image à droite
+    layoutIngredientsPrincipal->addWidget(widgetIngredientsGauche, 2); // 2/3 de l'espace
+    layoutIngredientsPrincipal->addWidget(widgetImageDroite, 1);       // 1/3 de l'espace
 
     layoutScroll->addWidget(groupBoxIngredients);
 
     scrollArea->setWidget(scrollContent);
     layoutDetail->addWidget(scrollArea);
 }
-
 void MainWindow::setupMenus()
 {
     QMenu *menuFichier = menuBar()->addMenu(tr("File"));
@@ -482,6 +517,8 @@ void MainWindow::afficherRecette(Recette* recette)
         connecterSignauxModification();
     }
 
+    chargerImageRecette(QString::fromStdString(recette->getPhoto()));
+
     qDebug() << tr("Recipe displayed, Modified Data =") << donneesModifiees << ", modeEdition =" << modeEdition;
 }
 
@@ -528,6 +565,8 @@ void MainWindow::viderFormulaire()
     textEditDescription->clear();
     tableWidgetIngredients->setRowCount(0);
     labelTitreDetail->setText(tr("Select a recipe"));
+    labelImageRecette->clear();
+    labelImageRecette->setText(tr("No image available"));
 
     donneesModifiees = false;
     btnSauvegarder->setEnabled(false);
@@ -1315,5 +1354,42 @@ void MainWindow::sauvegarderRecettesXML(const QString& fichier)
 
     file.close();
     statusBar()->showMessage(tr("Recipes saved to XML."), 3000);
+}
+
+
+void MainWindow::chargerImageRecette(const QString& nomImage)
+{
+    if (nomImage.isEmpty()) {
+        labelImageRecette->clear();
+        labelImageRecette->setText(tr("No image available"));
+        return;
+    }
+
+    // Construire le chemin vers l'image dans les ressources
+    QString cheminImage = QString(":/Recettes/images/%1").arg(nomImage);
+
+    QPixmap pixmap(cheminImage);
+
+    if (pixmap.isNull()) {
+        // Si l'image n'est pas trouvée dans les ressources, essayer un chemin relatif
+        QString cheminRelatif = QString("Recettes/images/%1").arg(nomImage);
+        pixmap.load(cheminRelatif);
+    }
+
+    if (!pixmap.isNull()) {
+        // Redimensionner l'image en conservant les proportions
+        QPixmap pixmapRedimensionne = pixmap.scaled(
+            labelImageRecette->size(),
+            Qt::KeepAspectRatio,
+            Qt::SmoothTransformation
+            );
+        labelImageRecette->setPixmap(pixmapRedimensionne);
+
+        qDebug() << tr("Image loaded:") << nomImage;
+    } else {
+        labelImageRecette->clear();
+        labelImageRecette->setText(tr("Image not found: %1").arg(nomImage));
+        qDebug() << tr("Image not found:") << cheminImage;
+    }
 }
 

@@ -9,60 +9,65 @@
   <date>6/7/2025</date>
   <description>Poulet basquaise maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Sel</nom>
-    <quantite>747.7</quantite>
+    <nom>Poulet</nom>
+    <quantite>800</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Poivrons</nom>
+    <quantite>300</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Tomates</nom>
+    <quantite>400</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
     <nom>Oignons</nom>
-    <quantite>360.7</quantite>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Thon</nom>
-    <quantite>409.4</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Maïs</nom>
-    <quantite>457</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Chocolat</nom>
-    <quantite>662.1</quantite>
-    <unite>g</unite>
+    <nom>Ail</nom>
+    <quantite>3</quantite>
+    <unite>gousses</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Riz au curry</nom>
   <photo>riz_au_curry.jpg</photo>
-  <catégorie>Dessert</catégorie>
+  <catégorie>Plat</catégorie>
   <createur>Chef B</createur>
   <nombre_personnes>6</nombre_personnes>
   <prix>7.84</prix>
   <date>6/10/2024</date>
   <description>Riz au curry maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Poivre</nom>
-    <quantite>430.4</quantite>
+    <nom>Riz</nom>
+    <quantite>500</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Tomates</nom>
-    <quantite>434.4</quantite>
+    <nom>Curry</nom>
+    <quantite>20</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Sel</nom>
-    <quantite>197.8</quantite>
+    <nom>Oignons</nom>
+    <quantite>150</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Lait</nom>
-    <quantite>322.4</quantite>
+    <nom>Lait de coco</nom>
+    <quantite>400</quantite>
     <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Poulet</nom>
+    <quantite>300</quantite>
+    <unite>g</unite>
   </ingredient>
 </recette>
 
@@ -76,18 +81,28 @@
   <date>7/10/2025</date>
   <description>Lasagnes maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Vanille</nom>
-    <quantite>368.1</quantite>
+    <nom>Pâtes à lasagne</nom>
+    <quantite>250</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Sucre</nom>
-    <quantite>260.2</quantite>
+    <nom>Viande hachée</nom>
+    <quantite>400</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Pâtes</nom>
-    <quantite>384</quantite>
+    <nom>Tomates</nom>
+    <quantite>300</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Oignons</nom>
+    <quantite>150</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Fromage râpé</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
@@ -95,36 +110,36 @@
 <recette>
   <nom>Pizza Margherita</nom>
   <photo>pizza_margherita.jpg</photo>
-  <catégorie>Dessert</catégorie>
+  <catégorie>Plat</catégorie>
   <createur>Chef D</createur>
   <nombre_personnes>5</nombre_personnes>
   <prix>19.62</prix>
   <date>11/9/2025</date>
   <description>Pizza Margherita maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Beurre</nom>
-    <quantite>272.7</quantite>
+    <nom>Pâte à pizza</nom>
+    <quantite>300</quantite>
     <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Pomme</nom>
-    <quantite>426.6</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Poulet</nom>
-    <quantite>142.7</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Oeufs</nom>
-    <quantite>639.9</quantite>
-    <unite>pièces</unite>
   </ingredient>
   <ingredient>
     <nom>Tomates</nom>
-    <quantite>753.9</quantite>
+    <quantite>200</quantite>
     <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Mozzarella</nom>
+    <quantite>250</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Basilic</nom>
+    <quantite>10</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Huile d'olive</nom>
+    <quantite>20</quantite>
+    <unite>ml</unite>
   </ingredient>
 </recette>
 
@@ -138,80 +153,100 @@
   <date>18/8/2025</date>
   <description>Gratin dauphinois maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Thon</nom>
-    <quantite>513</quantite>
+    <nom>Pommes de terre</nom>
+    <quantite>1000</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Sucre</nom>
-    <quantite>769.3</quantite>
-    <unite>g</unite>
+    <nom>Crème</nom>
+    <quantite>400</quantite>
+    <unite>ml</unite>
   </ingredient>
   <ingredient>
-    <nom>Chocolat</nom>
-    <quantite>389.5</quantite>
+    <nom>Lait</nom>
+    <quantite>200</quantite>
+    <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Ail</nom>
+    <quantite>2</quantite>
+    <unite>gousses</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Fromage râpé</nom>
+    <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Soupe à l'oignon</nom>
-  <photo>soupe_à_l'oignon.jpg</photo>
-  <catégorie>Dessert</catégorie>
+  <photo>soupe_a_l_oignon.jpg</photo>
+  <catégorie>Soupe</catégorie>
   <createur>Chef F</createur>
   <nombre_personnes>7</nombre_personnes>
   <prix>11.41</prix>
   <date>28/1/2023</date>
   <description>Soupe à l'oignon maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Maïs</nom>
-    <quantite>589.7</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Oeufs</nom>
-    <quantite>616.8</quantite>
-    <unite>pièces</unite>
-  </ingredient>
-  <ingredient>
     <nom>Oignons</nom>
-    <quantite>555.3</quantite>
+    <quantite>600</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Vanille</nom>
-    <quantite>103.4</quantite>
+    <nom>Bouillon de boeuf</nom>
+    <quantite>1000</quantite>
+    <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Beurre</nom>
+    <quantite>50</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Farine</nom>
+    <quantite>20</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Pain</nom>
+    <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Crêpes sucrées</nom>
-  <photo>crêpes_sucrées.jpg</photo>
-  <catégorie>Plat</catégorie>
+  <photo>crepes_sucrees.jpg</photo>
+  <catégorie>Dessert</catégorie>
   <createur>Chef G</createur>
   <nombre_personnes>6</nombre_personnes>
   <prix>8.98</prix>
   <date>4/3/2023</date>
   <description>Crêpes sucrées maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Oignons</nom>
-    <quantite>211.3</quantite>
+    <nom>Farine</nom>
+    <quantite>250</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Chocolat</nom>
-    <quantite>138.4</quantite>
+    <nom>Lait</nom>
+    <quantite>500</quantite>
+    <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Oeufs</nom>
+    <quantite>3</quantite>
+    <unite>pièces</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Sucre</nom>
+    <quantite>50</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Pâtes</nom>
-    <quantite>132</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Vanille</nom>
-    <quantite>459.9</quantite>
+    <nom>Beurre</nom>
+    <quantite>30</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
@@ -219,42 +254,42 @@
 <recette>
   <nom>Couscous</nom>
   <photo>couscous.jpg</photo>
-  <catégorie>Dessert</catégorie>
+  <catégorie>Plat</catégorie>
   <createur>Chef H</createur>
   <nombre_personnes>6</nombre_personnes>
   <prix>8.91</prix>
   <date>24/9/2024</date>
   <description>Couscous maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Vanille</nom>
-    <quantite>566.6</quantite>
+    <nom>Semoule</nom>
+    <quantite>400</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Farine</nom>
-    <quantite>217</quantite>
+    <nom>Pois chiches</nom>
+    <quantite>150</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Beurre</nom>
-    <quantite>793.8</quantite>
+    <nom>Carottes</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Pomme</nom>
-    <quantite>485</quantite>
+    <nom>Courgettes</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Oignons</nom>
-    <quantite>251.4</quantite>
+    <nom>Agneau</nom>
+    <quantite>400</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Tajine de légumes</nom>
-  <photo>tajine_de_légumes.jpg</photo>
+  <photo>tajine_de_legumes.jpg</photo>
   <catégorie>Plat</catégorie>
   <createur>Chef I</createur>
   <nombre_personnes>7</nombre_personnes>
@@ -262,62 +297,72 @@
   <date>15/11/2024</date>
   <description>Tajine de légumes maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
+    <nom>Carottes</nom>
+    <quantite>300</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Courgettes</nom>
+    <quantite>300</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
     <nom>Tomates</nom>
-    <quantite>148.4</quantite>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Farine</nom>
-    <quantite>641.3</quantite>
+    <nom>Pois chiches</nom>
+    <quantite>150</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Sucre</nom>
-    <quantite>157.6</quantite>
+    <nom>Épices à tajine</nom>
+    <quantite>20</quantite>
     <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Lait</nom>
-    <quantite>445.5</quantite>
-    <unite>ml</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Boeuf bourguignon</nom>
   <photo>boeuf_bourguignon.jpg</photo>
-  <catégorie>Dessert</catégorie>
+  <catégorie>Plat</catégorie>
   <createur>Chef J</createur>
   <nombre_personnes>5</nombre_personnes>
   <prix>13.66</prix>
   <date>5/8/2023</date>
   <description>Boeuf bourguignon maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Tomates</nom>
-    <quantite>621.4</quantite>
+    <nom>Boeuf</nom>
+    <quantite>800</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Poivrons</nom>
-    <quantite>710.7</quantite>
+    <nom>Vin rouge</nom>
+    <quantite>500</quantite>
+    <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Carottes</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Cannelle</nom>
-    <quantite>518.8</quantite>
+    <nom>Oignons</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Riz</nom>
-    <quantite>493.4</quantite>
+    <nom>Champignons</nom>
+    <quantite>150</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Salade niçoise</nom>
-  <photo>salade_niçoise.jpg</photo>
-  <catégorie>Plat</catégorie>
+  <photo>salade_nicoise.jpg</photo>
+  <catégorie>Entrée</catégorie>
   <createur>Chef K</createur>
   <nombre_personnes>8</nombre_personnes>
   <prix>17.47</prix>
@@ -325,32 +370,27 @@
   <description>Salade niçoise maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
     <nom>Tomates</nom>
-    <quantite>134.9</quantite>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Sucre</nom>
-    <quantite>678.2</quantite>
+    <nom>Thon</nom>
+    <quantite>150</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Cannelle</nom>
-    <quantite>111.5</quantite>
+    <nom>Oeufs</nom>
+    <quantite>3</quantite>
+    <unite>pièces</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Haricots verts</nom>
+    <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Pâtes</nom>
-    <quantite>541.9</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Chocolat</nom>
-    <quantite>694.4</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Poivrons</nom>
-    <quantite>327.5</quantite>
+    <nom>Olives noires</nom>
+    <quantite>50</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
@@ -365,23 +405,28 @@
   <date>13/7/2024</date>
   <description>Tarte au citron maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Sel</nom>
-    <quantite>388.8</quantite>
+    <nom>Farine</nom>
+    <quantite>250</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Maïs</nom>
-    <quantite>565.1</quantite>
+    <nom>Citron</nom>
+    <quantite>3</quantite>
+    <unite>pièces</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Oeufs</nom>
+    <quantite>4</quantite>
+    <unite>pièces</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Sucre</nom>
+    <quantite>150</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Vanille</nom>
-    <quantite>380.6</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Thon</nom>
-    <quantite>775.7</quantite>
+    <nom>Beurre</nom>
+    <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
@@ -389,42 +434,42 @@
 <recette>
   <nom>Fondant au chocolat</nom>
   <photo>fondant_au_chocolat.jpg</photo>
-  <catégorie>Plat</catégorie>
+  <catégorie>Dessert</catégorie>
   <createur>Chef M</createur>
   <nombre_personnes>2</nombre_personnes>
   <prix>13.79</prix>
   <date>31/3/2024</date>
   <description>Fondant au chocolat maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
+    <nom>Chocolat noir</nom>
+    <quantite>200</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Beurre</nom>
+    <quantite>150</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Sucre</nom>
+    <quantite>100</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
     <nom>Oeufs</nom>
-    <quantite>717.6</quantite>
+    <quantite>4</quantite>
     <unite>pièces</unite>
   </ingredient>
   <ingredient>
-    <nom>Ail</nom>
-    <quantite>561.6</quantite>
-    <unite>gousses</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Cannelle</nom>
-    <quantite>259.7</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Maïs</nom>
-    <quantite>591.9</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Sel</nom>
-    <quantite>54</quantite>
+    <nom>Farine</nom>
+    <quantite>50</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Gâteau au yaourt</nom>
-  <photo>gâteau_au_yaourt.jpg</photo>
+  <photo>gateau_au_yaourt.jpg</photo>
   <catégorie>Dessert</catégorie>
   <createur>Chef N</createur>
   <nombre_personnes>2</nombre_personnes>
@@ -432,85 +477,95 @@
   <date>1/9/2023</date>
   <description>Gâteau au yaourt maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Pomme</nom>
-    <quantite>213.1</quantite>
+    <nom>Yaourt nature</nom>
+    <quantite>125</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Sel</nom>
-    <quantite>479.7</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Tomates</nom>
-    <quantite>95.1</quantite>
+    <nom>Farine</nom>
+    <quantite>250</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
     <nom>Sucre</nom>
-    <quantite>526.1</quantite>
+    <quantite>150</quantite>
     <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Oeufs</nom>
+    <quantite>3</quantite>
+    <unite>pièces</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Huile</nom>
+    <quantite>100</quantite>
+    <unite>ml</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Tarte Tatin</nom>
   <photo>tarte_tatin.jpg</photo>
-  <catégorie>Plat</catégorie>
+  <catégorie>Dessert</catégorie>
   <createur>Chef O</createur>
   <nombre_personnes>3</nombre_personnes>
   <prix>7.94</prix>
   <date>11/6/2025</date>
   <description>Tarte Tatin maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Lait</nom>
-    <quantite>188</quantite>
-    <unite>ml</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Sel</nom>
-    <quantite>764</quantite>
+    <nom>Pommes</nom>
+    <quantite>800</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Farine</nom>
-    <quantite>236</quantite>
+    <nom>Sucre</nom>
+    <quantite>150</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Ail</nom>
-    <quantite>710.1</quantite>
-    <unite>gousses</unite>
+    <nom>Beurre</nom>
+    <quantite>100</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Pâte brisée</nom>
+    <quantite>300</quantite>
+    <unite>g</unite>
   </ingredient>
 </recette>
 
 <recette>
   <nom>Chili con carne</nom>
   <photo>chili_con_carne.jpg</photo>
-  <catégorie>Dessert</catégorie>
+  <catégorie>Plat</catégorie>
   <createur>Chef P</createur>
   <nombre_personnes>2</nombre_personnes>
   <prix>19.65</prix>
   <date>15/3/2025</date>
   <description>Chili con carne maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Beurre</nom>
-    <quantite>728.3</quantite>
+    <nom>Boeuf haché</nom>
+    <quantite>500</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Sel</nom>
-    <quantite>754.3</quantite>
+    <nom>Haricots rouges</nom>
+    <quantite>300</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Pâtes</nom>
-    <quantite>217.4</quantite>
+    <nom>Tomates</nom>
+    <quantite>300</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Poivre</nom>
-    <quantite>368</quantite>
+    <nom>Oignons</nom>
+    <quantite>150</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Épices chili</nom>
+    <quantite>20</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
@@ -525,23 +580,28 @@
   <date>7/3/2025</date>
   <description>Ratatouille maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Sucre</nom>
-    <quantite>279.6</quantite>
+    <nom>Aubergines</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Beurre</nom>
-    <quantite>128.3</quantite>
+    <nom>Courgettes</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Ail</nom>
-    <quantite>795.3</quantite>
-    <unite>gousses</unite>
+    <nom>Poivrons</nom>
+    <quantite>200</quantite>
+    <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Sel</nom>
-    <quantite>564.4</quantite>
+    <nom>Tomates</nom>
+    <quantite>200</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Oignons</nom>
+    <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
@@ -549,36 +609,36 @@
 <recette>
   <nom>Blinis au saumon</nom>
   <photo>blinis_au_saumon.jpg</photo>
-  <catégorie>Dessert</catégorie>
+  <catégorie>Entrée</catégorie>
   <createur>Chef R</createur>
   <nombre_personnes>4</nombre_personnes>
   <prix>6.23</prix>
   <date>17/11/2025</date>
   <description>Blinis au saumon maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Ail</nom>
-    <quantite>768.9</quantite>
-    <unite>gousses</unite>
+    <nom>Blinis</nom>
+    <quantite>12</quantite>
+    <unite>pièces</unite>
   </ingredient>
   <ingredient>
-    <nom>Tomates</nom>
-    <quantite>166</quantite>
+    <nom>Saumon fumé</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Chocolat</nom>
-    <quantite>332.4</quantite>
+    <nom>Crème fraîche</nom>
+    <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Lait</nom>
-    <quantite>797.4</quantite>
-    <unite>ml</unite>
+    <nom>Aneth</nom>
+    <quantite>5</quantite>
+    <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Maïs</nom>
-    <quantite>352.9</quantite>
-    <unite>g</unite>
+    <nom>Citron</nom>
+    <quantite>1</quantite>
+    <unite>pièce</unite>
   </ingredient>
 </recette>
 
@@ -592,33 +652,28 @@
   <date>23/2/2023</date>
   <description>Quiche lorraine maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
+    <nom>Pâte brisée</nom>
+    <quantite>300</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Lardons</nom>
+    <quantite>200</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
     <nom>Oeufs</nom>
-    <quantite>336.2</quantite>
+    <quantite>3</quantite>
     <unite>pièces</unite>
   </ingredient>
   <ingredient>
-    <nom>Maïs</nom>
-    <quantite>163.4</quantite>
-    <unite>g</unite>
+    <nom>Crème fraîche</nom>
+    <quantite>200</quantite>
+    <unite>ml</unite>
   </ingredient>
   <ingredient>
-    <nom>Beurre</nom>
-    <quantite>65.1</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Poivrons</nom>
-    <quantite>565.8</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Vanille</nom>
-    <quantite>627.9</quantite>
-    <unite>g</unite>
-  </ingredient>
-  <ingredient>
-    <nom>Pomme</nom>
-    <quantite>785.3</quantite>
+    <nom>Fromage râpé</nom>
+    <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
 </recette>
@@ -633,19 +688,23 @@
   <date>23/9/2024</date>
   <description>Mousse au chocolat maison préparé avec amour et des ingrédients frais.</description>
   <ingredient>
-    <nom>Beurre</nom>
-    <quantite>621.6</quantite>
+    <nom>Chocolat noir</nom>
+    <quantite>200</quantite>
     <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Oeufs</nom>
+    <quantite>4</quantite>
+    <unite>pièces</unite>
   </ingredient>
   <ingredient>
     <nom>Sucre</nom>
-    <quantite>339.8</quantite>
+    <quantite>50</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>
-    <nom>Oignons</nom>
-    <quantite>195.8</quantite>
-    <unite>g</unite>
+    <nom>Crème</nom>
+    <quantite>200</quantite>
+    <unite>ml</unite>
   </ingredient>
 </recette>
-

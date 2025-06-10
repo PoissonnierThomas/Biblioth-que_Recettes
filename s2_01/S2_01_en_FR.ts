@@ -404,5 +404,26 @@ Voulez-vous les abandonner ?</translation>
         <translation>Fichier JSON chargé : %1</translation>
     </message>
 
+    <!-- Image de la recette -->
+    <message>
+        <source>Recipe picture</source>
+        <translation>Photo de la Recette</translation>
+    </message>
+    <message>
+        <source>No image available</source>
+        <translation>Aucune image disponible</translation>
+    </message>
+    <message>
+        <source>Image loaded:</source>
+        <translation>Image chargée :</translation>
+    </message>
+    <message>
+        <source>Image not found: %1</source>
+        <translation>Image non trouvée : %1</translation>
+    </message>
+    <message>
+        <source>Image not found:</source>
+        <translation>Image non trouvée :</translation>
+    </message>
 </context>
 </TS>

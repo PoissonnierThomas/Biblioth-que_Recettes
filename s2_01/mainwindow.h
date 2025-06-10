@@ -32,6 +32,7 @@
 #include <QCloseEvent>
 #include <QResizeEvent>
 #include <memory>
+#include <QPixmap>
 #include <vector>
 #include "recette.h"
 
@@ -112,6 +113,10 @@ private:
     QPushButton *btnAjouterIngredient;
     QPushButton *btnSupprimerIngredient;
 
+    // Affichage de l'image
+    QLabel *labelImageRecette;
+    QGroupBox *groupBoxImage;
+
     // Menu
     QAction *actionOuvrir;
     QAction *actionSauvegarder;
@@ -170,6 +175,7 @@ private:
     void appliquerStyle();
     QString formaterPrix(double prix);
     QString categorieVersInterface(const std::string& categorie);
+    void chargerImageRecette(const QString& nomImage);
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
