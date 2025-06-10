@@ -234,7 +234,8 @@ void MainWindow::setupMenus()
     actionSauvegarder = new QAction(tr("Save"), this);
     actionSauvegarder->setShortcut(QKeySequence::Save);
     menuFichier->addAction(actionSauvegarder);
-
+    connect(actionSauvegarder, &QAction::triggered,
+            this, &MainWindow::sauvegarderFichier);
     menuFichier->addSeparator();
 
     actionQuitter = new QAction(tr("Quit"), this);
@@ -1195,3 +1196,124 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
     event->accept();
 }
+
+void MainWindow::sauvegarderFichier()
+{
+    if (recettes.empty()) {
+        QMessageBox::warning(this, tr("Save"), tr("No recipe to save."));
+        return;
+    }
+
+    QString fichier = QFileDialog::getSaveFileName(
+        this,
+        tr("Save recipe file"),
+        "",
+        tr("JSON files (*.json);;XML files (*.xml);;All files (*)")
+        );
+
+    if (fichier.isEmpty()) return;
+
+    QFileInfo fileInfo(fichier);
+    QString extension = fileInfo.suffix().toLower();
+
+    if (extension == "json") {
+        sauvegarderRecettesJSON(fichier);
+    } else if (extension == "xml") {
+        sauvegarderRecettesXML(fichier);
+    } else {
+        QMessageBox::warning(this, tr("Error"),
+                             tr("Please choose a valid XML or JSON file extension."));
+    }
+}
+
+void MainWindow::sauvegarderRecettesJSON(const QString& fichier)
+{
+    QJsonArray array;
+
+    for (const auto& recette : recettes) {
+        QJsonObject obj;
+        obj["nom"] = QString::fromStdString(recette->getNom());
+        obj["photo"] = QString::fromStdString(recette->getPhoto());
+        obj["categorie"] = QString::fromStdString(recette->getCategorie());
+        obj["createur"] = QString::fromStdString(recette->getCreateur());
+        obj["nombre_personnes"] = static_cast<int>(recette->getConvives());
+        obj["prix"] = recette->getPrix();
+
+        const Date& d = recette->getDate();
+        obj["date"] = QString("%1/%2/%3").arg(d.jour).arg(d.mois).arg(d.annee);
+
+        QJsonArray descArray;
+        for (const auto& s : recette->getDescription()) {
+            descArray.append(QString::fromStdString(s));
+        }
+        obj["description"] = descArray;
+
+        QJsonArray ingArray;
+        for (const auto* ing : recette->getIngredients()) {
+            QJsonObject ingObj;
+            ingObj["nom"] = QString::fromStdString(ing->getNom());
+            ingObj["quantite"] = ing->getQuantite();
+            ingObj["unite"] = QString::fromStdString(ing->getUnite());
+            ingArray.append(ingObj);
+        }
+        obj["ingredients"] = ingArray;
+
+        array.append(obj);
+    }
+
+    QJsonDocument doc(array);
+
+    QFile file(fichier);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, tr("Save error"), tr("Cannot write to file."));
+        return;
+    }
+
+    file.write(doc.toJson(QJsonDocument::Indented));
+    file.close();
+
+    statusBar()->showMessage(tr("Recipes saved to JSON."), 3000);
+}
+
+void MainWindow::sauvegarderRecettesXML(const QString& fichier)
+{
+    QFile file(fichier);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::warning(this, tr("Save error"), tr("Cannot write to file."));
+        return;
+    }
+
+    QTextStream out(&file);
+    out << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+
+    for (const auto& recette : recettes) {
+        out << "<recette>\n";
+        out << "  <nom>" << QString::fromStdString(recette->getNom()) << "</nom>\n";
+        out << "  <photo>" << QString::fromStdString(recette->getPhoto()) << "</photo>\n";
+        out << "  <catégorie>" << QString::fromStdString(recette->getCategorie()) << "</catégorie>\n";
+        out << "  <createur>" << QString::fromStdString(recette->getCreateur()) << "</createur>\n";
+        out << "  <nombre_personnes>" << recette->getConvives() << "</nombre_personnes>\n";
+        out << "  <prix>" << recette->getPrix() << "</prix>\n";
+
+        const Date& d = recette->getDate();
+        out << "  <date>" << d.jour << "/" << d.mois << "/" << d.annee << "</date>\n";
+
+        for (const auto& desc : recette->getDescription()) {
+            out << "  <description>" << QString::fromStdString(desc) << "</description>\n";
+        }
+
+        for (const auto* ing : recette->getIngredients()) {
+            out << "  <ingredient>\n";
+            out << "    <nom>" << QString::fromStdString(ing->getNom()) << "</nom>\n";
+            out << "    <quantite>" << ing->getQuantite() << "</quantite>\n";
+            out << "    <unite>" << QString::fromStdString(ing->getUnite()) << "</unite>\n";
+            out << "  </ingredient>\n";
+        }
+
+        out << "</recette>\n\n";
+    }
+
+    file.close();
+    statusBar()->showMessage(tr("Recipes saved to XML."), 3000);
+}
+

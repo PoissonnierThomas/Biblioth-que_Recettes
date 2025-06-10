@@ -68,6 +68,8 @@ private slots:
     // Modifications
     void onDonneesModifiees();
 
+    //Sauvegardes
+    void sauvegarderFichier();
 private:
     //  Widgets principaux
     QWidget *centralWidget;
@@ -160,6 +162,8 @@ private:
     void sauvegarderDonneesOriginales();
     void restaurerDonneesOriginales();
     bool confirmerAbandonModifications();
+    void sauvegarderRecettesJSON(const QString& fichier);
+    void sauvegarderRecettesXML(const QString& fichier);
 
     // Utilitaires
     void redimensionnerColonnes();
