@@ -178,50 +178,25 @@ void MainWindow::setupDetailPanel()
 
     layoutScroll->addWidget(groupBoxInfos);
 
-    // Description
+    // ============================================================================
+    // NOUVELLE SECTION : Description avec image à côté
+    // ============================================================================
+
     groupBoxDescription = new QGroupBox(tr("Description"));
-    QVBoxLayout *layoutDesc = new QVBoxLayout(groupBoxDescription);
+    QHBoxLayout *layoutDescriptionPrincipal = new QHBoxLayout(groupBoxDescription);
+
+    // Partie gauche : Zone de texte description
+    QWidget *widgetDescriptionGauche = new QWidget();
+    QVBoxLayout *layoutDesc = new QVBoxLayout(widgetDescriptionGauche);
 
     textEditDescription = new QTextEdit();
-    textEditDescription->setMaximumHeight(120);
+    textEditDescription->setMinimumHeight(200);      // Plus grand que les 120px originaux
+    textEditDescription->setMaximumHeight(400);      // Limite raisonnable
     textEditDescription->setEnabled(false);
+
     layoutDesc->addWidget(textEditDescription);
 
-    layoutScroll->addWidget(groupBoxDescription);
-
-    // Ingrédients avec image
-    groupBoxIngredients = new QGroupBox(tr("Ingredients"));
-    QHBoxLayout *layoutIngredientsPrincipal = new QHBoxLayout(groupBoxIngredients);
-
-    // Partie gauche : tableau et boutons des ingrédients
-    QWidget *widgetIngredientsGauche = new QWidget();
-    QVBoxLayout *layoutIng = new QVBoxLayout(widgetIngredientsGauche);
-
-    QHBoxLayout *layoutBoutonsIng = new QHBoxLayout();
-    btnAjouterIngredient = new QPushButton(tr("Add"));
-    btnSupprimerIngredient = new QPushButton(tr("Delete"));
-    btnAjouterIngredient->setEnabled(false);
-    btnSupprimerIngredient->setEnabled(false);
-
-    layoutBoutonsIng->addWidget(btnAjouterIngredient);
-    layoutBoutonsIng->addWidget(btnSupprimerIngredient);
-    layoutBoutonsIng->addStretch();
-
-    layoutIng->addLayout(layoutBoutonsIng);
-
-    tableWidgetIngredients = new QTableWidget();
-    tableWidgetIngredients->setColumnCount(3);
-    QStringList headers{tr("Name"), tr("Quantity"), tr("Unit")};
-    tableWidgetIngredients->setHorizontalHeaderLabels(headers);
-    tableWidgetIngredients->setAlternatingRowColors(true);
-    tableWidgetIngredients->setSelectionBehavior(QAbstractItemView::SelectRows);
-    tableWidgetIngredients->horizontalHeader()->setStretchLastSection(true);
-    tableWidgetIngredients->setEnabled(false);
-    tableWidgetIngredients->setToolTip(tr("Double-click on an ingredient to edit it"));
-
-    layoutIng->addWidget(tableWidgetIngredients);
-
-    // Partie droite : image de la recette
+    // Partie droite : Image de la recette (DÉPLACÉE ICI)
     QWidget *widgetImageDroite = new QWidget();
     QVBoxLayout *layoutImageDroite = new QVBoxLayout(widgetImageDroite);
 
@@ -250,15 +225,51 @@ void MainWindow::setupDetailPanel()
     layoutImageDroite->addWidget(labelImageRecette);
     layoutImageDroite->addStretch();
 
-    // Assemblage horizontal : tableau à gauche, image à droite
-    layoutIngredientsPrincipal->addWidget(widgetIngredientsGauche, 2); // 2/3 de l'espace
-    layoutIngredientsPrincipal->addWidget(widgetImageDroite, 1);       // 1/3 de l'espace
+    // Assemblage horizontal : description à gauche (60%), image à droite (40%)
+    layoutDescriptionPrincipal->addWidget(widgetDescriptionGauche, 3);  // 3/5 de l'espace
+    layoutDescriptionPrincipal->addWidget(widgetImageDroite, 2);        // 2/5 de l'espace
+
+    layoutScroll->addWidget(groupBoxDescription);
+
+    // ============================================================================
+    // SECTION INGRÉDIENTS SIMPLIFIÉE (sans image)
+    // ============================================================================
+
+    groupBoxIngredients = new QGroupBox(tr("Ingredients"));
+    QVBoxLayout *layoutIng = new QVBoxLayout(groupBoxIngredients);
+
+    // Boutons de gestion des ingrédients
+    QHBoxLayout *layoutBoutonsIng = new QHBoxLayout();
+    btnAjouterIngredient = new QPushButton(tr("Add"));
+    btnSupprimerIngredient = new QPushButton(tr("Delete"));
+    btnAjouterIngredient->setEnabled(false);
+    btnSupprimerIngredient->setEnabled(false);
+
+    layoutBoutonsIng->addWidget(btnAjouterIngredient);
+    layoutBoutonsIng->addWidget(btnSupprimerIngredient);
+    layoutBoutonsIng->addStretch();
+
+    layoutIng->addLayout(layoutBoutonsIng);
+
+    // Tableau des ingrédients (maintenant sur toute la largeur)
+    tableWidgetIngredients = new QTableWidget();
+    tableWidgetIngredients->setColumnCount(3);
+    QStringList headers{tr("Name"), tr("Quantity"), tr("Unit")};
+    tableWidgetIngredients->setHorizontalHeaderLabels(headers);
+    tableWidgetIngredients->setAlternatingRowColors(true);
+    tableWidgetIngredients->setSelectionBehavior(QAbstractItemView::SelectRows);
+    tableWidgetIngredients->horizontalHeader()->setStretchLastSection(true);
+    tableWidgetIngredients->setEnabled(false);
+    tableWidgetIngredients->setToolTip(tr("Double-click on an ingredient to edit it"));
+
+    layoutIng->addWidget(tableWidgetIngredients);
 
     layoutScroll->addWidget(groupBoxIngredients);
 
     scrollArea->setWidget(scrollContent);
     layoutDetail->addWidget(scrollArea);
 }
+
 void MainWindow::setupMenus()
 {
     QMenu *menuFichier = menuBar()->addMenu(tr("File"));
@@ -1199,25 +1210,25 @@ void MainWindow::appliquerThemeSombre(bool sombre)
             "    background-color: #3c3c3c; "
             "    color: #ffffff; "
             "} "
-                     "QGroupBox { "
-                     "    font-weight: bold; "
-                     "    border: 2px solid #666666; "
-                     "    border-radius: 5px; "
-                     "    margin-top: 1ex; "
-                     "    padding-top: 10px; "
-                     "    background-color: #3c3c3c; "
-                     "    color: #ffffff; "
-                     "} "
-                     "QGroupBox::title { "
-                     "    subcontrol-origin: margin; "
-                     "    subcontrol-position: top left; "
-                     "    left: 10px; "
-                     "    padding: 0 8px 0 8px; "
-                     "    background-color: #3c3c3c; "
-                     "    color: #ffffff; "
-                     "    border: none; "
-                     "    border-radius: 3px; "
-                     "} "
+            "QGroupBox { "
+            "    font-weight: bold; "
+            "    border: 2px solid #666666; "
+            "    border-radius: 5px; "
+            "    margin-top: 1ex; "
+            "    padding-top: 10px; "
+            "    background-color: #3c3c3c; "
+            "    color: #ffffff; "
+            "} "
+            "QGroupBox::title { "
+            "    subcontrol-origin: margin; "
+            "    subcontrol-position: top left; "
+            "    left: 10px; "
+            "    padding: 0 8px 0 8px; "
+            "    background-color: #3c3c3c; "
+            "    color: #ffffff; "
+            "    border: none; "
+            "    border-radius: 3px; "
+            "} "
             "QPushButton { "
             "    background-color: #4a4a4a; "
             "    border: 1px solid #666666; "
@@ -1263,35 +1274,35 @@ void MainWindow::appliquerThemeSombre(bool sombre)
             "QListWidget::item:hover { "
             "    background-color: #4a4a4a; "
             "} "
-                     "QTableWidget { "
-                     "    gridline-color: #666666; "
-                     "    background-color: #3c3c3c; "
-                     "    alternate-background-color: #454545; "
-                     "    color: #ffffff; "
-                     "    selection-background-color: #0078d4; "
-                     "    selection-color: #ffffff; "
-                     "} "
-                     "QTableWidget::item { "
-                     "    background-color: #3c3c3c; "
-                     "    color: #ffffff; "
-                     "    border: none; "
-                     "    padding: 3px; "
-                     "} "
-                     "QTableWidget::item:alternate { "
-                     "    background-color: #454545; "
-                     "    color: #ffffff; "
-                     "} "
-                     "QTableWidget::item:selected { "
-                     "    background-color: #0078d4; "
-                     "    color: #ffffff; "
-                     "} "
-                     "QTableWidget::item:hover { "
-                     "    background-color: #555555; "
-                     "} "
-                     "QTableWidgetItem { "
-                     "    background-color: #3c3c3c; "
-                     "    color: #ffffff; "
-                     "} "
+            "QTableWidget { "
+            "    gridline-color: #666666; "
+            "    background-color: #3c3c3c; "
+            "    alternate-background-color: #454545; "
+            "    color: #ffffff; "
+            "    selection-background-color: #0078d4; "
+            "    selection-color: #ffffff; "
+            "} "
+            "QTableWidget::item { "
+            "    background-color: #3c3c3c; "
+            "    color: #ffffff; "
+            "    border: none; "
+            "    padding: 3px; "
+            "} "
+            "QTableWidget::item:alternate { "
+            "    background-color: #454545; "
+            "    color: #ffffff; "
+            "} "
+            "QTableWidget::item:selected { "
+            "    background-color: #0078d4; "
+            "    color: #ffffff; "
+            "} "
+            "QTableWidget::item:hover { "
+            "    background-color: #555555; "
+            "} "
+            "QTableWidgetItem { "
+            "    background-color: #3c3c3c; "
+            "    color: #ffffff; "
+            "} "
             "QHeaderView::section { "
             "    background-color: #4a4a4a; "
             "    color: #ffffff; "
@@ -1340,22 +1351,22 @@ void MainWindow::appliquerThemeSombre(bool sombre)
             "    border-radius: 5px; "
             "    background-color: #fafafa; "
             "} "
-                     "QGroupBox { "
-                     "    font-weight: bold; "
-                     "    border: 2px solid #cccccc; "
-                     "    border-radius: 5px; "
-                     "    margin-top: 1ex; "
-                     "    padding-top: 10px; "
-                     "} "
-                     "QGroupBox::title { "
-                     "    subcontrol-origin: margin; "
-                     "    subcontrol-position: top left; "
-                     "    left: 10px; "
-                     "    padding: 0 8px 0 8px; "
-                     "    background-color: #fafafa; "
-                     "    border: none; "
-                     "    border-radius: 3px; "
-                     "} "
+            "QGroupBox { "
+            "    font-weight: bold; "
+            "    border: 2px solid #cccccc; "
+            "    border-radius: 5px; "
+            "    margin-top: 1ex; "
+            "    padding-top: 10px; "
+            "} "
+            "QGroupBox::title { "
+            "    subcontrol-origin: margin; "
+            "    subcontrol-position: top left; "
+            "    left: 10px; "
+            "    padding: 0 8px 0 8px; "
+            "    background-color: #fafafa; "
+            "    border: none; "
+            "    border-radius: 3px; "
+            "} "
             "QPushButton { "
             "    background-color: #e3f2fd; "
             "    border: 1px solid #2196f3; "
@@ -1378,26 +1389,26 @@ void MainWindow::appliquerThemeSombre(bool sombre)
             "    background-color: #2196f3; "
             "    color: white; "
             "} "
-                     "QTableWidget { "
-                     "    gridline-color: #e0e0e0; "
-                     "    selection-background-color: #e3f2fd; "
-                     "    background-color: #ffffff; "
-                     "    alternate-background-color: #f5f5f5; "
-                     "} "
-                     "QTableWidget::item { "
-                     "    background-color: #ffffff; "
-                     "    color: #000000; "
-                     "    border: none; "
-                     "    padding: 3px; "
-                     "} "
-                     "QTableWidget::item:alternate { "
-                     "    background-color: #f5f5f5; "
-                     "    color: #000000; "
-                     "} "
-                     "QTableWidget::item:selected { "
-                     "    background-color: #2196f3; "
-                     "    color: #ffffff; "
-                     "} ";
+            "QTableWidget { "
+            "    gridline-color: #e0e0e0; "
+            "    selection-background-color: #e3f2fd; "
+            "    background-color: #ffffff; "
+            "    alternate-background-color: #f5f5f5; "
+            "} "
+            "QTableWidget::item { "
+            "    background-color: #ffffff; "
+            "    color: #000000; "
+            "    border: none; "
+            "    padding: 3px; "
+            "} "
+            "QTableWidget::item:alternate { "
+            "    background-color: #f5f5f5; "
+            "    color: #000000; "
+            "} "
+            "QTableWidget::item:selected { "
+            "    background-color: #2196f3; "
+            "    color: #ffffff; "
+            "} ";
     }
 
     setStyleSheet(styleSheet);
@@ -1590,4 +1601,3 @@ void MainWindow::chargerImageRecette(const QString& nomImage)
         qDebug() << tr("Image not found:") << cheminImage;
     }
 }
-

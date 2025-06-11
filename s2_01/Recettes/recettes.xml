@@ -3,11 +3,16 @@
   <nom>Poulet basquaise</nom>
   <photo>poulet_basquaise.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef A</createur>
+  <createur>Richard Gaudefroy</createur>
   <nombre_personnes>4</nombre_personnes>
   <prix>18.91</prix>
-  <date>6/7/2025</date>
-  <description>Poulet basquaise maison préparé avec amour et des ingrédients frais.</description>
+  <date>06/07/2025</date>
+  <description>ÉTAPES :
+1. Couper les poivrons en lamelles, les tomates en dés, émincer les oignons et l'ail.
+2. Dans une cocotte avec l'huile d'olive, dorer les morceaux de poulet de tous côtés (10 min), puis les réserver.
+3. Faire fondre les oignons, ajouter les poivrons et laisser mijoter 10 minutes.
+4. Incorporer les tomates, l'ail, le piment d'Espelette, sel et poivre.
+5. Remettre le poulet, ajouter le vin blanc, couvrir et laisser mijoter 30-40 minutes à feu doux.</description>
   <ingredient>
     <nom>Poulet</nom>
     <quantite>800</quantite>
@@ -33,17 +38,38 @@
     <quantite>3</quantite>
     <unite>gousses</unite>
   </ingredient>
+  <ingredient>
+    <nom>Piment d'Espelette</nom>
+    <quantite>5</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Vin blanc</nom>
+    <quantite>100</quantite>
+    <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Huile d'olive</nom>
+    <quantite>30</quantite>
+    <unite>ml</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Riz au curry</nom>
   <photo>riz_au_curry.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef B</createur>
+  <createur>Romuald Mejean</createur>
   <nombre_personnes>6</nombre_personnes>
   <prix>7.84</prix>
-  <date>6/10/2024</date>
-  <description>Riz au curry maison préparé avec amour et des ingrédients frais.</description>
+  <date>06/10/2024</date>
+  <description>ÉTAPES :
+1. Couper le poulet en dés et les oignons en lamelles.
+2. Faire revenir les oignons dans une poêle avec de l'huile.
+3. Ajouter le poulet et faire dorer 5 minutes.
+4. Incorporer le curry et mélanger 1 minute.
+5. Ajouter le riz et le lait de coco, porter à ébullition.
+6. Baisser le feu, couvrir et laisser cuire 18-20 minutes jusqu'à absorption du liquide.</description>
   <ingredient>
     <nom>Riz</nom>
     <quantite>500</quantite>
@@ -69,17 +95,32 @@
     <quantite>300</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Huile</nom>
+    <quantite>20</quantite>
+    <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Bouillon de volaille</nom>
+    <quantite>200</quantite>
+    <unite>ml</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Lasagnes</nom>
   <photo>lasagnes.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef C</createur>
+  <createur>Thomas Achour</createur>
   <nombre_personnes>4</nombre_personnes>
   <prix>18.87</prix>
-  <date>7/10/2025</date>
-  <description>Lasagnes maison préparé avec amour et des ingrédients frais.</description>
+  <date>07/10/2025</date>
+  <description>ÉTAPES :
+1. Faire revenir les oignons émincés, ajouter la viande hachée et faire dorer.
+2. Incorporer les tomates concassées, assaisonner et laisser mijoter 20 minutes.
+3. Préparer une béchamel avec beurre, farine et lait.
+4. Dans un plat, alterner couches de pâtes, viande, béchamel et fromage.
+5. Terminer par fromage râpé et enfourner 30 minutes à 180°C.</description>
   <ingredient>
     <nom>Pâtes à lasagne</nom>
     <quantite>250</quantite>
@@ -105,17 +146,38 @@
     <quantite>200</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Beurre</nom>
+    <quantite>50</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Farine</nom>
+    <quantite>50</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Lait</nom>
+    <quantite>500</quantite>
+    <unite>ml</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Pizza Margherita</nom>
   <photo>pizza_margherita.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef D</createur>
+  <createur>Sandrine Bouget</createur>
   <nombre_personnes>5</nombre_personnes>
   <prix>19.62</prix>
-  <date>11/9/2025</date>
-  <description>Pizza Margherita maison préparé avec amour et des ingrédients frais.</description>
+  <date>11/09/2025</date>
+  <description>ÉTAPES :
+1. Étaler la pâte à pizza sur une plaque huilée.
+2. Écraser les tomates et les étaler sur la pâte.
+3. Ajouter la mozzarella coupée en dés.
+4. Arroser d'huile d'olive et assaisonner.
+5. Enfourner 12-15 minutes à 220°C.
+6. Ajouter le basilic frais à la sortie du four.</description>
   <ingredient>
     <nom>Pâte à pizza</nom>
     <quantite>300</quantite>
@@ -147,11 +209,16 @@
   <nom>Gratin dauphinois</nom>
   <photo>gratin_dauphinois.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef E</createur>
+  <createur>Théo Delamarche</createur>
   <nombre_personnes>6</nombre_personnes>
   <prix>3.59</prix>
-  <date>18/8/2025</date>
-  <description>Gratin dauphinois maison préparé avec amour et des ingrédients frais.</description>
+  <date>18/08/2025</date>
+  <description>ÉTAPES :
+1. Éplucher et couper les pommes de terre en rondelles fines.
+2. Frotter un plat avec l'ail et le beurrer.
+3. Disposer les pommes de terre en couches dans le plat.
+4. Mélanger crème et lait, assaisonner et verser sur les pommes de terre.
+5. Parsemer de fromage râpé et enfourner 1h15 à 180°C.</description>
   <ingredient>
     <nom>Pommes de terre</nom>
     <quantite>1000</quantite>
@@ -177,17 +244,27 @@
     <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Beurre</nom>
+    <quantite>20</quantite>
+    <unite>g</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Soupe à l'oignon</nom>
   <photo>soupe_a_l_oignon.jpg</photo>
   <catégorie>Soupe</catégorie>
-  <createur>Chef F</createur>
+  <createur>Maximilien Jamet</createur>
   <nombre_personnes>7</nombre_personnes>
   <prix>11.41</prix>
-  <date>28/1/2023</date>
-  <description>Soupe à l'oignon maison préparé avec amour et des ingrédients frais.</description>
+  <date>28/01/2023</date>
+  <description>ÉTAPES :
+1. Émincer finement les oignons.
+2. Les faire fondre dans le beurre à feu doux 30 minutes jusqu'à caramélisation.
+3. Saupoudrer de farine et mélanger.
+4. Verser progressivement le bouillon chaud et laisser mijoter 20 minutes.
+5. Servir avec des croûtons de pain grillé et du fromage râpé.</description>
   <ingredient>
     <nom>Oignons</nom>
     <quantite>600</quantite>
@@ -213,17 +290,27 @@
     <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Fromage râpé</nom>
+    <quantite>50</quantite>
+    <unite>g</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Crêpes sucrées</nom>
   <photo>crepes_sucrees.jpg</photo>
   <catégorie>Dessert</catégorie>
-  <createur>Chef G</createur>
+  <createur>Moussa Couvreux</createur>
   <nombre_personnes>6</nombre_personnes>
   <prix>8.98</prix>
-  <date>4/3/2023</date>
-  <description>Crêpes sucrées maison préparé avec amour et des ingrédients frais.</description>
+  <date>04/03/2023</date>
+  <description>ÉTAPES :
+1. Mélanger la farine et le sucre dans un saladier.
+2. Faire un puits et ajouter les œufs battus.
+3. Incorporer progressivement le lait en fouettant pour éviter les grumeaux.
+4. Ajouter le beurre fondu et laisser reposer 30 minutes.
+5. Cuire les crêpes dans une poêle chaude 2 minutes de chaque côté.</description>
   <ingredient>
     <nom>Farine</nom>
     <quantite>250</quantite>
@@ -249,17 +336,27 @@
     <quantite>30</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Sel</nom>
+    <quantite>2</quantite>
+    <unite>g</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Couscous</nom>
   <photo>couscous.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef H</createur>
+  <createur>Jimmy Azoulay</createur>
   <nombre_personnes>6</nombre_personnes>
   <prix>8.91</prix>
-  <date>24/9/2024</date>
-  <description>Couscous maison préparé avec amour et des ingrédients frais.</description>
+  <date>24/09/2024</date>
+  <description>ÉTAPES :
+1. Faire revenir l'agneau coupé en morceaux dans un couscoussier.
+2. Ajouter les légumes coupés en gros morceaux et les épices.
+3. Couvrir d'eau et laisser mijoter 1h.
+4. Préparer la semoule selon les instructions, l'égrainer et la faire gonfler à la vapeur.
+5. Servir la semoule avec la viande, les légumes et le bouillon.</description>
   <ingredient>
     <nom>Semoule</nom>
     <quantite>400</quantite>
@@ -285,17 +382,32 @@
     <quantite>400</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Épices couscous</nom>
+    <quantite>15</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Oignons</nom>
+    <quantite>100</quantite>
+    <unite>g</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Tajine de légumes</nom>
   <photo>tajine_de_legumes.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef I</createur>
+  <createur>Annabelle Vella</createur>
   <nombre_personnes>7</nombre_personnes>
   <prix>17.32</prix>
   <date>15/11/2024</date>
-  <description>Tajine de légumes maison préparé avec amour et des ingrédients frais.</description>
+  <description>ÉTAPES :
+1. Couper tous les légumes en gros morceaux.
+2. Dans un tajine ou une cocotte, faire revenir les oignons dans l'huile.
+3. Ajouter les épices et mélanger 1 minute.
+4. Incorporer les légumes et les pois chiches égouttés.
+5. Ajouter un peu d'eau, couvrir et laisser mijoter 45 minutes à feu doux.</description>
   <ingredient>
     <nom>Carottes</nom>
     <quantite>300</quantite>
@@ -321,17 +433,32 @@
     <quantite>20</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Oignons</nom>
+    <quantite>150</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Huile d'olive</nom>
+    <quantite>30</quantite>
+    <unite>ml</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Boeuf bourguignon</nom>
   <photo>boeuf_bourguignon.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef J</createur>
+  <createur>Vincent Herault</createur>
   <nombre_personnes>5</nombre_personnes>
   <prix>13.66</prix>
-  <date>5/8/2023</date>
-  <description>Boeuf bourguignon maison préparé avec amour et des ingrédients frais.</description>
+  <date>05/08/2023</date>
+  <description>ÉTAPES :
+1. Couper le bœuf en gros cubes et le faire dorer dans une cocotte.
+2. Ajouter les oignons et carottes coupés, faire revenir.
+3. Flamber au cognac puis ajouter le vin rouge.
+4. Incorporer les champignons, le bouquet garni, couvrir et mijoter 2h30.
+5. Servir avec des pommes de terre ou des pâtes.</description>
   <ingredient>
     <nom>Boeuf</nom>
     <quantite>800</quantite>
@@ -357,17 +484,32 @@
     <quantite>150</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Lardons</nom>
+    <quantite>100</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Bouquet garni</nom>
+    <quantite>1</quantite>
+    <unite>pièce</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Salade niçoise</nom>
   <photo>salade_nicoise.jpg</photo>
   <catégorie>Entrée</catégorie>
-  <createur>Chef K</createur>
+  <createur>Garance Prades</createur>
   <nombre_personnes>8</nombre_personnes>
   <prix>17.47</prix>
-  <date>24/4/2024</date>
-  <description>Salade niçoise maison préparé avec amour et des ingrédients frais.</description>
+  <date>24/04/2024</date>
+  <description>ÉTAPES :
+1. Faire cuire les œufs durs et les haricots verts al dente.
+2. Couper les tomates en quartiers, émietter le thon.
+3. Écaler et couper les œufs en quartiers.
+4. Disposer tous les ingrédients dans un saladier.
+5. Assaisonner avec vinaigrette à l'huile d'olive, vinaigre, moutarde et herbes de Provence.</description>
   <ingredient>
     <nom>Tomates</nom>
     <quantite>200</quantite>
@@ -393,17 +535,37 @@
     <quantite>50</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Anchois</nom>
+    <quantite>30</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Huile d'olive</nom>
+    <quantite>50</quantite>
+    <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Vinaigre</nom>
+    <quantite>20</quantite>
+    <unite>ml</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Tarte au citron</nom>
   <photo>tarte_au_citron.jpg</photo>
   <catégorie>Dessert</catégorie>
-  <createur>Chef L</createur>
+  <createur>Tatiana Poinsignon</createur>
   <nombre_personnes>5</nombre_personnes>
   <prix>13.39</prix>
-  <date>13/7/2024</date>
-  <description>Tarte au citron maison préparé avec amour et des ingrédients frais.</description>
+  <date>13/07/2024</date>
+  <description>ÉTAPES :
+1. Préparer la pâte brisée avec farine, beurre, œuf et sucre.
+2. Foncer un moule et cuire à blanc 15 minutes à 180°C.
+3. Préparer la crème au citron en mélangeant jus de citron, œufs, sucre et beurre.
+4. Cuire à feu doux en remuant jusqu'à épaississement.
+5. Verser sur la pâte et laisser refroidir.</description>
   <ingredient>
     <nom>Farine</nom>
     <quantite>250</quantite>
@@ -435,11 +597,16 @@
   <nom>Fondant au chocolat</nom>
   <photo>fondant_au_chocolat.jpg</photo>
   <catégorie>Dessert</catégorie>
-  <createur>Chef M</createur>
+  <createur>Lara Verlet</createur>
   <nombre_personnes>2</nombre_personnes>
   <prix>13.79</prix>
-  <date>31/3/2024</date>
-  <description>Fondant au chocolat maison préparé avec amour et des ingrédients frais.</description>
+  <date>31/03/2024</date>
+  <description>ÉTAPES :
+1. Faire fondre le chocolat et le beurre au bain-marie.
+2. Battre les œufs avec le sucre jusqu'à blanchiment.
+3. Incorporer le chocolat fondu puis la farine tamisée.
+4. Beurrer des ramequins et y verser la préparation.
+5. Enfourner 12 minutes à 180°C pour un cœur coulant.</description>
   <ingredient>
     <nom>Chocolat noir</nom>
     <quantite>200</quantite>
@@ -471,11 +638,16 @@
   <nom>Gâteau au yaourt</nom>
   <photo>gateau_au_yaourt.jpg</photo>
   <catégorie>Dessert</catégorie>
-  <createur>Chef N</createur>
+  <createur>Matéo Caillot</createur>
   <nombre_personnes>2</nombre_personnes>
   <prix>15.03</prix>
-  <date>1/9/2023</date>
-  <description>Gâteau au yaourt maison préparé avec amour et des ingrédients frais.</description>
+  <date>01/09/2023</date>
+  <description>ÉTAPES :
+1. Vider le yaourt dans un saladier et garder le pot comme mesure.
+2. Ajouter les œufs et mélanger.
+3. Incorporer 2 pots de sucre, 3 pots de farine et 1/2 pot d'huile.
+4. Ajouter la levure et mélanger.
+5. Verser dans un moule beurré et enfourner 30 minutes à 180°C.</description>
   <ingredient>
     <nom>Yaourt nature</nom>
     <quantite>125</quantite>
@@ -501,17 +673,27 @@
     <quantite>100</quantite>
     <unite>ml</unite>
   </ingredient>
+  <ingredient>
+    <nom>Levure chimique</nom>
+    <quantite>10</quantite>
+    <unite>g</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Tarte Tatin</nom>
   <photo>tarte_tatin.jpg</photo>
   <catégorie>Dessert</catégorie>
-  <createur>Chef O</createur>
+  <createur>Sandra Mai</createur>
   <nombre_personnes>3</nombre_personnes>
   <prix>7.94</prix>
-  <date>11/6/2025</date>
-  <description>Tarte Tatin maison préparé avec amour et des ingrédients frais.</description>
+  <date>11/06/2025</date>
+  <description>ÉTAPES :
+1. Éplucher et couper les pommes en quartiers.
+2. Faire un caramel avec le sucre dans un moule allant au four.
+3. Disposer les pommes sur le caramel avec le beurre.
+4. Recouvrir de pâte brisée en rentrant les bords.
+5. Enfourner 25 minutes à 180°C puis démouler rapidement.</description>
   <ingredient>
     <nom>Pommes</nom>
     <quantite>800</quantite>
@@ -538,11 +720,16 @@
   <nom>Chili con carne</nom>
   <photo>chili_con_carne.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef P</createur>
+  <createur>Mathias Favereau</createur>
   <nombre_personnes>2</nombre_personnes>
   <prix>19.65</prix>
-  <date>15/3/2025</date>
-  <description>Chili con carne maison préparé avec amour et des ingrédients frais.</description>
+  <date>15/03/2025</date>
+  <description>ÉTAPES :
+1. Faire revenir les oignons émincés dans une cocotte.
+2. Ajouter le bœuf haché et faire dorer.
+3. Incorporer les épices chili et mélanger 1 minute.
+4. Ajouter les tomates concassées et les haricots rouges égouttés.
+5. Laisser mijoter 45 minutes à feu doux, servir avec du riz.</description>
   <ingredient>
     <nom>Boeuf haché</nom>
     <quantite>500</quantite>
@@ -568,17 +755,27 @@
     <quantite>20</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Huile</nom>
+    <quantite>20</quantite>
+    <unite>ml</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Ratatouille</nom>
   <photo>ratatouille.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef Q</createur>
+  <createur>Mickaël Vives</createur>
   <nombre_personnes>8</nombre_personnes>
   <prix>11.35</prix>
-  <date>7/3/2025</date>
-  <description>Ratatouille maison préparé avec amour et des ingrédients frais.</description>
+  <date>07/03/2025</date>
+  <description>ÉTAPES :
+1. Couper tous les légumes en dés de taille égale.
+2. Faire revenir les oignons dans l'huile d'olive.
+3. Ajouter successivement aubergines, courgettes puis poivrons, 5 minutes entre chaque.
+4. Incorporer les tomates et l'ail, assaisonner.
+5. Couvrir et laisser mijoter 30 minutes à feu doux.</description>
   <ingredient>
     <nom>Aubergines</nom>
     <quantite>200</quantite>
@@ -604,17 +801,37 @@
     <quantite>100</quantite>
     <unite>g</unite>
   </ingredient>
+  <ingredient>
+    <nom>Ail</nom>
+    <quantite>3</quantite>
+    <unite>gousses</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Huile d'olive</nom>
+    <quantite>50</quantite>
+    <unite>ml</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Herbes de Provence</nom>
+    <quantite>5</quantite>
+    <unite>g</unite>
+  </ingredient>
 </recette>
 
 <recette>
   <nom>Blinis au saumon</nom>
   <photo>blinis_au_saumon.jpg</photo>
   <catégorie>Entrée</catégorie>
-  <createur>Chef R</createur>
+  <createur>Paul Theophile</createur>
   <nombre_personnes>4</nombre_personnes>
   <prix>6.23</prix>
   <date>17/11/2025</date>
-  <description>Blinis au saumon maison préparé avec amour et des ingrédients frais.</description>
+  <description>ÉTAPES :
+1. Réchauffer légèrement les blinis au four ou à la poêle.
+2. Tartiner chaque blini d'une cuillère de crème fraîche.
+3. Disposer une tranche de saumon fumé sur chaque blini.
+4. Ajouter quelques brins d'aneth et un trait de citron.
+5. Servir immédiatement en entrée ou pour l'apéritif.</description>
   <ingredient>
     <nom>Blinis</nom>
     <quantite>12</quantite>
@@ -646,11 +863,16 @@
   <nom>Quiche lorraine</nom>
   <photo>quiche_lorraine.jpg</photo>
   <catégorie>Plat</catégorie>
-  <createur>Chef S</createur>
+  <createur>Ludivine Delaporte</createur>
   <nombre_personnes>5</nombre_personnes>
   <prix>10.97</prix>
-  <date>23/2/2023</date>
-  <description>Quiche lorraine maison préparé avec amour et des ingrédients frais.</description>
+  <date>23/02/2023</date>
+  <description>ÉTAPES :
+1. Étaler la pâte brisée dans un moule à tarte et piquer le fond.
+2. Faire revenir les lardons sans matière grasse et les répartir sur la pâte.
+3. Battre les œufs avec la crème fraîche, assaisonner.
+4. Verser l'appareil sur les lardons, parsemer de fromage.
+5. Enfourner 35 minutes à 180°C jusqu'à coloration dorée.</description>
   <ingredient>
     <nom>Pâte brisée</nom>
     <quantite>300</quantite>
@@ -682,11 +904,16 @@
   <nom>Mousse au chocolat</nom>
   <photo>mousse_au_chocolat.jpg</photo>
   <catégorie>Dessert</catégorie>
-  <createur>Chef T</createur>
+  <createur>Laurie Fourmont</createur>
   <nombre_personnes>3</nombre_personnes>
   <prix>9.56</prix>
-  <date>23/9/2024</date>
-  <description>Mousse au chocolat maison préparé avec amour et des ingrédients frais.</description>
+  <date>23/09/2024</date>
+  <description>ÉTAPES :
+1. Faire fondre le chocolat au bain-marie.
+2. Séparer les blancs des jaunes d'œufs.
+3. Mélanger les jaunes avec le chocolat fondu et le sucre.
+4. Monter les blancs en neige et la crème en chantilly.
+5. Incorporer délicatement les blancs puis la crème. Réfrigérer 3h minimum.</description>
   <ingredient>
     <nom>Chocolat noir</nom>
     <quantite>200</quantite>
@@ -700,6 +927,57 @@
   <ingredient>
     <nom>Sucre</nom>
     <quantite>50</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Crème</nom>
+    <quantite>200</quantite>
+    <unite>ml</unite>
+  </ingredient>
+</recette>
+
+<recette>
+  <nom>Brownille</nom>
+  <photo>brownille.jpg</photo>
+  <catégorie>Entremet</catégorie>
+  <createur>Richard Gaudefroy</createur>
+  <nombre_personnes>3</nombre_personnes>
+  <prix>9.56</prix>
+  <date>23/09/2024</date>
+  <description>ÉTAPES :
+1. Faire fondre le chocolat au bain-marie.
+2. Battre les œufs avec le sucre jusqu'à blanchiment.
+3. Incorporer le chocolat fondu puis la pulpe des gousses de vanille.
+4. Préparer une crème à la vanille et un brownie au chocolat.
+5. Assembler en couches alternées dans des verrines et réfrigérer 4h.</description>
+  <ingredient>
+    <nom>Chocolat noir</nom>
+    <quantite>200</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Oeufs</nom>
+    <quantite>4</quantite>
+    <unite>pièces</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Sucre</nom>
+    <quantite>50</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Vanille</nom>
+    <quantite>2</quantite>
+    <unite>gousses</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Beurre</nom>
+    <quantite>100</quantite>
+    <unite>g</unite>
+  </ingredient>
+  <ingredient>
+    <nom>Farine</nom>
+    <quantite>80</quantite>
     <unite>g</unite>
   </ingredient>
   <ingredient>

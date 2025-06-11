@@ -25,6 +25,7 @@
         <file>Recettes/images/blinis_au_saumon.jpg</file>
         <file>Recettes/images/quiche_lorraine.jpg</file>
         <file>Recettes/images/mousse_au_chocolat.jpg</file>
+        <file>Recettes/images/brownille.jpg</file>
     </qresource>
     
     <!-- Organisation avec préfixes pour un accès plus propre -->
@@ -53,6 +54,7 @@
         <file alias="blinis">Recettes/images/blinis_au_saumon.jpg</file>
         <file alias="quiche">Recettes/images/quiche_lorraine.jpg</file>
         <file alias="mousse">Recettes/images/mousse_au_chocolat.jpg</file>
+        <file alias="brownille">Recettes/images/brownille.jpg</file>
     </qresource>
 
     <qresource prefix="/translations">
