@@ -1579,6 +1579,9 @@ void MainWindow::chargerImageRecette(const QString& nomImage)
 
     QPixmap pixmap(cheminImage);
 
+
+    pixmap.load(nomImage);
+
     if (pixmap.isNull()) {
         // Si l'image n'est pas trouvée dans les ressources, essayer un chemin relatif
         QString cheminRelatif = QString("Recettes/images/%1").arg(nomImage);
