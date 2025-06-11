@@ -438,5 +438,22 @@ Voulez-vous les abandonner ?</translation>
         <source>Light mode enabled</source>
         <translation>Mode clair activé</translation>
     </message>
+    <!-- Adaptation des quantités -->
+    <message>
+        <source>Total price:</source>
+        <translation>Prix total :</translation>
+    </message>
+    <message>
+        <source>Quantities shown for original portions</source>
+        <translation>Quantités affichées pour les portions originales</translation>
+    </message>
+    <message>
+        <source>Quantities adapted for %1 people</source>
+        <translation>Quantités adaptées pour %1 personnes</translation>
+    </message>
+    <message>
+        <source>Original quantity: %1 %2</source>
+        <translation>Quantité originale : %1 %2</translation>
+    </message>
 </context>
 </TS>
