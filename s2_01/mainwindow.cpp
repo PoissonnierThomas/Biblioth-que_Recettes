@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     , recetteActuelle(nullptr)
     , modeEdition(false)
     , donneesModifiees(false)
+    , modeSombre(false)
 {
     setWindowTitle(tr("Recipe Manager - S2.01"));
     setMinimumSize(1000, 700);
@@ -283,6 +284,13 @@ void MainWindow::setupMenus()
     actionModeEdition->setCheckable(true);
     actionModeEdition->setShortcut(QKeySequence("Ctrl+E"));
     menuEdition->addAction(actionModeEdition);
+
+    menuEdition->addSeparator();
+
+    actionModeSombre = new QAction(tr("Dark mode"), this);
+    actionModeSombre->setCheckable(true);
+    actionModeSombre->setShortcut(QKeySequence("Ctrl+D"));
+    menuEdition->addAction(actionModeSombre);
 }
 
 void MainWindow::connecterSignaux()
@@ -313,6 +321,9 @@ void MainWindow::connecterSignaux()
 
     connect(actionModeEdition, &QAction::toggled,
             this, &MainWindow::onModeEditionToggled);
+
+    connect(actionModeSombre, &QAction::toggled,
+            this, &MainWindow::onModeSombreToggled);
     connect(actionOuvrir, &QAction::triggered,
             this, &MainWindow::ouvrirFichier);
     connect(actionQuitter, &QAction::triggered,
@@ -1168,53 +1179,240 @@ void MainWindow::redimensionnerColonnes()
 
 void MainWindow::appliquerStyle()
 {
-    setStyleSheet(
-        "QFrame { "
-        "    border: 1px solid #d0d0d0; "
-        "    border-radius: 5px; "
-        "    background-color: #fafafa; "
-        "} "
-        "QGroupBox { "
-        "    font-weight: bold; "
-        "    border: 2px solid #cccccc; "
-        "    border-radius: 5px; "
-        "    margin-top: 1ex; "
-        "    padding-top: 10px; "
-        "} "
-        "QGroupBox::title { "
-        "    subcontrol-origin: margin; "
-        "    left: 10px; "
-        "    padding: 0 5px 0 5px; "
-        "} "
-        "QPushButton { "
-        "    background-color: #e3f2fd; "
-        "    border: 1px solid #2196f3; "
-        "    border-radius: 4px; "
-        "    padding: 5px 10px; "
-        "    font-weight: bold; "
-        "} "
-        "QPushButton:hover { "
-        "    background-color: #bbdefb; "
-        "} "
-        "QPushButton:pressed { "
-        "    background-color: #90caf9; "
-        "} "
-        "QPushButton:disabled { "
-        "    background-color: #f5f5f5; "
-        "    color: #9e9e9e; "
-        "    border: 1px solid #e0e0e0; "
-        "} "
-        "QListWidget::item:selected { "
-        "    background-color: #2196f3; "
-        "    color: white; "
-        "} "
-        "QTableWidget { "
-        "    gridline-color: #e0e0e0; "
-        "    selection-background-color: #e3f2fd; "
-        "} "
-        );
+    appliquerThemeSombre(modeSombre);
 }
 
+void MainWindow::appliquerThemeSombre(bool sombre)
+{
+    QString styleSheet;
+
+    if (sombre) {
+        // Thème sombre
+        styleSheet =
+            "QMainWindow { "
+            "    background-color: #2b2b2b; "
+            "    color: #ffffff; "
+            "} "
+            "QFrame { "
+            "    border: 1px solid #555555; "
+            "    border-radius: 5px; "
+            "    background-color: #3c3c3c; "
+            "    color: #ffffff; "
+            "} "
+                     "QGroupBox { "
+                     "    font-weight: bold; "
+                     "    border: 2px solid #666666; "
+                     "    border-radius: 5px; "
+                     "    margin-top: 1ex; "
+                     "    padding-top: 10px; "
+                     "    background-color: #3c3c3c; "
+                     "    color: #ffffff; "
+                     "} "
+                     "QGroupBox::title { "
+                     "    subcontrol-origin: margin; "
+                     "    subcontrol-position: top left; "
+                     "    left: 10px; "
+                     "    padding: 0 8px 0 8px; "
+                     "    background-color: #3c3c3c; "
+                     "    color: #ffffff; "
+                     "    border: none; "
+                     "    border-radius: 3px; "
+                     "} "
+            "QPushButton { "
+            "    background-color: #4a4a4a; "
+            "    border: 1px solid #666666; "
+            "    border-radius: 4px; "
+            "    padding: 5px 10px; "
+            "    font-weight: bold; "
+            "    color: #ffffff; "
+            "} "
+            "QPushButton:hover { "
+            "    background-color: #5a5a5a; "
+            "} "
+            "QPushButton:pressed { "
+            "    background-color: #6a6a6a; "
+            "} "
+            "QPushButton:disabled { "
+            "    background-color: #2a2a2a; "
+            "    color: #666666; "
+            "    border: 1px solid #444444; "
+            "} "
+            "QLineEdit, QTextEdit, QComboBox, QSpinBox, QDoubleSpinBox, QDateEdit { "
+            "    background-color: #4a4a4a; "
+            "    border: 1px solid #666666; "
+            "    border-radius: 3px; "
+            "    padding: 3px; "
+            "    color: #ffffff; "
+            "} "
+            "QLineEdit:focus, QTextEdit:focus { "
+            "    border: 2px solid #0078d4; "
+            "} "
+            "QListWidget { "
+            "    background-color: #3c3c3c; "
+            "    border: 1px solid #666666; "
+            "    color: #ffffff; "
+            "} "
+            "QListWidget::item { "
+            "    padding: 5px; "
+            "    border-bottom: 1px solid #555555; "
+            "} "
+            "QListWidget::item:selected { "
+            "    background-color: #0078d4; "
+            "    color: white; "
+            "} "
+            "QListWidget::item:hover { "
+            "    background-color: #4a4a4a; "
+            "} "
+                     "QTableWidget { "
+                     "    gridline-color: #666666; "
+                     "    background-color: #3c3c3c; "
+                     "    alternate-background-color: #454545; "
+                     "    color: #ffffff; "
+                     "    selection-background-color: #0078d4; "
+                     "    selection-color: #ffffff; "
+                     "} "
+                     "QTableWidget::item { "
+                     "    background-color: #3c3c3c; "
+                     "    color: #ffffff; "
+                     "    border: none; "
+                     "    padding: 3px; "
+                     "} "
+                     "QTableWidget::item:alternate { "
+                     "    background-color: #454545; "
+                     "    color: #ffffff; "
+                     "} "
+                     "QTableWidget::item:selected { "
+                     "    background-color: #0078d4; "
+                     "    color: #ffffff; "
+                     "} "
+                     "QTableWidget::item:hover { "
+                     "    background-color: #555555; "
+                     "} "
+                     "QTableWidgetItem { "
+                     "    background-color: #3c3c3c; "
+                     "    color: #ffffff; "
+                     "} "
+            "QHeaderView::section { "
+            "    background-color: #4a4a4a; "
+            "    color: #ffffff; "
+            "    padding: 5px; "
+            "    border: 1px solid #666666; "
+            "} "
+            "QScrollArea { "
+            "    background-color: #2b2b2b; "
+            "} "
+            "QScrollBar:vertical { "
+            "    background-color: #3c3c3c; "
+            "    width: 12px; "
+            "    border-radius: 6px; "
+            "} "
+            "QScrollBar::handle:vertical { "
+            "    background-color: #666666; "
+            "    border-radius: 6px; "
+            "} "
+            "QScrollBar::handle:vertical:hover { "
+            "    background-color: #777777; "
+            "} "
+            "QMenuBar { "
+            "    background-color: #3c3c3c; "
+            "    color: #ffffff; "
+            "} "
+            "QMenuBar::item:selected { "
+            "    background-color: #4a4a4a; "
+            "} "
+            "QMenu { "
+            "    background-color: #3c3c3c; "
+            "    color: #ffffff; "
+            "    border: 1px solid #666666; "
+            "} "
+            "QMenu::item:selected { "
+            "    background-color: #0078d4; "
+            "} "
+            "QStatusBar { "
+            "    background-color: #3c3c3c; "
+            "    color: #ffffff; "
+            "} ";
+    } else {
+        // Thème clair (original)
+        styleSheet =
+            "QFrame { "
+            "    border: 1px solid #d0d0d0; "
+            "    border-radius: 5px; "
+            "    background-color: #fafafa; "
+            "} "
+                     "QGroupBox { "
+                     "    font-weight: bold; "
+                     "    border: 2px solid #cccccc; "
+                     "    border-radius: 5px; "
+                     "    margin-top: 1ex; "
+                     "    padding-top: 10px; "
+                     "} "
+                     "QGroupBox::title { "
+                     "    subcontrol-origin: margin; "
+                     "    subcontrol-position: top left; "
+                     "    left: 10px; "
+                     "    padding: 0 8px 0 8px; "
+                     "    background-color: #fafafa; "
+                     "    border: none; "
+                     "    border-radius: 3px; "
+                     "} "
+            "QPushButton { "
+            "    background-color: #e3f2fd; "
+            "    border: 1px solid #2196f3; "
+            "    border-radius: 4px; "
+            "    padding: 5px 10px; "
+            "    font-weight: bold; "
+            "} "
+            "QPushButton:hover { "
+            "    background-color: #bbdefb; "
+            "} "
+            "QPushButton:pressed { "
+            "    background-color: #90caf9; "
+            "} "
+            "QPushButton:disabled { "
+            "    background-color: #f5f5f5; "
+            "    color: #9e9e9e; "
+            "    border: 1px solid #e0e0e0; "
+            "} "
+            "QListWidget::item:selected { "
+            "    background-color: #2196f3; "
+            "    color: white; "
+            "} "
+                     "QTableWidget { "
+                     "    gridline-color: #e0e0e0; "
+                     "    selection-background-color: #e3f2fd; "
+                     "    background-color: #ffffff; "
+                     "    alternate-background-color: #f5f5f5; "
+                     "} "
+                     "QTableWidget::item { "
+                     "    background-color: #ffffff; "
+                     "    color: #000000; "
+                     "    border: none; "
+                     "    padding: 3px; "
+                     "} "
+                     "QTableWidget::item:alternate { "
+                     "    background-color: #f5f5f5; "
+                     "    color: #000000; "
+                     "} "
+                     "QTableWidget::item:selected { "
+                     "    background-color: #2196f3; "
+                     "    color: #ffffff; "
+                     "} ";
+    }
+
+    setStyleSheet(styleSheet);
+}
+void MainWindow::onModeSombreToggled(bool actif)
+{
+    modeSombre = actif;
+    appliquerThemeSombre(actif);
+
+    if (actif) {
+        statusBar()->showMessage(tr("Dark mode enabled"), 2000);
+    } else {
+        statusBar()->showMessage(tr("Light mode enabled"), 2000);
+    }
+}
 void MainWindow::resizeEvent(QResizeEvent *event)
 {
     QMainWindow::resizeEvent(event);

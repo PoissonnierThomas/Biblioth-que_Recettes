@@ -425,5 +425,18 @@ Voulez-vous les abandonner ?</translation>
         <source>Image not found:</source>
         <translation>Image non trouvée :</translation>
     </message>
+    <!-- Mode sombre -->
+    <message>
+        <source>Dark mode</source>
+        <translation>Mode Sombre</translation>
+    </message>
+    <message>
+        <source>Dark mode enabled</source>
+        <translation>Mode sombre activé</translation>
+    </message>
+    <message>
+        <source>Light mode enabled</source>
+        <translation>Mode clair activé</translation>
+    </message>
 </context>
 </TS>

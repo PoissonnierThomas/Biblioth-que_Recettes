@@ -94,7 +94,7 @@ Application Qt de gestion de recettes de cuisine permettant l'affichage, l'édit
 
 ### Interface avancée
 
-- [ ] **Thèmes visuels** - Dark/Light mode
+- [x] **Thèmes visuels** - Dark/Light mode
 - [x] **Aperçu des images** - Affichage des photos de recettes
 
 ## Technologies utilisées

@@ -68,6 +68,7 @@ private slots:
 
     // Modifications
     void onDonneesModifiees();
+    void onModeSombreToggled(bool actif);
 
     //Sauvegardes
     void sauvegarderFichier();
@@ -122,6 +123,7 @@ private:
     QAction *actionSauvegarder;
     QAction *actionQuitter;
     QAction *actionModeEdition;
+    QAction *actionModeSombre;
 
     // Données
     std::vector<std::unique_ptr<Recette>> recettes;
@@ -176,7 +178,8 @@ private:
     QString formaterPrix(double prix);
     QString categorieVersInterface(const std::string& categorie);
     void chargerImageRecette(const QString& nomImage);
-
+    void appliquerThemeSombre(bool activer);
+    bool modeSombre;
 protected:
     void resizeEvent(QResizeEvent *event) override;
     void closeEvent(QCloseEvent *event) override;
