@@ -1,0 +1,970 @@
+[
+    {
+        "categorie": "Plat",
+        "createur": "Richard Gaudefroy",
+        "date": "6/7/2025",
+        "description": [
+            "ÉTAPES :\n1. Couper les poivrons en lamelles, les tomates en dés, émincer les oignons et l'ail.\n2. Dans une cocotte avec l'huile d'olive, dorer les morceaux de poulet de tous côtés (10 min), puis les réserver.\n3. Faire fondre les oignons, ajouter les poivrons et laisser mijoter 10 minutes.\n4. Incorporer les tomates, l'ail, le piment d'Espelette, sel et poivre.\n5. Remettre le poulet, ajouter le vin blanc, couvrir et laisser mijoter 30-40 minutes à feu doux."
+        ],
+        "ingredients": [
+            {
+                "nom": "Poulet",
+                "quantite": 800,
+                "unite": "g"
+            },
+            {
+                "nom": "Poivrons",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Tomates",
+                "quantite": 400,
+                "unite": "g"
+            },
+            {
+                "nom": "Oignons",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Ail",
+                "quantite": 3,
+                "unite": "gousses"
+            },
+            {
+                "nom": "Piment d'Espelette",
+                "quantite": 5,
+                "unite": "g"
+            },
+            {
+                "nom": "Vin blanc",
+                "quantite": 100,
+                "unite": "ml"
+            },
+            {
+                "nom": "Huile d'olive",
+                "quantite": 30,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Poulet basquaise",
+        "nombre_personnes": 4,
+        "photo": "poulet_basquaise.jpg",
+        "prix": 18.91
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Romuald Mejean",
+        "date": "6/10/2024",
+        "description": [
+            "ÉTAPES :\n1. Couper le poulet en dés et les oignons en lamelles.\n2. Faire revenir les oignons dans une poêle avec de l'huile.\n3. Ajouter le poulet et faire dorer 5 minutes.\n4. Incorporer le curry et mélanger 1 minute.\n5. Ajouter le riz et le lait de coco, porter à ébullition.\n6. Baisser le feu, couvrir et laisser cuire 18-20 minutes jusqu'à absorption du liquide."
+        ],
+        "ingredients": [
+            {
+                "nom": "Riz",
+                "quantite": 500,
+                "unite": "g"
+            },
+            {
+                "nom": "Curry",
+                "quantite": 20,
+                "unite": "g"
+            },
+            {
+                "nom": "Oignons",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Lait de coco",
+                "quantite": 400,
+                "unite": "ml"
+            },
+            {
+                "nom": "Poulet",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Huile",
+                "quantite": 20,
+                "unite": "ml"
+            },
+            {
+                "nom": "Bouillon de volaille",
+                "quantite": 200,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Riz au curry",
+        "nombre_personnes": 6,
+        "photo": "riz_au_curry.jpg",
+        "prix": 7.84
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Thomas Achour",
+        "date": "7/10/2025",
+        "description": [
+            "ÉTAPES :\n1. Faire revenir les oignons émincés, ajouter la viande hachée et faire dorer.\n2. Incorporer les tomates concassées, assaisonner et laisser mijoter 20 minutes.\n3. Préparer une béchamel avec beurre, farine et lait.\n4. Dans un plat, alterner couches de pâtes, viande, béchamel et fromage.\n5. Terminer par fromage râpé et enfourner 30 minutes à 180°C."
+        ],
+        "ingredients": [
+            {
+                "nom": "Pâtes à lasagne",
+                "quantite": 250,
+                "unite": "g"
+            },
+            {
+                "nom": "Viande hachée",
+                "quantite": 400,
+                "unite": "g"
+            },
+            {
+                "nom": "Tomates",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Oignons",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Fromage râpé",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 50,
+                "unite": "g"
+            },
+            {
+                "nom": "Farine",
+                "quantite": 50,
+                "unite": "g"
+            },
+            {
+                "nom": "Lait",
+                "quantite": 500,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Lasagnes",
+        "nombre_personnes": 4,
+        "photo": "lasagnes.jpg",
+        "prix": 18.87
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Sandrine Bouget",
+        "date": "11/9/2025",
+        "description": [
+            "ÉTAPES :\n1. Étaler la pâte à pizza sur une plaque huilée.\n2. Écraser les tomates et les étaler sur la pâte.\n3. Ajouter la mozzarella coupée en dés.\n4. Arroser d'huile d'olive et assaisonner.\n5. Enfourner 12-15 minutes à 220°C.\n6. Ajouter le basilic frais à la sortie du four."
+        ],
+        "ingredients": [
+            {
+                "nom": "Pâte à pizza",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Tomates",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Mozzarella",
+                "quantite": 250,
+                "unite": "g"
+            },
+            {
+                "nom": "Basilic",
+                "quantite": 10,
+                "unite": "g"
+            },
+            {
+                "nom": "Huile d'olive",
+                "quantite": 20,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Pizza Margherita",
+        "nombre_personnes": 5,
+        "photo": "pizza_margherita.jpg",
+        "prix": 19.62
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Théo Delamarche",
+        "date": "18/8/2025",
+        "description": [
+            "ÉTAPES :\n1. Éplucher et couper les pommes de terre en rondelles fines.\n2. Frotter un plat avec l'ail et le beurrer.\n3. Disposer les pommes de terre en couches dans le plat.\n4. Mélanger crème et lait, assaisonner et verser sur les pommes de terre.\n5. Parsemer de fromage râpé et enfourner 1h15 à 180°C."
+        ],
+        "ingredients": [
+            {
+                "nom": "Pommes de terre",
+                "quantite": 1000,
+                "unite": "g"
+            },
+            {
+                "nom": "Crème",
+                "quantite": 400,
+                "unite": "ml"
+            },
+            {
+                "nom": "Lait",
+                "quantite": 200,
+                "unite": "ml"
+            },
+            {
+                "nom": "Ail",
+                "quantite": 2,
+                "unite": "gousses"
+            },
+            {
+                "nom": "Fromage râpé",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 20,
+                "unite": "g"
+            }
+        ],
+        "nom": "Gratin dauphinois",
+        "nombre_personnes": 6,
+        "photo": "gratin_dauphinois.jpg",
+        "prix": 3.59
+    },
+    {
+        "categorie": "Soupe",
+        "createur": "Maximilien Jamet",
+        "date": "28/1/2023",
+        "description": [
+            "ÉTAPES :\n1. Émincer finement les oignons.\n2. Les faire fondre dans le beurre à feu doux 30 minutes jusqu'à caramélisation.\n3. Saupoudrer de farine et mélanger.\n4. Verser progressivement le bouillon chaud et laisser mijoter 20 minutes.\n5. Servir avec des croûtons de pain grillé et du fromage râpé."
+        ],
+        "ingredients": [
+            {
+                "nom": "Oignons",
+                "quantite": 600,
+                "unite": "g"
+            },
+            {
+                "nom": "Bouillon de boeuf",
+                "quantite": 1000,
+                "unite": "ml"
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 50,
+                "unite": "g"
+            },
+            {
+                "nom": "Farine",
+                "quantite": 20,
+                "unite": "g"
+            },
+            {
+                "nom": "Pain",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Fromage râpé",
+                "quantite": 50,
+                "unite": "g"
+            }
+        ],
+        "nom": "Soupe à l'oignon!",
+        "nombre_personnes": 7,
+        "photo": "soupe_a_l_oignon.jpg",
+        "prix": 11.41
+    },
+    {
+        "categorie": "Dessert",
+        "createur": "Moussa Couvreux",
+        "date": "4/3/2023",
+        "description": [
+            "ÉTAPES :\n1. Mélanger la farine et le sucre dans un saladier.\n2. Faire un puits et ajouter les œufs battus.\n3. Incorporer progressivement le lait en fouettant pour éviter les grumeaux.\n4. Ajouter le beurre fondu et laisser reposer 30 minutes.\n5. Cuire les crêpes dans une poêle chaude 2 minutes de chaque côté."
+        ],
+        "ingredients": [
+            {
+                "nom": "Farine",
+                "quantite": 250,
+                "unite": "g"
+            },
+            {
+                "nom": "Lait",
+                "quantite": 500,
+                "unite": "ml"
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 3,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 50,
+                "unite": "g"
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 30,
+                "unite": "g"
+            },
+            {
+                "nom": "Sel",
+                "quantite": 2,
+                "unite": "g"
+            }
+        ],
+        "nom": "Crêpes sucrées",
+        "nombre_personnes": 6,
+        "photo": "crepes_sucrees.jpg",
+        "prix": 8.98
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Jimmy Azoulay",
+        "date": "24/9/2024",
+        "description": [
+            "ÉTAPES :\n1. Faire revenir l'agneau coupé en morceaux dans un couscoussier.\n2. Ajouter les légumes coupés en gros morceaux et les épices.\n3. Couvrir d'eau et laisser mijoter 1h.\n4. Préparer la semoule selon les instructions, l'égrainer et la faire gonfler à la vapeur.\n5. Servir la semoule avec la viande, les légumes et le bouillon."
+        ],
+        "ingredients": [
+            {
+                "nom": "Semoule",
+                "quantite": 400,
+                "unite": "g"
+            },
+            {
+                "nom": "Pois chiches",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Carottes",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Courgettes",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Agneau",
+                "quantite": 400,
+                "unite": "g"
+            },
+            {
+                "nom": "Épices couscous",
+                "quantite": 15,
+                "unite": "g"
+            },
+            {
+                "nom": "Oignons",
+                "quantite": 100,
+                "unite": "g"
+            }
+        ],
+        "nom": "Couscous",
+        "nombre_personnes": 6,
+        "photo": "couscous.jpg",
+        "prix": 8.91
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Annabelle Vella",
+        "date": "15/11/2024",
+        "description": [
+            "ÉTAPES :\n1. Couper tous les légumes en gros morceaux.\n2. Dans un tajine ou une cocotte, faire revenir les oignons dans l'huile.\n3. Ajouter les épices et mélanger 1 minute.\n4. Incorporer les légumes et les pois chiches égouttés.\n5. Ajouter un peu d'eau, couvrir et laisser mijoter 45 minutes à feu doux."
+        ],
+        "ingredients": [
+            {
+                "nom": "Carottes",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Courgettes",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Tomates",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Pois chiches",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Épices à tajine",
+                "quantite": 20,
+                "unite": "g"
+            },
+            {
+                "nom": "Oignons",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Huile d'olive",
+                "quantite": 30,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Tajine de légumes",
+        "nombre_personnes": 7,
+        "photo": "tajine_de_legumes.jpg",
+        "prix": 17.32
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Vincent Herault",
+        "date": "5/8/2023",
+        "description": [
+            "ÉTAPES :\n1. Couper le bœuf en gros cubes et le faire dorer dans une cocotte.\n2. Ajouter les oignons et carottes coupés, faire revenir.\n3. Flamber au cognac puis ajouter le vin rouge.\n4. Incorporer les champignons, le bouquet garni, couvrir et mijoter 2h30.\n5. Servir avec des pommes de terre ou des pâtes."
+        ],
+        "ingredients": [
+            {
+                "nom": "Boeuf",
+                "quantite": 800,
+                "unite": "g"
+            },
+            {
+                "nom": "Vin rouge",
+                "quantite": 500,
+                "unite": "ml"
+            },
+            {
+                "nom": "Carottes",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Oignons",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Champignons",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Lardons",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Bouquet garni",
+                "quantite": 1,
+                "unite": "pièce"
+            }
+        ],
+        "nom": "Boeuf bourguignon",
+        "nombre_personnes": 5,
+        "photo": "boeuf_bourguignon.jpg",
+        "prix": 13.66
+    },
+    {
+        "categorie": "Entrée",
+        "createur": "Garance Prades",
+        "date": "24/4/2024",
+        "description": [
+            "ÉTAPES :\n1. Faire cuire les œufs durs et les haricots verts al dente.\n2. Couper les tomates en quartiers, émietter le thon.\n3. Écaler et couper les œufs en quartiers.\n4. Disposer tous les ingrédients dans un saladier.\n5. Assaisonner avec vinaigrette à l'huile d'olive, vinaigre, moutarde et herbes de Provence."
+        ],
+        "ingredients": [
+            {
+                "nom": "Tomates",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Thon",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 3,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Haricots verts",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Olives noires",
+                "quantite": 50,
+                "unite": "g"
+            },
+            {
+                "nom": "Anchois",
+                "quantite": 30,
+                "unite": "g"
+            },
+            {
+                "nom": "Huile d'olive",
+                "quantite": 50,
+                "unite": "ml"
+            },
+            {
+                "nom": "Vinaigre",
+                "quantite": 20,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Salade niçoise",
+        "nombre_personnes": 8,
+        "photo": "salade_nicoise.jpg",
+        "prix": 17.47
+    },
+    {
+        "categorie": "Dessert",
+        "createur": "Tatiana Poinsignon",
+        "date": "13/7/2024",
+        "description": [
+            "ÉTAPES :\n1. Préparer la pâte brisée avec farine, beurre, œuf et sucre.\n2. Foncer un moule et cuire à blanc 15 minutes à 180°C.\n3. Préparer la crème au citron en mélangeant jus de citron, œufs, sucre et beurre.\n4. Cuire à feu doux en remuant jusqu'à épaississement.\n5. Verser sur la pâte et laisser refroidir."
+        ],
+        "ingredients": [
+            {
+                "nom": "Farine",
+                "quantite": 250,
+                "unite": "g"
+            },
+            {
+                "nom": "Citron",
+                "quantite": 3,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 4,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 100,
+                "unite": "g"
+            }
+        ],
+        "nom": "Tarte au citron",
+        "nombre_personnes": 5,
+        "photo": "tarte_au_citron.jpg",
+        "prix": 13.39
+    },
+    {
+        "categorie": "Dessert",
+        "createur": "Lara Verlet",
+        "date": "31/3/2024",
+        "description": [
+            "ÉTAPES :\n1. Faire fondre le chocolat et le beurre au bain-marie.\n2. Battre les œufs avec le sucre jusqu'à blanchiment.\n3. Incorporer le chocolat fondu puis la farine tamisée.\n4. Beurrer des ramequins et y verser la préparation.\n5. Enfourner 12 minutes à 180°C pour un cœur coulant."
+        ],
+        "ingredients": [
+            {
+                "nom": "Chocolat noir",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 4,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Farine",
+                "quantite": 50,
+                "unite": "g"
+            }
+        ],
+        "nom": "Fondant au chocolat",
+        "nombre_personnes": 2,
+        "photo": "fondant_au_chocolat.jpg",
+        "prix": 13.79
+    },
+    {
+        "categorie": "Dessert",
+        "createur": "Matéo Caillot",
+        "date": "1/9/2023",
+        "description": [
+            "ÉTAPES :\n1. Vider le yaourt dans un saladier et garder le pot comme mesure.\n2. Ajouter les œufs et mélanger.\n3. Incorporer 2 pots de sucre, 3 pots de farine et 1/2 pot d'huile.\n4. Ajouter la levure et mélanger.\n5. Verser dans un moule beurré et enfourner 30 minutes à 180°C."
+        ],
+        "ingredients": [
+            {
+                "nom": "Yaourt nature",
+                "quantite": 125,
+                "unite": "g"
+            },
+            {
+                "nom": "Farine",
+                "quantite": 250,
+                "unite": "g"
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 3,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Huile",
+                "quantite": 100,
+                "unite": "ml"
+            },
+            {
+                "nom": "Levure chimique",
+                "quantite": 10,
+                "unite": "g"
+            }
+        ],
+        "nom": "Gâteau au yaourt",
+        "nombre_personnes": 2,
+        "photo": "gateau_au_yaourt.jpg",
+        "prix": 15.03
+    },
+    {
+        "categorie": "Dessert",
+        "createur": "Sandra Mai",
+        "date": "11/6/2025",
+        "description": [
+            "ÉTAPES :\n1. Éplucher et couper les pommes en quartiers.\n2. Faire un caramel avec le sucre dans un moule allant au four.\n3. Disposer les pommes sur le caramel avec le beurre.\n4. Recouvrir de pâte brisée en rentrant les bords.\n5. Enfourner 25 minutes à 180°C puis démouler rapidement."
+        ],
+        "ingredients": [
+            {
+                "nom": "Pommes",
+                "quantite": 800,
+                "unite": "g"
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Pâte brisée",
+                "quantite": 300,
+                "unite": "g"
+            }
+        ],
+        "nom": "Tarte Tatin",
+        "nombre_personnes": 3,
+        "photo": "tarte_tatin.jpg",
+        "prix": 7.94
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Mathias Favereau",
+        "date": "15/3/2025",
+        "description": [
+            "ÉTAPES :\n1. Faire revenir les oignons émincés dans une cocotte.\n2. Ajouter le bœuf haché et faire dorer.\n3. Incorporer les épices chili et mélanger 1 minute.\n4. Ajouter les tomates concassées et les haricots rouges égouttés.\n5. Laisser mijoter 45 minutes à feu doux, servir avec du riz."
+        ],
+        "ingredients": [
+            {
+                "nom": "Boeuf haché",
+                "quantite": 500,
+                "unite": "g"
+            },
+            {
+                "nom": "Haricots rouges",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Tomates",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Oignons",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "Épices chili",
+                "quantite": 20,
+                "unite": "g"
+            },
+            {
+                "nom": "Huile",
+                "quantite": 20,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Chili con carne",
+        "nombre_personnes": 2,
+        "photo": "chili_con_carne.jpg",
+        "prix": 19.65
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Mickaël Vives",
+        "date": "7/3/2025",
+        "description": [
+            "ÉTAPES :\n1. Couper tous les légumes en dés de taille égale.\n2. Faire revenir les oignons dans l'huile d'olive.\n3. Ajouter successivement aubergines, courgettes puis poivrons, 5 minutes entre chaque.\n4. Incorporer les tomates et l'ail, assaisonner.\n5. Couvrir et laisser mijoter 30 minutes à feu doux."
+        ],
+        "ingredients": [
+            {
+                "nom": "Aubergines",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Courgettes",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Poivrons",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Tomates",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Oignons",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Ail",
+                "quantite": 3,
+                "unite": "gousses"
+            },
+            {
+                "nom": "Huile d'olive",
+                "quantite": 50,
+                "unite": "ml"
+            },
+            {
+                "nom": "Herbes de Provence",
+                "quantite": 5,
+                "unite": "g"
+            }
+        ],
+        "nom": "Ratatouille",
+        "nombre_personnes": 8,
+        "photo": "ratatouille.jpg",
+        "prix": 11.35
+    },
+    {
+        "categorie": "Entrée",
+        "createur": "Paul Theophile",
+        "date": "17/11/2025",
+        "description": [
+            "ÉTAPES :\n1. Réchauffer légèrement les blinis au four ou à la poêle.\n2. Tartiner chaque blini d'une cuillère de crème fraîche.\n3. Disposer une tranche de saumon fumé sur chaque blini.\n4. Ajouter quelques brins d'aneth et un trait de citron.\n5. Servir immédiatement en entrée ou pour l'apéritif."
+        ],
+        "ingredients": [
+            {
+                "nom": "Blinis",
+                "quantite": 12,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Saumon fumé",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Crème fraîche",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Aneth",
+                "quantite": 5,
+                "unite": "g"
+            },
+            {
+                "nom": "Citron",
+                "quantite": 1,
+                "unite": "pièce"
+            }
+        ],
+        "nom": "Blinis au saumon",
+        "nombre_personnes": 4,
+        "photo": "blinis_au_saumon.jpg",
+        "prix": 6.23
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Ludivine Delaporte",
+        "date": "23/2/2023",
+        "description": [
+            "ÉTAPES :\n1. Étaler la pâte brisée dans un moule à tarte et piquer le fond.\n2. Faire revenir les lardons sans matière grasse et les répartir sur la pâte.\n3. Battre les œufs avec la crème fraîche, assaisonner.\n4. Verser l'appareil sur les lardons, parsemer de fromage.\n5. Enfourner 35 minutes à 180°C jusqu'à coloration dorée."
+        ],
+        "ingredients": [
+            {
+                "nom": "Pâte brisée",
+                "quantite": 300,
+                "unite": "g"
+            },
+            {
+                "nom": "Lardons",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 3,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Crème fraîche",
+                "quantite": 200,
+                "unite": "ml"
+            },
+            {
+                "nom": "Fromage râpé",
+                "quantite": 100,
+                "unite": "g"
+            }
+        ],
+        "nom": "Quiche lorraine",
+        "nombre_personnes": 5,
+        "photo": "quiche_lorraine.jpg",
+        "prix": 10.97
+    },
+    {
+        "categorie": "Dessert",
+        "createur": "Laurie Fourmont",
+        "date": "23/9/2024",
+        "description": [
+            "ÉTAPES :\n1. Faire fondre le chocolat au bain-marie.\n2. Séparer les blancs des jaunes d'œufs.\n3. Mélanger les jaunes avec le chocolat fondu et le sucre.\n4. Monter les blancs en neige et la crème en chantilly.\n5. Incorporer délicatement les blancs puis la crème. Réfrigérer 3h minimum."
+        ],
+        "ingredients": [
+            {
+                "nom": "Chocolat noir",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 4,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 50,
+                "unite": "g"
+            },
+            {
+                "nom": "Crème",
+                "quantite": 200,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Mousse au chocolat",
+        "nombre_personnes": 3,
+        "photo": "mousse_au_chocolat.jpg",
+        "prix": 9.56
+    },
+    {
+        "categorie": "Entremet",
+        "createur": "Richard Gaudefroy",
+        "date": "23/9/2024",
+        "description": [
+            "ÉTAPES :\n1. Faire fondre le chocolat au bain-marie.\n2. Battre les œufs avec le sucre jusqu'à blanchiment.\n3. Incorporer le chocolat fondu puis la pulpe des gousses de vanille.\n4. Préparer une crème à la vanille et un brownie au chocolat.\n5. Assembler en couches alternées dans des verrines et réfrigérer 4h."
+        ],
+        "ingredients": [
+            {
+                "nom": "Chocolat noir",
+                "quantite": 200,
+                "unite": "g"
+            },
+            {
+                "nom": "Oeufs",
+                "quantite": 4,
+                "unite": "pièces"
+            },
+            {
+                "nom": "Sucre",
+                "quantite": 50,
+                "unite": "g"
+            },
+            {
+                "nom": "Vanille",
+                "quantite": 2,
+                "unite": "gousses"
+            },
+            {
+                "nom": "Beurre",
+                "quantite": 100,
+                "unite": "g"
+            },
+            {
+                "nom": "Farine",
+                "quantite": 80,
+                "unite": "g"
+            },
+            {
+                "nom": "Crème",
+                "quantite": 200,
+                "unite": "ml"
+            }
+        ],
+        "nom": "Brownille",
+        "nombre_personnes": 3,
+        "photo": "brownille.jpg",
+        "prix": 9.56
+    },
+    {
+        "categorie": "Plat",
+        "createur": "Rémy",
+        "date": "13/6/2025",
+        "description": [
+            "Saumon à la sauce soja"
+        ],
+        "ingredients": [
+            {
+                "nom": "Saumon",
+                "quantite": 150,
+                "unite": "g"
+            },
+            {
+                "nom": "sauce soja",
+                "quantite": 10,
+                "unite": "mL"
+            }
+        ],
+        "nom": "SuperSaumon",
+        "nombre_personnes": 1,
+        "photo": "C:/Users/tompo/Cours/2024-2025/S2/S2.01/groupe19/Outils_Demo/Recette_Jury.jpg",
+        "prix": 20
+    }
+]
