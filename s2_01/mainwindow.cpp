@@ -267,7 +267,7 @@ void MainWindow::setupMenus()
     actionOuvrir->setShortcut(QKeySequence::Open);
     menuFichier->addAction(actionOuvrir);
 
-    actionSauvegarder = new QAction(tr("Save"), this);
+    actionSauvegarder = new QAction(tr("Save..."), this);
     actionSauvegarder->setShortcut(QKeySequence::Save);
     menuFichier->addAction(actionSauvegarder);
     connect(actionSauvegarder, &QAction::triggered,

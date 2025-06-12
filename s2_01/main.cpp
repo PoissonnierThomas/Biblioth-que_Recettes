@@ -14,13 +14,13 @@ int main(int argc, char *argv[])
 
     QTranslator translator;
 
-    /*/if (translator.load(":/translations/S2_01_en_FR.qm")) {
-    //    app.installTranslator(&translator);
-    //    qDebug() << "Traduction française chargée avec succès";
+    if (translator.load(":/translations/S2_01_en_FR.qm")) {
+        app.installTranslator(&translator);
+        qDebug() << "Traduction française chargée avec succès";
     } else {
         qDebug() << "Impossible de charger la traduction française";
         qDebug() << "Vérifiez que le fichier S2_01_en_FR.qm existe dans le répertoire";
-    }*/
+    }
 
     MainWindow window;
     window.show();
