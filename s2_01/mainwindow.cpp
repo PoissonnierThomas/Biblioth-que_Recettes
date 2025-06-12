@@ -178,25 +178,19 @@ void MainWindow::setupDetailPanel()
 
     layoutScroll->addWidget(groupBoxInfos);
 
-    // ============================================================================
-    // NOUVELLE SECTION : Description avec image à côté
-    // ============================================================================
-
     groupBoxDescription = new QGroupBox(tr("Description"));
     QHBoxLayout *layoutDescriptionPrincipal = new QHBoxLayout(groupBoxDescription);
 
-    // Partie gauche : Zone de texte description
     QWidget *widgetDescriptionGauche = new QWidget();
     QVBoxLayout *layoutDesc = new QVBoxLayout(widgetDescriptionGauche);
 
     textEditDescription = new QTextEdit();
-    textEditDescription->setMinimumHeight(200);      // Plus grand que les 120px originaux
-    textEditDescription->setMaximumHeight(400);      // Limite raisonnable
+    textEditDescription->setMinimumHeight(200);
+    textEditDescription->setMaximumHeight(400);
     textEditDescription->setEnabled(false);
 
     layoutDesc->addWidget(textEditDescription);
 
-    // Partie droite : Image de la recette (DÉPLACÉE ICI)
     QWidget *widgetImageDroite = new QWidget();
     QVBoxLayout *layoutImageDroite = new QVBoxLayout(widgetImageDroite);
 
@@ -225,15 +219,11 @@ void MainWindow::setupDetailPanel()
     layoutImageDroite->addWidget(labelImageRecette);
     layoutImageDroite->addStretch();
 
-    // Assemblage horizontal : description à gauche (60%), image à droite (40%)
-    layoutDescriptionPrincipal->addWidget(widgetDescriptionGauche, 3);  // 3/5 de l'espace
-    layoutDescriptionPrincipal->addWidget(widgetImageDroite, 2);        // 2/5 de l'espace
+    layoutDescriptionPrincipal->addWidget(widgetDescriptionGauche, 3);
+    layoutDescriptionPrincipal->addWidget(widgetImageDroite, 2);
 
     layoutScroll->addWidget(groupBoxDescription);
 
-    // ============================================================================
-    // SECTION INGRÉDIENTS SIMPLIFIÉE (sans image)
-    // ============================================================================
 
     groupBoxIngredients = new QGroupBox(tr("Ingredients"));
     QVBoxLayout *layoutIng = new QVBoxLayout(groupBoxIngredients);
@@ -251,7 +241,6 @@ void MainWindow::setupDetailPanel()
 
     layoutIng->addLayout(layoutBoutonsIng);
 
-    // Tableau des ingrédients (maintenant sur toute la largeur)
     tableWidgetIngredients = new QTableWidget();
     tableWidgetIngredients->setColumnCount(3);
     QStringList headers{tr("Name"), tr("Quantity"), tr("Unit")};
@@ -259,7 +248,7 @@ void MainWindow::setupDetailPanel()
     tableWidgetIngredients->setAlternatingRowColors(true);
     tableWidgetIngredients->setSelectionBehavior(QAbstractItemView::SelectRows);
     tableWidgetIngredients->horizontalHeader()->setStretchLastSection(true);
-    tableWidgetIngredients->setEnabled(false);
+    tableWidgetIngredients->setEditTriggers(QAbstractItemView::NoEditTriggers);
     tableWidgetIngredients->setToolTip(tr("Double-click on an ingredient to edit it"));
 
     layoutIng->addWidget(tableWidgetIngredients);
@@ -628,7 +617,12 @@ void MainWindow::activerEdition(bool activer)
     lineEditPhoto->setEnabled(activer);
     dateEditDate->setEnabled(activer);
     textEditDescription->setEnabled(activer);
-    tableWidgetIngredients->setEnabled(activer);
+
+    if (activer)
+        tableWidgetIngredients->setEditTriggers(QAbstractItemView::DoubleClicked |
+                                                QAbstractItemView::EditKeyPressed);
+    else
+        tableWidgetIngredients->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     btnAjouterIngredient->setEnabled(activer);
     btnSupprimerIngredient->setEnabled(activer && tableWidgetIngredients->currentRow() >= 0);
@@ -1000,6 +994,10 @@ void MainWindow::onParcourirPhoto()
     if (!fichier.isEmpty()) {
         lineEditPhoto->setText(fichier);
     }
+    chargerImageRecette(fichier);
+
+    if (modeEdition)
+        onDonneesModifiees();
 }
 
 void MainWindow::ouvrirFichier()
@@ -1574,18 +1572,25 @@ void MainWindow::chargerImageRecette(const QString& nomImage)
         return;
     }
 
-    // Construire le chemin vers l'image dans les ressources
-    QString cheminImage = QString(":/Recettes/images/%1").arg(nomImage);
+    QPixmap pixmap;
 
-    QPixmap pixmap(cheminImage);
+    if (QFile::exists(nomImage)) {
+        pixmap.load(nomImage);
+        qDebug() << tr("Image loaded from absolute path:") << nomImage;
+    }
+    else {
+        // Construire le chemin vers l'image dans les ressources
+        QString cheminImage = QString(":/Recettes/images/%1").arg(nomImage);
+
+        pixmap.load(cheminImage);
 
 
-    pixmap.load(nomImage);
 
-    if (pixmap.isNull()) {
-        // Si l'image n'est pas trouvée dans les ressources, essayer un chemin relatif
-        QString cheminRelatif = QString("Recettes/images/%1").arg(nomImage);
-        pixmap.load(cheminRelatif);
+        if (pixmap.isNull()) {
+            // Si l'image n'est pas trouvée dans les ressources, essayer un chemin relatif
+            QString cheminRelatif = QString("Recettes/images/%1").arg(nomImage);
+            pixmap.load(cheminRelatif);
+        }
     }
 
     if (!pixmap.isNull()) {
@@ -1601,6 +1606,6 @@ void MainWindow::chargerImageRecette(const QString& nomImage)
     } else {
         labelImageRecette->clear();
         labelImageRecette->setText(tr("Image not found: %1").arg(nomImage));
-        qDebug() << tr("Image not found:") << cheminImage;
+        qDebug() << tr("Image not found:") << nomImage;
     }
 }
